@@ -81,22 +81,22 @@
 
 | # | Module | المحتوى | الحالة |
 |---|---|---|---|
-| 3.1 | Arrays & Hash Maps (Deep) | what problem, what operations, where in real software | 📋 |
-| 3.2 | Sets, Stacks, Queues | call stack, task queue, dedup, undo | 📋 |
-| 3.3 | Linked Lists | why they exist, when arrays fail | 📋 |
-| 3.4 | Trees | DOM, file systems, JSON, B-Trees (preview) | 📋 |
-| 3.5 | Heaps & Priority Queues | schedulers, job priorities | 📋 |
-| 3.6 | Graphs | BFS, DFS, dependencies, shortest path (conceptual) | 📋 |
-| 3.7 | Algorithmic Thinking | decomposition, searching, sorting, traversal, recursion, iteration, divide & conquer | 📋 |
-| 3.8 | Big-O From Intuition | 1 → 10 → 100 → 1000 ops; O(1), O(log n), O(n), O(n log n), O(n²) | 📋 |
-| 3.9 | Algorithms That Matter | recognizing complexity, choosing structures, reducing work, tradeoffs | 📋 |
-| 3.10 | Databases From Zero | why not files? tables, rows, columns, keys, relationships | 📋 |
-| 3.11 | SQL From Zero | SELECT, WHERE, ORDER BY, LIMIT, JOIN, GROUP BY, INSERT, UPDATE, DELETE | 📋 |
-| 3.12 | Database Design | User, Organization, Product, Order, OrderItem; relationships; normalization | 📋 |
-| 3.13 | Indexes | scan vs seek, B-Tree model, EXPLAIN, tradeoffs | 📋 |
-| 3.14 | Transactions & ACID | transfer money example, crash in the middle, ACID | 📋 |
-| 🛠 | **Project 4:** Database-backed API | | 📋 |
-| ✔ | Checkpoint 3 | | 📋 |
+| 3.1 | [Arrays & Hash Maps (Deep)](../level-3-core-computer-science/module-3.1-arrays-hash-maps.md) | what problem, what operations, where in real software | ✅ |
+| 3.2 | [Sets, Stacks, Queues](../level-3-core-computer-science/module-3.2-sets-stacks-queues.md) | call stack, task queue, dedup, undo | ✅ |
+| 3.3 | [Linked Lists](../level-3-core-computer-science/module-3.3-linked-lists.md) | why they exist, when arrays fail | ✅ |
+| 3.4 | [Trees](../level-3-core-computer-science/module-3.4-trees.md) | DOM, file systems, JSON, B-Trees (preview) | ✅ |
+| 3.5 | [Heaps & Priority Queues](../level-3-core-computer-science/module-3.5-heaps-priority-queues.md) | schedulers, job priorities | ✅ |
+| 3.6 | [Graphs](../level-3-core-computer-science/module-3.6-graphs.md) | BFS, DFS, dependencies, shortest path (conceptual) | ✅ |
+| 3.7 | [Algorithmic Thinking](../level-3-core-computer-science/module-3.7-algorithmic-thinking.md) | decomposition, searching, sorting, traversal, recursion, iteration, divide & conquer | ✅ |
+| 3.8 | [Big-O From Intuition](../level-3-core-computer-science/module-3.8-big-o.md) | 1 → 10 → 100 → 1000 ops; O(1), O(log n), O(n), O(n log n), O(n²) | ✅ |
+| 3.9 | [Algorithms That Matter](../level-3-core-computer-science/module-3.9-algorithms-that-matter.md) | recognizing complexity, choosing structures, reducing work, tradeoffs | ✅ |
+| 3.10 | [Databases From Zero](../level-3-core-computer-science/module-3.10-databases-from-zero.md) | why not files? tables, rows, columns, keys, relationships | ✅ |
+| 3.11 | [SQL From Zero](../level-3-core-computer-science/module-3.11-sql-from-zero.md) | SELECT, WHERE, ORDER BY, LIMIT, JOIN, GROUP BY, INSERT, UPDATE, DELETE | ✅ |
+| 3.12 | [Database Design](../level-3-core-computer-science/module-3.12-database-design.md) | User, Organization, Product, Order, OrderItem; relationships; normalization | ✅ |
+| 3.13 | [Indexes](../level-3-core-computer-science/module-3.13-indexes.md) | scan vs seek, B-Tree model, EXPLAIN, tradeoffs | ✅ |
+| 3.14 | [Transactions & ACID](../level-3-core-computer-science/module-3.14-transactions-acid.md) | transfer money example, crash in the middle, ACID | ✅ |
+| 🛠 | [**Project 4:** Database-backed Store API (PostgreSQL, raw SQL, migrations, transactions, indexes)](../projects/project-4-db-api/README.md) | | ✅ |
+| ✔ | [Checkpoint 3](../level-3-core-computer-science/checkpoint-3.md) | | ✅ |
 
 ---
 

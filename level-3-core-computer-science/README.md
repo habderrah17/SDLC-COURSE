@@ -47,22 +47,22 @@
 
 | # | الوحدة | المفاهيم | الحالة |
 |---|---|---|---|
-| 3.1 | Arrays & Hash Maps (Deep) | contiguous memory, index O(1), insert/delete cost, hash function, `Map`/`Object`, collisions (concept), when `includes` kills you | 📋 |
-| 3.2 | Sets, Stacks, Queues | `Set` for dedup/membership, stack (call stack, undo, parsing), queue (task queues, BFS), deque | 📋 |
-| 3.3 | Linked Lists | why they exist, O(1) insert at head, cache-unfriendly, LRU cache example | 📋 |
-| 3.4 | Trees | hierarchy, DOM, file systems, JSON, binary trees, BST (concept), traversal (pre/in/post/level), B-Tree preview | 📋 |
-| 3.5 | Heaps & Priority Queues | priority scheduling, top-K, job queues with priority | 📋 |
-| 3.6 | Graphs | nodes/edges, adjacency list, BFS/DFS, dependency resolution, cycle detection, shortest path (concept) | 📋 |
-| 3.7 | Algorithmic Thinking | decomposition, searching (linear/binary), sorting (what built-in does), traversal, recursion vs iteration, divide & conquer | 📋 |
-| 3.8 | Big-O From Intuition | counting operations, O(1)/O(log n)/O(n)/O(n log n)/O(n²), space complexity, real software examples | 📋 |
-| 3.9 | Algorithms That Matter | recognizing complexity in code, choosing structures, reducing work, precomputation, tradeoffs; what NOT to master | 📋 |
-| 3.10 | Databases From Zero | why not files (revisited with proof), tables/rows/columns, primary/foreign keys, relationships (1:1, 1:N, N:M), constraints | 📋 |
-| 3.11 | SQL From Zero | `SELECT`, `WHERE`, `ORDER BY`, `LIMIT`, `JOIN` (INNER/LEFT), `GROUP BY`/aggregates, `INSERT`, `UPDATE`, `DELETE`, N+1 problem | 📋 |
-| 3.12 | Database Design | modeling User/Org/Product/Order/OrderItem, normalization (1NF–3NF pragmatically), naming, migrations | 📋 |
-| 3.13 | Indexes | full scan vs index seek, B-Tree mental model, composite indexes, `EXPLAIN ANALYZE`, write cost, when NOT to index | 📋 |
-| 3.14 | Transactions & ACID | transfer money, crash in the middle, `BEGIN/COMMIT/ROLLBACK`, ACID each letter, isolation levels (intro), connection pooling | 📋 |
-| 🛠 | [Project 4: Database-backed API](../projects/README.md#project-4) | PostgreSQL, raw SQL, migrations, transactions, indexes | 📋 |
-| ✔ | Checkpoint 3 | | 📋 |
+| 3.1 | [Arrays & Hash Maps (Deep)](module-3.1-arrays-hash-maps.md) | contiguous memory, index O(1), insert/delete cost, hash function, `Map`/`Object`, collisions (concept), when `includes` kills you | ✅ |
+| 3.2 | [Sets, Stacks, Queues](module-3.2-sets-stacks-queues.md) | `Set` for dedup/membership, stack (call stack, undo, parsing), queue (task queues, BFS), deque | ✅ |
+| 3.3 | [Linked Lists](module-3.3-linked-lists.md) | why they exist, O(1) insert at head, cache-unfriendly, LRU cache example | ✅ |
+| 3.4 | [Trees](module-3.4-trees.md) | hierarchy, DOM, file systems, JSON, binary trees, BST (concept), traversal (pre/in/post/level), B-Tree preview | ✅ |
+| 3.5 | [Heaps & Priority Queues](module-3.5-heaps-priority-queues.md) | priority scheduling, top-K, job queues with priority | ✅ |
+| 3.6 | [Graphs](module-3.6-graphs.md) | nodes/edges, adjacency list, BFS/DFS, dependency resolution, cycle detection, shortest path (concept) | ✅ |
+| 3.7 | [Algorithmic Thinking](module-3.7-algorithmic-thinking.md) | decomposition, searching (linear/binary), sorting (what built-in does), traversal, recursion vs iteration, divide & conquer | ✅ |
+| 3.8 | [Big-O From Intuition](module-3.8-big-o.md) | counting operations, O(1)/O(log n)/O(n)/O(n log n)/O(n²), space complexity, real software examples | ✅ |
+| 3.9 | [Algorithms That Matter](module-3.9-algorithms-that-matter.md) | recognizing complexity in code, choosing structures, reducing work, precomputation, tradeoffs; what NOT to master | ✅ |
+| 3.10 | [Databases From Zero](module-3.10-databases-from-zero.md) | why not files (revisited with proof), tables/rows/columns, primary/foreign keys, relationships (1:1, 1:N, N:M), constraints | ✅ |
+| 3.11 | [SQL From Zero](module-3.11-sql-from-zero.md) | `SELECT`, `WHERE`, `ORDER BY`, `LIMIT`, `JOIN` (INNER/LEFT), `GROUP BY`/aggregates, `INSERT`, `UPDATE`, `DELETE`, N+1 problem | ✅ |
+| 3.12 | [Database Design](module-3.12-database-design.md) | modeling User/Org/Product/Order/OrderItem, normalization (1NF–3NF pragmatically), naming, migrations | ✅ |
+| 3.13 | [Indexes](module-3.13-indexes.md) | full scan vs index seek, B-Tree mental model, composite indexes, `EXPLAIN ANALYZE`, write cost, when NOT to index | ✅ |
+| 3.14 | [Transactions & ACID](module-3.14-transactions-acid.md) | transfer money, crash in the middle, `BEGIN/COMMIT/ROLLBACK`, ACID each letter, isolation levels (intro), connection pooling | ✅ |
+| 🛠 | [Project 4: Database-backed API](../projects/project-4-db-api/README.md) | PostgreSQL, raw SQL, migrations, transactions, indexes | ✅ |
+| ✔ | [Checkpoint 3](checkpoint-3.md) | | ✅ |
 
 ---
 
