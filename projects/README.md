@@ -9,8 +9,8 @@
 | 2 | <a id="project-2"></a>[Data-Processing Program (CSV → report)](project-2-data-processing/README.md) | L1 | `project-2-data-processing/` | ✅ |
 | 3 | <a id="project-3"></a>[HTTP Server from scratch (raw TCP → HTTP → node:http)](project-3-http-server/README.md) | L2 | `project-3-http-server/` | ✅ |
 | 4 | <a id="project-4"></a>[Database-backed API (PostgreSQL, raw SQL)](project-4-db-api/README.md) | L3 | `project-4-db-api/` | ✅ |
-| 5 | <a id="project-5"></a>Authenticated Application | L5 | `project-5-auth-app/` | 📋 |
-| 6 | <a id="project-6"></a>Production-style Backend (cache, queue, worker, Docker, CI/CD, observability) | L5 | `project-6-production-backend/` | 📋 |
+| 5 | <a id="project-5"></a>[Authenticated Application (authN, sessions, authZ, RLS, threat model)](project-5-auth-app/README.md) | L5 | `project-5-auth-app/` | ✅ |
+| 6 | <a id="project-6"></a>[Production-style Backend (cache, queue, worker, Docker, CI/CD, failure drills)](project-6-production-backend/README.md) | L5 | `project-6-production-backend/` | ✅ |
 | 7 | <a id="project-7"></a>Distributed System Exercise (3 services + injected failures) | L7 | `project-7-distributed/` | 📋 |
 | 8 | <a id="project-8"></a>AI-assisted Engineering Project | L8 | `project-8-ai-assisted/` | 📋 |
 | C | Capstone SaaS (Mode A + Mode B) | L9 | `capstone/` | 📋 |

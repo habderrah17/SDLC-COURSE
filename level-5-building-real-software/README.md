@@ -41,22 +41,22 @@
 
 | # | الوحدة | المفاهيم | الحالة |
 |---|---|---|---|
-| 5.1 | API Design | REST, resources & naming, HTTP methods semantics, status codes, error format, pagination (offset/cursor), filtering, sorting, versioning, idempotency keys, OpenAPI | 📋 |
-| 5.2 | Authentication | identity, passwords (argon2/bcrypt, never encrypt), sessions vs JWT, cookies (HttpOnly/Secure/SameSite), token refresh, OAuth/OIDC (concept), MFA (concept), rate limiting | 📋 |
-| 5.3 | Authorization | authN ≠ authZ, RBAC, permissions, resource ownership, multi-tenancy & tenant isolation, authz at every layer, deny by default | 📋 |
-| 5.4 | Security From Beginner to Professional | threat/attacker/asset/trust boundary, least privilege, input validation, output encoding, secrets, encryption at rest/in transit, XSS, CSRF, SQL injection, SSRF, IDOR, dependency risks | 📋 |
-| 5.5 | Threat Modeling | Assets → Entry points → Trust boundaries → Threats → Mitigations; STRIDE; data flow diagrams; threat model for Project 5 | 📋 |
-| 5.6 | Concurrency in Business Logic | race conditions (double booking, double spend), atomicity, DB locks (`SELECT ... FOR UPDATE`), optimistic concurrency (version column), deadlocks, idempotency | 📋 |
-| 5.7 | Anatomy of a Production System | Application → Database → Cache → Queue → Worker → External Services; connection pools; health checks; graceful shutdown; config | 📋 |
-| 5.8 | Caching | why, what, where (browser/CDN/app/DB), TTL, invalidation strategies, cache-aside, stampede, consistency tradeoffs | 📋 |
-| 5.9 | Queues & Background Jobs | why queue work, producer/queue/consumer, at-least-once delivery, idempotent consumers, retries/DLQ, file upload example | 📋 |
-| 5.10 | Deployment From Zero | what deployment means, server, process manager, container, environments, DNS, HTTPS/certs, DB migrations in deploy, load balancer, rollback | 📋 |
-| 5.11 | Docker | what problem it solves, image vs container, layers, Dockerfile, filesystem, networking (0.0.0.0!), volumes, Compose for app+db+redis+worker | 📋 |
-| 5.12 | CI/CD | Code → Build → Test → Artifact → Deploy; pipelines, exit codes (!), environments, secrets in CI, deploy strategies (rolling/blue-green/canary — concept) | 📋 |
-| 5.13 | Cloud (Provider-Agnostic) | compute, storage (object/block), managed DB, network/VPC, load balancer, secrets manager, monitoring; cost awareness | 📋 |
-| 🛠 | [Project 5: Authenticated Application](../projects/README.md#project-5) | | 📋 |
-| 🛠 | [Project 6: Production-style Backend](../projects/README.md#project-6) | | 📋 |
-| ✔ | Checkpoint 5 | | 📋 |
+| 5.1 | [API Design](module-5.1-api-design.md) | REST, resources & naming, HTTP methods semantics, status codes, error format, pagination (offset/cursor), filtering, sorting, versioning, idempotency keys, OpenAPI | ✅ |
+| 5.2 | [Authentication](module-5.2-authentication.md) | identity, passwords (argon2/bcrypt, never encrypt), sessions vs JWT, cookies (HttpOnly/Secure/SameSite), token refresh, OAuth/OIDC (concept), MFA (concept), rate limiting | ✅ |
+| 5.3 | [Authorization](module-5.3-authorization.md) | authN ≠ authZ, RBAC, permissions, resource ownership, multi-tenancy & tenant isolation, authz at every layer, deny by default | ✅ |
+| 5.4 | [Security From Beginner to Professional](module-5.4-security.md) | threat/attacker/asset/trust boundary, least privilege, input validation, output encoding, secrets, encryption at rest/in transit, XSS, CSRF, SQL injection, SSRF, IDOR, dependency risks | ✅ |
+| 5.5 | [Threat Modeling](module-5.5-threat-modeling.md) | Assets → Entry points → Trust boundaries → Threats → Mitigations; STRIDE; data flow diagrams; threat model for Project 5 | ✅ |
+| 5.6 | [Concurrency in Business Logic](module-5.6-concurrency-business-logic.md) | race conditions (double booking, double spend), atomicity, DB locks (`SELECT ... FOR UPDATE`), optimistic concurrency (version column), deadlocks, idempotency | ✅ |
+| 5.7 | [Anatomy of a Production System](module-5.7-production-anatomy.md) | Application → Database → Cache → Queue → Worker → External Services; connection pools; health checks; graceful shutdown; config | ✅ |
+| 5.8 | [Caching](module-5.8-caching.md) | why, what, where (browser/CDN/app/DB), TTL, invalidation strategies, cache-aside, stampede, consistency tradeoffs | ✅ |
+| 5.9 | [Queues & Background Jobs](module-5.9-queues-jobs-workers.md) | why queue work, producer/queue/consumer, at-least-once delivery, idempotent consumers, retries/DLQ, file upload example | ✅ |
+| 5.10 | [Deployment From Zero](module-5.10-deployment.md) | what deployment means, server, process manager, container, environments, DNS, HTTPS/certs, DB migrations in deploy, load balancer, rollback | ✅ |
+| 5.11 | [Docker](module-5.11-docker-containers.md) | what problem it solves, image vs container, layers, Dockerfile, filesystem, networking (0.0.0.0!), volumes, Compose for app+db+redis+worker | ✅ |
+| 5.12 | [CI/CD](module-5.12-ci-cd.md) | Code → Build → Test → Artifact → Deploy; pipelines, exit codes (!), environments, secrets in CI, deploy strategies (rolling/blue-green/canary — concept) | ✅ |
+| 5.13 | [Cloud (Provider-Agnostic)](module-5.13-cloud-fundamentals.md) | compute, storage (object/block), managed DB, network/VPC, load balancer, secrets manager, monitoring; cost awareness | ✅ |
+| 🛠 | [Project 5: Authenticated Application](../projects/project-5-auth-app/README.md) | | ✅ |
+| 🛠 | [Project 6: Production-style Backend](../projects/project-6-production-backend/README.md) | | ✅ |
+| ✔ | [Checkpoint 5](checkpoint-5.md) | | ✅ |
 
 ---
 

@@ -433,5 +433,6 @@ AFTER:   "أفهم الحواسيب، البرمجيات، الأنظمة، ال
 | Level 2 — Computer Systems | ✅ مكتمل (13 وحدة + Project 3 + Checkpoint 2) |
 | Level 3 — Core Computer Science | ✅ مكتمل (14 وحدة + Project 4 + Checkpoint 3) |
 | Level 4 — Software Engineering Foundations | ✅ مكتمل (16 وحدة + Checkpoint 4) |
-| Level 5 – 9 | 🚧 (الفهارس جاهزة) |
+| Level 5 — Building Real Software | ✅ مكتمل (13 وحدة + Project 5–6 + Checkpoint 5) |
+| Level 6 – 9 | 🚧 (الفهارس جاهزة) |
 | Projects / Challenges / Glossary | 🚧 |

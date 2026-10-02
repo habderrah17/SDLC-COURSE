@@ -130,22 +130,22 @@
 
 | # | Module | المحتوى | الحالة |
 |---|---|---|---|
-| 5.1 | API Design | REST, resources, methods, status codes, pagination, filtering, sorting, versioning, idempotency | 📋 |
-| 5.2 | Authentication | identity, passwords & hashing, sessions, cookies, tokens, JWT, OAuth (conceptual) | 📋 |
-| 5.3 | Authorization | roles, permissions, resource ownership, multi-tenancy | 📋 |
-| 5.4 | Security From Beginner to Professional | threat, attacker, asset, trust boundary; least privilege, validation, secrets, encryption; XSS, CSRF, SQLi, SSRF, IDOR | 📋 |
-| 5.5 | Threat Modeling | Assets → Entry points → Trust boundaries → Threats → Mitigations; STRIDE | 📋 |
-| 5.6 | Concurrency in Business Logic | race conditions, deadlocks, atomicity, locks, optimistic/pessimistic concurrency | 📋 |
-| 5.7 | Anatomy of a Production System | Application → DB → Cache → Queue → Worker → External Services | 📋 |
-| 5.8 | Caching | why, what, where, how long, invalidation | 📋 |
-| 5.9 | Queues & Background Jobs | producer/queue/consumer; file upload example | 📋 |
-| 5.10 | Deployment From Zero | server, process, container, environment, DNS, HTTPS, DB, LB | 📋 |
-| 5.11 | Docker | what problem; image, container, filesystem, network, volume | 📋 |
-| 5.12 | CI/CD | Code → Build → Test → Artifact → Deploy | 📋 |
-| 5.13 | Cloud (Provider-Agnostic) | compute, storage, database, network, LB, secrets, monitoring | 📋 |
-| 🛠 | **Project 5:** Authenticated Application | | 📋 |
-| 🛠 | **Project 6:** Production-style Backend | | 📋 |
-| ✔ | Checkpoint 5 | | 📋 |
+| 5.1 | [API Design](../level-5-building-real-software/module-5.1-api-design.md) | REST, resources, methods, status codes, pagination, filtering, sorting, versioning, idempotency | ✅ |
+| 5.2 | [Authentication](../level-5-building-real-software/module-5.2-authentication.md) | identity, passwords & hashing, sessions, cookies, tokens, JWT, OAuth (conceptual) | ✅ |
+| 5.3 | [Authorization](../level-5-building-real-software/module-5.3-authorization.md) | roles, permissions, resource ownership, multi-tenancy | ✅ |
+| 5.4 | [Security From Beginner to Professional](../level-5-building-real-software/module-5.4-security.md) | threat, attacker, asset, trust boundary; least privilege, validation, secrets, encryption; XSS, CSRF, SQLi, SSRF, IDOR | ✅ |
+| 5.5 | [Threat Modeling](../level-5-building-real-software/module-5.5-threat-modeling.md) | Assets → Entry points → Trust boundaries → Threats → Mitigations; STRIDE | ✅ |
+| 5.6 | [Concurrency in Business Logic](../level-5-building-real-software/module-5.6-concurrency-business-logic.md) | race conditions, deadlocks, atomicity, locks, optimistic/pessimistic concurrency | ✅ |
+| 5.7 | [Anatomy of a Production System](../level-5-building-real-software/module-5.7-production-anatomy.md) | Application → DB → Cache → Queue → Worker → External Services | ✅ |
+| 5.8 | [Caching](../level-5-building-real-software/module-5.8-caching.md) | why, what, where, how long, invalidation | ✅ |
+| 5.9 | [Queues & Background Jobs](../level-5-building-real-software/module-5.9-queues-jobs-workers.md) | producer/queue/consumer; file upload example | ✅ |
+| 5.10 | [Deployment From Zero](../level-5-building-real-software/module-5.10-deployment.md) | server, process, container, environment, DNS, HTTPS, DB, LB | ✅ |
+| 5.11 | [Docker](../level-5-building-real-software/module-5.11-docker-containers.md) | what problem; image, container, filesystem, network, volume | ✅ |
+| 5.12 | [CI/CD](../level-5-building-real-software/module-5.12-ci-cd.md) | Code → Build → Test → Artifact → Deploy | ✅ |
+| 5.13 | [Cloud (Provider-Agnostic)](../level-5-building-real-software/module-5.13-cloud-fundamentals.md) | compute, storage, database, network, LB, secrets, monitoring | ✅ |
+| 🛠 | **Project 5:** [Authenticated Application](../projects/project-5-auth-app/README.md) | | ✅ |
+| 🛠 | **Project 6:** [Production-style Backend](../projects/project-6-production-backend/README.md) | | ✅ |
+| ✔ | [Checkpoint 5](../level-5-building-real-software/checkpoint-5.md) | | ✅ |
 
 ---
 
