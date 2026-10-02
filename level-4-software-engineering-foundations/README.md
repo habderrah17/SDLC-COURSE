@@ -61,23 +61,23 @@ Software Engineering explains:   "How humans build and evolve software systems."
 
 | # | الوحدة | المفاهيم | الحالة |
 |---|---|---|---|
-| 4.0 | CS vs SE — The Transition | why "it works" is the beginning, not the end; engineering judgment | 📋 |
-| 4.1 | SDLC in Detail | Discovery → Requirements → Analysis → Planning → Design → Implementation → Testing → Review → Build → Release → Deploy → Monitor → Feedback → Maintain → Evolve; iterative reality; where projects die | 📋 |
-| 4.2 | Requirements | what is a requirement, FR vs NFR, constraints, assumptions, ambiguity hunting, "feature ≠ requirement" | 📋 |
-| 4.3 | User Stories & Acceptance Criteria | As a / I want / So that; Given / When / Then; limitations; INVEST; definition of done | 📋 |
-| 4.4 | Engineering Estimation | why uncertain, decomposition, relative sizing, cone of uncertainty, risk-first, communicating ranges | 📋 |
-| 4.5 | Software Design | requirements → architecture → design → implementation; design before code; sketching boundaries | 📋 |
-| 4.6 | Abstraction, Encapsulation, Modularity | `sendEmail()` hides SMTP/auth/retry; interfaces; information hiding; module boundaries | 📋 |
-| 4.7 | Coupling & Cohesion | types of coupling, measuring cohesion, simple → professional examples, dependency direction | 📋 |
-| 4.8 | SOLID (Without Dogma) | S/O/L/I/D each: beginner explanation, bad example, refactor, professional reading, when NOT to apply | 📋 |
-| 4.9 | Design Patterns That Matter | Adapter, Strategy, Factory, Observer, Repository, Dependency Injection — problem/solution/tradeoff; anti-patterns | 📋 |
-| 4.10 | Clean Code | naming, function size & shape, duplication (and when it's OK), side effects, cyclomatic complexity, readability > cleverness | 📋 |
-| 4.11 | Testing From Zero | why tests exist, unit/integration/e2e, test pyramid/trophy, AAA, what to test, test doubles, TDD (pragmatic), `Code → Expected → Test → Confidence` | 📋 |
-| 4.12 | Debugging Deeply | stack traces (async!), structured logs, breakpoints & conditional breakpoints, CPU/memory profilers, network tools, DB query inspection, bisecting | 📋 |
-| 4.13 | Refactoring | behavior-preserving change, small steps, catalog (extract, inline, rename, move), refactor under test | 📋 |
-| 4.14 | Legacy Code | joining a huge codebase: repository archaeology, reading tests, git history/blame, logs, tracing execution, seams, characterization tests, safe change | 📋 |
-| 4.15 | Technical Debt | debt vs bad code, deliberate vs accidental, interest, tracking, paying down strategically | 📋 |
-| ✔ | Checkpoint 4 | | 📋 |
+| 4.0 | [CS vs SE — The Transition](module-4.0-cs-vs-se.md) | why "it works" is the beginning, not the end; engineering judgment | ✅ |
+| 4.1 | [SDLC in Detail](module-4.1-sdlc.md) | Discovery → Requirements → Analysis → Planning → Design → Implementation → Testing → Review → Build → Release → Deploy → Monitor → Feedback → Maintain → Evolve; iterative reality; where projects die | ✅ |
+| 4.2 | [Requirements](module-4.2-requirements.md) | what is a requirement, FR vs NFR, constraints, assumptions, ambiguity hunting, "feature ≠ requirement" | ✅ |
+| 4.3 | [User Stories & Acceptance Criteria](module-4.3-user-stories-acceptance-criteria.md) | As a / I want / So that; Given / When / Then; limitations; INVEST; definition of done | ✅ |
+| 4.4 | [Engineering Estimation](module-4.4-estimation.md) | why uncertain, decomposition, relative sizing, cone of uncertainty, risk-first, communicating ranges | ✅ |
+| 4.5 | [Software Design](module-4.5-software-design.md) | requirements → architecture → design → implementation; design before code; sketching boundaries | ✅ |
+| 4.6 | [Abstraction, Encapsulation, Modularity](module-4.6-abstraction-encapsulation-modularity.md) | `sendEmail()` hides SMTP/auth/retry; interfaces; information hiding; module boundaries | ✅ |
+| 4.7 | [Coupling & Cohesion](module-4.7-coupling-cohesion.md) | types of coupling, measuring cohesion, simple → professional examples, dependency direction | ✅ |
+| 4.8 | [SOLID (Without Dogma)](module-4.8-solid.md) | S/O/L/I/D each: beginner explanation, bad example, refactor, professional reading, when NOT to apply | ✅ |
+| 4.9 | [Design Patterns That Matter](module-4.9-design-patterns.md) | Adapter, Strategy, Factory, Observer, Repository, Dependency Injection — problem/solution/tradeoff; anti-patterns | ✅ |
+| 4.10 | [Clean Code](module-4.10-clean-code.md) | naming, function size & shape, duplication (and when it's OK), side effects, cyclomatic complexity, readability > cleverness | ✅ |
+| 4.11 | [Testing From Zero](module-4.11-testing.md) | why tests exist, unit/integration/e2e, test pyramid/trophy, AAA, what to test, test doubles, TDD (pragmatic), `Code → Expected → Test → Confidence` | ✅ |
+| 4.12 | [Debugging Deeply](module-4.12-debugging-deeply.md) | stack traces (async!), structured logs, breakpoints & conditional breakpoints, CPU/memory profilers, network tools, DB query inspection, bisecting | ✅ |
+| 4.13 | [Refactoring](module-4.13-refactoring.md) | behavior-preserving change, small steps, catalog (extract, inline, rename, move), refactor under test | ✅ |
+| 4.14 | [Legacy Code](module-4.14-legacy-code.md) | joining a huge codebase: repository archaeology, reading tests, git history/blame, logs, tracing execution, seams, characterization tests, safe change | ✅ |
+| 4.15 | [Technical Debt](module-4.15-tech-debt.md) | debt vs bad code, deliberate vs accidental, interest, tracking, paying down strategically | ✅ |
+| ✔ | [Checkpoint 4](checkpoint-4.md) | | ✅ |
 
 ---
 

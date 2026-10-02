@@ -106,23 +106,23 @@
 
 | # | Module | المحتوى | الحالة |
 |---|---|---|---|
-| 4.0 | CS vs SE — The Transition | why engineering ≠ coding | 📋 |
-| 4.1 | SDLC in Detail | Discovery → … → Evolution; iterative reality | 📋 |
-| 4.2 | Requirements | functional, non-functional, constraints, assumptions, acceptance criteria | 📋 |
-| 4.3 | User Stories & Acceptance Criteria | As a / I want / So that; Given / When / Then; limitations | 📋 |
-| 4.4 | Engineering Estimation | why estimates are uncertain; decomposition, relative estimation, risk | 📋 |
-| 4.5 | Software Design | requirements → architecture → design → implementation | 📋 |
-| 4.6 | Abstraction, Encapsulation, Modularity | `sendEmail()` hides SMTP; boundaries | 📋 |
-| 4.7 | Coupling & Cohesion | simple → professional examples | 📋 |
-| 4.8 | SOLID (Without Dogma) | per principle: beginner explanation, bad example, refactoring, when NOT to apply | 📋 |
-| 4.9 | Design Patterns That Matter | Adapter, Strategy, Factory, Observer, Repository, Dependency Injection | 📋 |
-| 4.10 | Clean Code | naming, functions, duplication, side effects, complexity, readability | 📋 |
-| 4.11 | Testing From Zero | why; unit / integration / e2e; mental model Code → Expected → Test → Confidence | 📋 |
-| 4.12 | Debugging Deeply | stack traces, logs, breakpoints, profilers, network tools, DB inspection | 📋 |
-| 4.13 | Refactoring | better structure without changing behavior | 📋 |
-| 4.14 | Legacy Code | repository archaeology, characterization tests, safe change | 📋 |
-| 4.15 | Technical Debt | debt vs bad code; managing it | 📋 |
-| ✔ | Checkpoint 4 | | 📋 |
+| 4.0 | [CS vs SE — The Transition](../level-4-software-engineering-foundations/module-4.0-cs-vs-se.md) | why engineering ≠ coding | ✅ |
+| 4.1 | [SDLC in Detail](../level-4-software-engineering-foundations/module-4.1-sdlc.md) | Discovery → … → Evolution; iterative reality | ✅ |
+| 4.2 | [Requirements](../level-4-software-engineering-foundations/module-4.2-requirements.md) | functional, non-functional, constraints, assumptions, acceptance criteria | ✅ |
+| 4.3 | [User Stories & Acceptance Criteria](../level-4-software-engineering-foundations/module-4.3-user-stories-acceptance-criteria.md) | As a / I want / So that; Given / When / Then; limitations | ✅ |
+| 4.4 | [Engineering Estimation](../level-4-software-engineering-foundations/module-4.4-estimation.md) | why estimates are uncertain; decomposition, relative estimation, risk | ✅ |
+| 4.5 | [Software Design](../level-4-software-engineering-foundations/module-4.5-software-design.md) | requirements → architecture → design → implementation | ✅ |
+| 4.6 | [Abstraction, Encapsulation, Modularity](../level-4-software-engineering-foundations/module-4.6-abstraction-encapsulation-modularity.md) | `sendEmail()` hides SMTP; boundaries | ✅ |
+| 4.7 | [Coupling & Cohesion](../level-4-software-engineering-foundations/module-4.7-coupling-cohesion.md) | simple → professional examples | ✅ |
+| 4.8 | [SOLID (Without Dogma)](../level-4-software-engineering-foundations/module-4.8-solid.md) | per principle: beginner explanation, bad example, refactoring, when NOT to apply | ✅ |
+| 4.9 | [Design Patterns That Matter](../level-4-software-engineering-foundations/module-4.9-design-patterns.md) | Adapter, Strategy, Factory, Observer, Repository, Dependency Injection | ✅ |
+| 4.10 | [Clean Code](../level-4-software-engineering-foundations/module-4.10-clean-code.md) | naming, functions, duplication, side effects, complexity, readability | ✅ |
+| 4.11 | [Testing From Zero](../level-4-software-engineering-foundations/module-4.11-testing.md) | why; unit / integration / e2e; mental model Code → Expected → Test → Confidence | ✅ |
+| 4.12 | [Debugging Deeply](../level-4-software-engineering-foundations/module-4.12-debugging-deeply.md) | stack traces, logs, breakpoints, profilers, network tools, DB inspection | ✅ |
+| 4.13 | [Refactoring](../level-4-software-engineering-foundations/module-4.13-refactoring.md) | better structure without changing behavior | ✅ |
+| 4.14 | [Legacy Code](../level-4-software-engineering-foundations/module-4.14-legacy-code.md) | repository archaeology, characterization tests, safe change | ✅ |
+| 4.15 | [Technical Debt](../level-4-software-engineering-foundations/module-4.15-tech-debt.md) | debt vs bad code; managing it | ✅ |
+| ✔ | [Checkpoint 4](../level-4-software-engineering-foundations/checkpoint-4.md) | | ✅ |
 
 ---
 
