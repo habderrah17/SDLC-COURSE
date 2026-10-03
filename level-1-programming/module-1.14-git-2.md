@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] commits، فروع، merge، revert — [M1.13](module-1.13-git-1.md)
 - [ ] العميل/الخادم والشبكة — [L0-M0.6](../level-0-absolute-foundations/module-06-network-client-server.md)
 
@@ -284,9 +285,13 @@ SyntaxError: Identifier 'FILE' has already been declared
 ## 14. الصلة بعصر AI
 وكلاء AI يفتحون PRs الآن. **لا تدمج PR لم تقرأه** — عنوانه الجميل ليس دليلًا. راجع الـ diff كما تراجع لزميل مبتدئ: ماذا تغيّر خارج نطاق المهمة؟ هل عُدّل `.gitignore`/الأسرار/إعدادات CI؟ وعلّم الـ AI اتفاقية الفريق (أسماء فروع، حجم PR، قالب الرسالة) في ملف تعليمات بالمستودع (L8-M5). `bisect` يبقى سلاحك عندما "يعمل الكود الذي ولّده AI… حتى لا يعمل".
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 remote/origin/`origin/main`؛ `clone/fetch/pull/push`؛ لماذا يُرفض push؛ دورة PR؛ حل التعارض منهجيًا + typecheck؛ لا force على المشترك.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 merge vs rebase vs squash؛ `pull --rebase` على فرعك؛ `bisect` (يدوي وrun)؛ `stash`/`tag`/`blame`؛ `.gitattributes` للأسطر.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ `rebase -i` للتنظيف قبل PR؛ cherry-pick؛ submodules/worktrees؛ signed commits؛ monorepo tooling.
 
 ## 18. الخلاصة

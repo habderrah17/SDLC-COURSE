@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] ادّعاء مقابل دليل؛ دين التحقّق — [L8-M8.1](module-8.1-what-changes.md)
 - [ ] SDLC ومراحله ولماذا الترتيب مهمّ — [L4-M4.1](../level-4-software-engineering-foundations/module-4.1-sdlc.md)
 - [ ] معايير القبول Given/When/Then — [L4-M4.3](../level-4-software-engineering-foundations/module-4.3-user-stories-acceptance-criteria.md)

@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] كل وحدات L8 السابقة — هذه الوحدة تُجمّعها: [M8.1](module-8.1-what-changes.md) الأدلّة، [M8.2](module-8.2-vibe-coding-vs-engineering.md) البوّابات، [M8.3](module-8.3-ai-assisted-sdlc.md) الملكية، [M8.4](module-8.4-ai-agents.md) الوكيل والسياسة، [M8.5](module-8.5-context-engineering.md) السياق، [M8.6](module-8.6-ai-delegation.md) الموجز، [M8.7](module-8.7-ai-verification.md) السلسلة، [M8.8](module-8.8-ai-failure-modes.md) الكواشف، [M8.9](module-8.9-ai-security.md) السياسة الأمنية، [M8.10](module-8.10-human-in-the-loop.md) الحدود الصلبة
 - [ ] المراقبة وSLI/SLO والتعلّم من الحوادث — [L6-M6.6](../level-6-professional-engineering/module-6.6-observability.md), [L6-M6.7](../level-6-professional-engineering/module-6.7-incident-response.md)
 - [ ] التفكير بالمنتج: هل حقّقت الميزة أثرها؟ — [L6-M6.8](../level-6-professional-engineering/module-6.8-product-thinking.md)

@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] العمليات، الإشارات، systemd كفكرة، SSH والـ shell — [L0-M0.4](../level-0-absolute-foundations/module-04-files-terminal-shell.md), [L2-M2.5](../level-2-computer-systems/module-2.5-process-deep-dive.md)
 - [ ] IP/ports/0.0.0.0، reverse proxy، TLS والشهادات — [L0-M0.5](../level-0-absolute-foundations/module-05-processes-ports-localhost.md), [L2-M2.11](../level-2-computer-systems/module-2.11-tls.md)
 - [ ] الإيقاف الرشيق، `/health` و`/ready`، التهيئة من البيئة — [M5.7](module-5.7-production-anatomy.md)
@@ -319,9 +320,13 @@ export function isOn(flag: Flag | undefined, ctx: { tenantId?: string; userId?: 
 ## 14. الصلة بعصر AI
 AI يكتب سكربتات نشر تبدو مقنعة وتفعل `git pull && npm install && pm2 restart`، وهجرات `RENAME COLUMN` في خطوة واحدة، وDockerfiles بلا SIGTERM. قيّمه بقائمة §3 "النشر الآمن" وبسؤال واحد: "ماذا يحدث لطلب دفع جارٍ لحظة النشر؟ ولنسخة قديمة بعد الهجرة؟". وهو ممتاز في: مراجعة الهجرات بحثًا عن أقفال طويلة ("هل هذه العبارة تأخذ ACCESS EXCLUSIVE على جدول كبير؟")، وتوليد وحدات systemd/Caddyfile من متطلباتك، وكتابة قوائم تحقق ما قبل النشر لمستودعك تحديدًا.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 build/release/deploy/rollback؛ artifact ثابت بالـ SHA مبني مرة بـ `npm ci`؛ البيئات وفروق التهيئة فقط؛ rolling يحتاج readiness + إيقاف رشيق + توافق N/N-1؛ الهجرات: متوافقة للخلف، قبل الكود، خطوة واحدة بقفل، `lock_timeout`، `CONCURRENTLY`، checksum، fix-forward؛ النشر الذري بالرابط الرمزي + smoke على مسار حقيقي + rollback بأمر مجرّب؛ systemd بـ SIGTERM/مهلة؛ أسرار خارج Git بصلاحيات مقيّدة؛ انشر صغيرًا كثيرًا نهارًا.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 blue/green وcanary ومعاييرهما (مراقبة الأسطول كله)؛ feature flags وتنظيفها؛ تقسيم النشر بين API والعامل؛ readiness المرتبط بإصدار المخطّط؛ Caddy/nginx وTLS التلقائي؛ `ProtectSystem`/`MemoryMax` في systemd.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ GitOps، service mesh والتوجيه بالنسب، تفاصيل Kubernetes Deployments/rollouts (M5.13)، نشر DB متعدّدة المناطق، تحليل أقفال PostgreSQL لكل عبارة DDL.
 
 ## 18. الخلاصة

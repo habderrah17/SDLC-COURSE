@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] مكدس الاستدعاء وقراءة stack trace — [M1.4](module-1.4-functions-scope-closures.md)
 - [ ] رموز الخروج، stdout vs stderr — [L0-M0.3](../level-0-absolute-foundations/module-03-running-a-program.md)
 - [ ] فكرة fail-fast مع الإعدادات — [L0-M0.4](../level-0-absolute-foundations/module-04-files-terminal-shell.md)
@@ -308,9 +309,13 @@ function getUserAge(json: string): Result<number> {
 ## 14. الصلة بعصر AI
 AI يحب `try { ... } catch (e) { console.log(e) }` حول كل شيء، و`return null` عند الفشل. **تحقق:** هل كل `catch` إمّا يعالج فعلًا أو يعيد الرمي؟ هل تُفرَّق الأخطاء المتوقعة عن الـ bugs؟ هل للفشل كود يمكن للبرنامج استخدامه؟ اطلب: *"لا catch صامت؛ Result للتحقق؛ أخطاء مخصّصة مع code وcause."*
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 متوقع vs bug؛ `throw/try/catch/finally`؛ `e: unknown` + `instanceof`؛ ارمِ `Error` فقط؛ لا ابتلاع؛ Result الأساسي؛ stderr + exit codes.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 أخطاء مخصّصة بـ `code` و`cause`؛ متى Result ومتى استثناء؛ `main(): number` ثم `process.exit`.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ `Error.captureStackTrace`؛ مكتبات Result (neverthrow)؛ error boundaries في الواجهات؛ unhandled rejection handlers (M1.11).
 
 ## 18. الخلاصة

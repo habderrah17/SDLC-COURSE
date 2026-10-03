@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] جدول الكمون: RAM نانوثانية، قرص ميكرو/ملّي، شبكة ملّي — [L0-M0.3](../level-0-absolute-foundations/module-03-running-a-program.md)، [L0-M0.6](../level-0-absolute-foundations/module-06-network-client-server.md)
 - [ ] الدوال كقيم، الإغلاقات، callbacks — [M1.4](module-1.4-functions-scope-closures.md)
 - [ ] الأخطاء وtry/catch — [M1.9](module-1.9-errors.md)
@@ -321,9 +322,13 @@ async function saveAll(items: string[]) {
 ## 14. الصلة بعصر AI
 AI ينسى `await` ويستخدم `forEach(async)` ويطلق `Promise.all` على آلاف العناصر ويترك fetch بلا مهلة. **تحقق:** ابحث عن استدعاءات تعيد Promise دون `await`/`return`/`.catch`؛ كل `forEach` مع `async`؛ كل `fetch` بلا `signal`. فعّل `@typescript-eslint/no-floating-promises` (L4) ليصطادها آليًا.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 لماذا async (الكمون)؛ خيط واحد + حلقة أحداث (مكدس/طابور/خارج)؛ Promise states؛ `async/await`؛ ترتيب A-B-C-D؛ `try/catch` حول `await`؛ `Promise.all` vs تسلسلي؛ نسيان `await`؛ الحجب؛ المهلات.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 `allSettled`؛ تزامن محدود؛ "آمن بين await-ين"؛ unhandled rejection تُسقط العملية؛ concurrency ≠ parallelism.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ microtasks vs macrotasks بالتفصيل؛ `process.nextTick`؛ worker threads (L2-M6)؛ streams backpressure؛ AbortController المركّب.
 
 ## 18. الخلاصة

@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] العميل/الخادم، URL، `fetch` و`res.ok` — [L0-M0.6](../level-0-absolute-foundations/module-06-network-client-server.md)
 - [ ] TCP تيار + التأطير + keep-alive — [M2.9](module-2.9-tcp-udp.md)
 - [ ] TLS/ALPN/termination — [M2.11](module-2.11-tls.md)
@@ -317,9 +318,13 @@ server.listen(PORT, () => console.log(`http-semantics on :${PORT}`));
 ## 14. الصلة بعصر AI
 AI يولّد APIs تعيد 200 لكل شيء، `Access-Control-Allow-Origin: *` دائمًا، وبلا حدود حجم أو مهلات أو ترويسات كاش. عند توليد أي endpoint اطلب صراحةً: *"رموز حالة دلالية، حد جسم ومهلات، `Cache-Control` صريح (الافتراضي `no-store`)، CORS بقائمة سماح."* وفي المراجعة افحص: `res.status(200)` في مسارات الخطأ، `"*"` في CORS، غياب `Content-Length` الصحيح، GET بأثر جانبي. وبالمقابل، أعطه `curl -v` كاملًا لتشخيص سريع — يقرأ الترويسات أفضل من معظم البشر.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 بنية الرسالة بالبايتات والتأطير (`Content-Length` بالبايتات، chunked)؛ جدول الطرق (آمن/idempotent/كاش) ولماذا idempotency مهمة الآن؛ عائلات الرموز والمهمة منها (401/403/404/409/422/429/5xx)؛ `Content-Type`/`Authorization`/`Cookie` وCSRF؛ الكاش: `Cache-Control` + ETag/304 + `Vary`؛ CORS للمتصفح لا للخادم؛ 1.1 vs 2 vs 3 ماذا يتغير وما لا.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 keep-alive وHOL؛ 301 vs 302/307/308؛ `no-cache` vs `no-store`؛ `If-Match`/412 للتحديث المتزامن؛ `Range`/206؛ ضغط gzip/br؛ مهلات الخادم وslowloris؛ WebSocket upgrade؛ `Retry-After`؛ قراءة DevTools Network.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ HTTP request smuggling بالتفصيل؛ HTTP/2 server push (ميت)؛ 103 Early Hints؛ `node:http2` مباشرة؛ content negotiation المتقدمة؛ HTTP signatures.
 
 ## 18. الخلاصة

@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] النوى المتعددة ولماذا توقفت الساعة — [M2.2](module-2.2-cpu-cache-ram.md)
 - [ ] المكدس والكومة — [M2.3](module-2.3-memory-stack-heap-gc.md)
 - [ ] المجدوِل وتبديل السياق — [M2.4](module-2.4-operating-systems.md)
@@ -282,9 +283,13 @@ app.post("/resize", async (req, res) => {
 ## 14. الصلة بعصر AI
 AI يقترح `worker_threads` لتسريع I/O (لا يفيد) ويعطيك SharedArrayBuffer بلا Atomics و`new Worker` داخل معالج الطلب. اسأله دائمًا: *"هل هذا CPU-bound أم I/O-bound؟ أي خيط يُحجب؟"* وارفض أي ذاكرة مشتركة بلا مزامنة صريحة. وفي المقابل، AI ممتاز في شرح **لماذا** سباق معيّن يحدث إن أعطيته تسلسل التعليمات.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 الخيط = مكدس خاص + كومة مشتركة؛ جدول عملية vs خيط؛ **لماذا `counter++` يسبّب سباقًا**؛ mutex/atomics/message passing كخيارات؛ طبقات Node الثلاث وأي عمل يذهب لأيها؛ I/O-bound → لا خيوط.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 deadlock والوقاية؛ worker pool + طابور؛ `transferList` vs نسخ؛ `UV_THREADPOOL_SIZE` وحدوده؛ لماذا GIL/goroutines موجودة؛ `availableParallelism`.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ نماذج الذاكرة (happens-before، memory barriers)؛ lock-free structures؛ false sharing؛ thread affinity؛ تفاصيل `Atomics.wait/notify`.
 
 ## 18. الخلاصة

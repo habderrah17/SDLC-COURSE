@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] الجداول، PK/FK، القيود، العلاقات الثلاث — [M3.10](module-3.10-databases-from-zero.md)
 - [ ] JOIN/GROUP BY وfan-out، N+1 — [M3.11](module-3.11-sql-from-zero.md)
 - [ ] الأشجار في جدول (`parent_id`)، الترتيب الطوبولوجي للـ migrations — [M3.4](module-3.4-trees.md), [M3.6](module-3.6-graphs.md)
@@ -270,9 +271,13 @@ CREATE TABLE subscriptions (
 ## 14. الصلة بعصر AI
 AI يولّد ERDs معقولة بسرعة — استخدمه كمسودة ثم طبّق اختبار "كم صفًا أحدّث؟" على كل عمود، واسأل عن كل تكرار: لقطة مقصودة أم خطأ؟ في migrations، اطلب صراحةً *"expand/migrate/contract، lock_timeout، backfill بدفعات، لا RENAME/DROP في نفس نشر الكود"* — AI يعرف هذه المصطلحات لكنه لا يطبّقها تلقائيًا. وراجع كل `CASCADE` وكل `jsonb` بسؤال "لماذا".
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 الطريقة من المتطلبات إلى ERD؛ التطبيع كـ "حقيقة في مكان واحد" واختبار التحديث؛ اللقطات مقابل التكرار الكسول؛ `organization_id` في كل جدول؛ migrations: مرقّمة/مرة واحدة/معاملة/متوافقة مع السابق.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 status history، soft delete بفهرس جزئي، audit log، jsonb بانضباط؛ expand/migrate/contract بالتفصيل؛ backfill بدفعات؛ `lock_timeout`؛ advisory lock للـ runner.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ BCNF/4NF؛ temporal tables وفترات الصلاحية؛ partitioning؛ sharding بالمستأجر (L7)؛ أدوات online schema change.
 
 ## 18. الخلاصة

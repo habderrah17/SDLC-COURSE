@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] جدول الكمون: RAM ≪ شبكة ≪ قرص، وcache الـ CPU كفكرة — [L2-M2.2](../level-2-computer-systems/module-2.2-cpu-cache-ram.md)
 - [ ] hash maps وO(1)، وLRU كفكرة — [L3-M3.1](../level-3-core-computer-science/module-3.1-arrays-hash-maps.md)
 - [ ] Ports & Adapters وfake > mock — [L4-M4.11](../level-4-software-engineering-foundations/module-4.11-testing.md)
@@ -286,9 +287,13 @@ node --import tsx --test src/cache.test.ts    # 5 pass
 ## 14. الصلة بعصر AI
 AI يقترح "أضف كاش Redis" كحل أداء عام قبل القياس، ويكتب مفاتيح بسيطة (`user:${id}`) بلا مستأجر/إصدار، وبلا مهل ولا تدهور. اطلب منه ما تطلبه من زميل: **جدول §13 أولًا** ثم الكود، واختبارات التدافع/SWR/التدهور كما في §7. وهو ممتاز في: تدقيق مفاتيح الكاش ("ما الذي يغيّر هذه النتيجة وليس في المفتاح؟")، واقتراح رؤوس HTTP الصحيحة لكل مسار، وقراءة `INFO stats` وتفسير hit ratio منخفض.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 متى يستحق الكاش (قِس)؛ cache-aside؛ المفتاح يحوي كل ما يغيّر النتيجة + المستأجر + الإصدار؛ TTL + jitter كخط أخير؛ `DEL` بعد COMMIT؛ التدافع وsingle-flight + SWR؛ negative caching؛ Redis بمهلة قصيرة وخطأ = miss وليس في `/ready`؛ `Cache-Control` private/no-store افتراضيًا للمصادق وETag/304؛ لا قرار كتابة من كاش؛ hit ratio.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 أوامر Redis الأساسية والـ pipelines وpub/sub للإبطال المحلي؛ `maxmemory-policy`؛ المفاتيح الساخنة والقيم الكبيرة؛ early expiration الاحتمالي؛ write-through/behind؛ CDN وVary؛ قاطع الدائرة.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ Redis Cluster/Sentinel، التوافق بين الكاش والمعاملات الموزّعة، كاش DB الداخلي (`shared_buffers`) بالتفصيل، HTTP caching المتقدّم (surrogate keys)، CRDT/replicated caches.
 
 ## 18. الخلاصة

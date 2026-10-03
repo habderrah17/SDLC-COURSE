@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] CS مقابل SE؛ SDLC ولماذا الكود ليس أوّله — [L4-M4.0](../level-4-software-engineering-foundations/module-4.0-cs-vs-se.md), [L4-M4.1](../level-4-software-engineering-foundations/module-4.1-sdlc.md)
 - [ ] المتطلبات ومعايير القبول — [L4-M4.2](../level-4-software-engineering-foundations/module-4.2-requirements.md), [L4-M4.3](../level-4-software-engineering-foundations/module-4.3-user-stories-acceptance-criteria.md)
 - [ ] الاختبار: ما الذي يُثبته وما لا يُثبته — [L4-M4.11](../level-4-software-engineering-foundations/module-4.11-testing.md)

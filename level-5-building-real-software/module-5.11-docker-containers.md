@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] العملية، PID، الإشارات، نظام الملفات، المستخدمون والصلاحيات — [L2-M2.4](../level-2-computer-systems/module-2.4-operating-systems.md), [L2-M2.5](../level-2-computer-systems/module-2.5-process-deep-dive.md)
 - [ ] 127.0.0.1 مقابل 0.0.0.0، المنافذ، DNS — [L0-M0.5](../level-0-absolute-foundations/module-05-processes-ports-localhost.md), [L2-M2.10](../level-2-computer-systems/module-2.10-dns.md)
 - [ ] الإيقاف الرشيق، `/health`/`/ready`، التهيئة من البيئة — [M5.7](module-5.7-production-anatomy.md)
@@ -366,9 +367,13 @@ node --import tsx --test src/dockerfile-lint.test.ts    # 3 pass — وأضفه 
 ## 14. الصلة بعصر AI
 AI يولّد Dockerfiles تعمل لكنها single-stage وroot وبصيغة shell وبلا `.dockerignore`؛ وcompose بلا healthcheck ولا حدود. `lintDockerfile` من §7 (وHadolint) هو ردّك الآلي: ولّد ثم افحص. اطلب منه صراحة قائمة §4 ("multi-stage، digest، USER node، exec-form + tini، HEALTHCHECK، بلا أسرار"). وهو ممتاز في: تفسير أخطاء الشبكة بين الحاويات (ECONNREFUSED على localhost)، وتصغير الصور (`image history` → ما الطبقة الضخمة؟)، وترجمة Compose إلى manifests للمنصّة (M5.13) مع مراجعتك.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 الحاوية = عملية + namespaces + cgroups + طبقات؛ صورة/حاوية/registry؛ وسوم مقابل digests؛ Dockerfile: أساس مثبّت، ترتيب الطبقات، `npm ci`, `.dockerignore`, multi-stage, `USER node`, CMD exec + init, HEALTHCHECK, بلا أسرار؛ `0.0.0.0` وDNS الخدمات وlocalhost؛ volumes للدائم؛ Compose مع healthcheck وdepends_on الشرطي وstop_grace_period وحدود الذاكرة؛ السجلات إلى stdout؛ `--max-old-space-size` مع الحدّ.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 `read_only`/`cap_drop`/`no-new-privileges`؛ فحص الصور؛ BuildKit secrets وcache mounts؛ override files؛ `host.docker.internal`؛ OOM 137 والتشخيص؛ صور distroless.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ تفاصيل namespaces/cgroups v2 وOCI runtime، rootless Docker، صور متعدّدة المعماريات (buildx)، شبكات Docker المتقدّمة، Swarm.
 
 ## 18. الخلاصة

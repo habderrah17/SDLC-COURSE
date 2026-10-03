@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] الفشل الجزئي، تقسيم الشبكة، "لا ساعة مشتركة"، الإصدار المنطقي — [L7-M7.1](module-7.1-distributed-systems-1-2-10.md)
 - [ ] المعاملات وعزلها وACID؛ WAL/الالتزام — [L3-M3.14](../level-3-core-computer-science/module-3.14-transactions-acid.md)
 - [ ] الكاش والإبطال وstale reads — [L5-M5.8](../level-5-building-real-software/module-5.8-caching.md)
@@ -312,9 +313,13 @@ Project 6 ينتقل إلى قائد + تابعين في منطقتين. اكت�
 ## 14. الصلة بعصر AI
 الوكلاء يُنتجون كودًا يفترض قاعدة بيانات واحدة متّسقة فورًا: `INSERT` ثم `SELECT` من "اتصال القراءة" في السطر التالي. حين تصف له البنية ("قائد + توابع، lag حتى 2s")، أضف مصفوفة §13 إلى سياقه واطلب أن يوسم كل استعلام بسياسة القراءة صراحةً — واجعل اختبارات §7 (محاكي القائد/التابع بتأخّر قابل للحقن) جزءًا من CI كي تُكتشف قراءة الـ "قرار" من تابع آليًا. والسؤال الذي تسأله لأي اقتراح "استخدم Cassandra/DynamoDB/Spanner": **ما نموذج الاتساق لكل عملية، وما يحدث عند التقسيم، وبأي زمن؟** — إن لم يستطع الوكيل (أو الزميل) الإجابة فالاقتراح ليس قرارًا بعد.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 لماذا نُكرّر وما الثمن؛ leader/follower متزامن/غير متزامن وما يُفقد؛ replication lag وأعراضه الأربعة وعلاجاتها؛ قراءات القرار من القائد فقط؛ W+R>N ومعناه وحدوده؛ CAP الصحيحة (لكل عملية، أثناء التقسيم فقط) وPACELC؛ split brain وfencing كمفهوم.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 رمز LSN عمليًا في PostgreSQL (`pg_current_wal_lsn`/`pg_last_wal_replay_lsn`)؛ semi-sync؛ multi-leader وتعارضاته؛ CRDTs كأنواع تُدمَج؛ linearizability مقابل serializability.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ Raft/Paxos داخليًا، sloppy quorums وhinted handoff، anti-entropy وMerkle trees، Spanner/TrueTime.
 
 ## 18. الخلاصة

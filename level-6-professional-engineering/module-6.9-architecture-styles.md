@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] التجريد، التغليف، الوحدات؛ الاقتران والتماسك — [L4-M4.6](../level-4-software-engineering-foundations/module-4.6-abstraction-encapsulation-modularity.md), [L4-M4.7](../level-4-software-engineering-foundations/module-4.7-coupling-cohesion.md)
 - [ ] Ports & Adapters / use cases / أخطاء النطاق كما في Projects 4–6 — [L4-M4.5](../level-4-software-engineering-foundations/module-4.5-software-design.md), [L4-M4.9](../level-4-software-engineering-foundations/module-4.9-design-patterns.md)
 - [ ] المعاملات وحدودها؛ الـ outbox — [L3-M3.14](../level-3-core-computer-science/module-3.14-transactions-acid.md), [L5-M5.9](../level-5-building-real-software/module-5.9-queues-jobs-workers.md)
@@ -441,9 +442,13 @@ Shopify وStack Overflow وBasecamp — أنظمة بحجم هائل تعمل ك
 ## 14. الصلة بعصر AI
 الوكلاء يعملون أفضل بكثير داخل **حدود صريحة وصغيرة**: وحدة بـ `public.ts` واضح ومخطّط DB خاص وقواعد مفروضة آليًا هي "مهمّة قابلة للتفويض" (L8-M8.6)؛ أما monolith طبقي بلا حدود فيُنتج الوكيل فيه تغييرات تلمس 40 ملفًا ويكسر ما لا يعرفه. فاحص الحدود §7 يصبح **حاجز أمان للوكيل** أيضًا: كل انتهاك يُرفض آليًا قبل أن يراه مراجع. وفي الاتجاه الآخر، لا تدع الوكيل يُقرّر النمط: سيقترح microservices لأنها الأكثر تمثيلًا في بيانات تدريبه، لا لأنها تناسب فريقك من خمسة — القرار المعماري ACTRR وADR بشريان (M6.3). وأخيرًا: أنظمة AI داخل منتجك (نداءات LLM، RAG) وحدة كغيرها بـ `public.ts` وحدود — لا تدعها تتسرّب إلى كل مكان.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 الفرق بين بنية الكود وبنية النشر؛ الأنماط الأربعة بما تُحسّنه وتُكلّفه؛ modular monolith بقواعده الخمس (public.ts فقط، لا جداول مشتركة، استدعاء/حدث، لا معاملة عابرة، نشر واحد)؛ فرض الحدود آليًا؛ جدول كلفة microservices ومتى تستحقّ؛ المعمارية التطوّرية وfitness functions وstrangler.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 CQRS-lite ونسخ القراءة بين الوحدات؛ outbox داخل الـ monolith؛ ratchet لتصفية الانتهاكات؛ contract tests عند الاستخراج؛ أدوات الحدود (dependency-cruiser, eslint-plugin-boundaries, Packwerk).
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ Event sourcing، service mesh، مقارنات orchestration/choreography بعمق، DDD الاستراتيجي الكامل (bounded contexts, context maps) — تعود في L7-M7.9.
 
 ## 18. الخلاصة

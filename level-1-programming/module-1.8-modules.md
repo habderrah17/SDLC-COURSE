@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] إعداد المشروع، ESM، `.js` في الاستيراد — [M1.0](module-1.0-setup.md)
 - [ ] الدوال والنطاق — [M1.4](module-1.4-functions-scope-closures.md)
 - [ ] نواة/قشرة — [M1.7](module-1.7-state-side-effects-immutability.md)
@@ -251,7 +252,7 @@ console.log(`${next.todos.length} todos`);
 export let count = 0;
 export function increment() { count++; }
 
-// src/main.ts
+// src/main.ts   ❌ (تمرين: هل يُترجَم؟)
 import { count, increment } from "./counter.js";
 increment(); increment();
 console.log(count);          // يطبع 2؟ أم 0؟
@@ -271,9 +272,13 @@ count = 5;                   // خطأ ترجمة؟
 ## 14. الصلة بعصر AI
 AI يضع كل شيء في ملف واحد أو ينشئ `utils.ts` عملاقًا، وينسى `.js`، ويخلط core بـ I/O. **أعطه الهيكل** في البرومبت (`core/` نقي، `io/` للآثار، named exports، `.js`). ثم **تحقق:** `grep -r "node:fs" src/core` يجب أن يعيد لا شيء.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 `export`/`import` named؛ `import type`؛ `.js`؛ النطاق الخاص للوحدة؛ تُقيَّم مرة واحدة؛ اتجاه الاعتماد core ← io ← main؛ قراءة أخطاء ESM.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 live bindings؛ الاعتماد الدائري ولماذا؛ `node:` prefix؛ `import.meta.dirname`؛ هيكل المجلدات.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ dynamic `import()`؛ barrel files وأضرارها على الأداء؛ package exports map؛ monorepos.
 
 ## 18. الخلاصة

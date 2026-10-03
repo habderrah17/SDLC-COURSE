@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] الحلقة والحالة وآلات الحالة — [L1-M1.3](../level-1-programming/module-1.3-loops.md), [L1-M1.7](../level-1-programming/module-1.7-state-side-effects-immutability.md)
 - [ ] العمليات، الأذونات، وما يعنيه "تنفيذ أمر" على جهازك — [L2-M2.4](../level-2-computer-systems/module-2.4-operating-systems.md), [L2-M2.5](../level-2-computer-systems/module-2.5-process-deep-dive.md)
 - [ ] المهلات، إعادة المحاولة، والعمليات التي لا تنتهي — [L7-M7.2](../level-7-advanced-systems/module-7.2-failure-timeouts-retries-idempotency.md)

@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] مهام OS الست وsyscall كفكرة، `node app.js` خطوة بخطوة — [L0-M0.3](../level-0-absolute-foundations/module-03-running-a-program.md)
 - [ ] الملفات والمسارات والأذونات الأولية — [L0-M0.4](../level-0-absolute-foundations/module-04-files-terminal-shell.md)
 - [ ] تخطيط ذاكرة العملية — [M2.3](module-2.3-memory-stack-heap-gc.md)
@@ -245,9 +246,13 @@ Error: EMFILE: too many open files, open '/app/templates/page.html'
 ## 14. الصلة بعصر AI
 AI يقترح "ارفع `ulimit`" و"زد الذاكرة" و"أضف خيوطًا" كحلول أولى لأنها الأكثر شيوعًا في النصوص. اطلب **التشخيص قبل الوصفة**: *"ما الـ syscalls/fds/الذاكرة الافتراضية مقابل المقيمة هنا؟ ما الذي يُثبت أن الاختناق هو X؟"* وأعطه مخرجات `top`/`lsof`/`strace -c` الحقيقية بدل وصفك — يقرؤها جيدًا إن أُعطيها.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 kernel/user mode وsyscall وتكلفته؛ الذاكرة الافتراضية = عزل + كسل + swap؛ OOM V8 vs OOM killer؛ حالات الخيط والمجدوِل وتبديل السياق؛ fd (0/1/2، سوكتات = fds، `ulimit -n`، أغلق ما تفتح)؛ الاسم ≠ inode؛ المقاطعات كأساس async.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 قراءة `top` (load، %wa، %sy)؛ `strace -c`، `lsof`، `/proc`؛ copy-on-write؛ `rss` vs `heapTotal` vs VmSize؛ root وتجاوز الأذونات؛ Docker = namespaces + cgroups.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ تفاصيل جداول الصفحات متعددة المستويات وTLB؛ خوارزميات الجدولة (CFS)؛ أنظمة ملفات محددة (ext4/xfs/journaling)؛ eBPF؛ real-time OS.
 
 ## 18. الخلاصة

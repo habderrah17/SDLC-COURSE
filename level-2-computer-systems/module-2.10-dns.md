@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] IP، المنافذ، UDP vs TCP — [M2.8](module-2.8-networking-from-zero.md)، [M2.9](module-2.9-tcp-udp.md)
 - [ ] thread pool لـ libuv (`dns.lookup`) — [M2.6](module-2.6-threads.md)
 - [ ] URL وأجزاؤه — [L0-M0.6](../level-0-absolute-foundations/module-06-network-client-server.md)
@@ -252,9 +253,13 @@ dig يعطي الجديد وNode يعطي القديم على **نفس الجه�
 ## 14. الصلة بعصر AI
 AI يقول "انتظر 24–48 ساعة للانتشار" ويقترح `/etc/hosts` كحل سريع وينسى أن يذكره لاحقًا. عند أي هجرة اطلب منه **خطة TTL بتواريخ**، وعند أعطال "تعمل على بعض الخوادم" اطلب قائمة **الفروق المحلية الممكنة** (hosts، كاش OS، resolv.conf، إصدار Node وسلوك `localhost`). أعطه مخرجات `dig` و`resolvectl` الحقيقية.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 الهرم والـ resolver العودي والكاش بـ TTL؛ "الانتشار" = انتهاء كاشات ووصفة الهجرة؛ A/AAAA/CNAME/NS/TXT؛ `ENOTFOUND` vs `EAI_AGAIN`؛ `lookup` (getaddrinfo، hosts، pool) vs `resolve`؛ `localhost` قد يكون `::1`؛ عطل DNS في Node يحجب pool.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 MX/SRV/SOA/PTR؛ negative caching؛ DNS على TCP؛ Docker/K8s DNS وndots؛ كاش بـ TTL في التطبيق؛ GeoDNS/anycast؛ failover بـ DNS وحدوده.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ DNSSEC بالتفصيل؛ DoH/DoT؛ نقل المناطق (AXFR)؛ EDNS؛ تشغيل خادم DNS موثوق بنفسك.
 
 ## 18. الخلاصة

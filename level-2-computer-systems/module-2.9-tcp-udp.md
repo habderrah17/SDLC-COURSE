@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] الحزم المستقلة، best effort، الرباعية، المنافذ — [M2.8](module-2.8-networking-from-zero.md)
 - [ ] السوكت = fd، epoll، non-blocking — [M2.4](module-2.4-operating-systems.md)، [M2.7](module-2.7-concurrency-event-loop.md)
 - [ ] Buffer والبايتات — [M2.1](module-2.1-bits-bytes-encoding.md)
@@ -275,9 +276,13 @@ function broadcast(msg) { for (const c of clients) c.write(JSON.stringify(msg));
 ## 14. الصلة بعصر AI
 AI يكتب خوادم TCP بـ `on("data", chunk => JSON.parse(chunk))` باستمرار — لأن معظم الأمثلة على الإنترنت تفعل ذلك. عند أي كود شبكة منخفض المستوى اطلب صراحةً: *"تأطير يتعامل مع التقسيم والدمج، حد حجم، معالج error، مهلة خمول"*. وعند تفسير أخطاء الإنتاج، أعطه حالات `ss` وعدّادات `netstat -s` (إعادة إرسال، RST) — يربطها بالأسباب جيدًا.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 المصافحة = 1 RTT وتفسير RST/timeout؛ seq/ACK/retransmit كفكرة؛ **TCP تيار → التأطير الثلاثي**؛ flow control = backpressure؛ slow start → أعد استخدام الاتصالات؛ FIN vs RST/`ECONNRESET`؛ الاتصال الميت لا يُكتشف بالقراءة؛ UDP ومتى؛ QUIC = TCP+TLS فوق UDP.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 backlog والخادم المحجوب؛ TIME_WAIT واستنفاد المنافذ؛ `setKeepAlive/setTimeout`؛ head-of-line blocking؛ تيارات QUIC المستقلة؛ قراءة `tcpdump` للأعلام؛ CLOSE_WAIT كعلامة تسرّب.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ خوارزميات الازدحام (CUBIC/BBR) بالتفصيل؛ Nagle/`TCP_NODELAY`؛ SACK؛ TCP Fast Open؛ ضبط معاملات النواة؛ تفاصيل QUIC الداخلية.
 
 ## 18. الخلاصة

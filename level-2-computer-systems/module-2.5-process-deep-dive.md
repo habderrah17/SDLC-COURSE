@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] البرنامج vs العملية، PID، exit codes — [L0-M0.3](../level-0-absolute-foundations/module-03-running-a-program.md)
 - [ ] متغيرات البيئة — [L0-M0.4](../level-0-absolute-foundations/module-04-files-terminal-shell.md)
 - [ ] syscalls، fds، المجدوِل — [M2.4](module-2.4-operating-systems.md)
@@ -280,9 +281,13 @@ queue.on("message", async (msg) => {
 ## 14. الصلة بعصر AI
 AI يكتب خوادم بلا معالجة إشارات، ويضيف `process.on("uncaughtException", log)` "للمتانة"، ويستخدم `exec` بنصوص مركّبة. عند طلب أي خدمة طويلة التشغيل أضف للبرومبت: *"إغلاق رشيق على SIGTERM/SIGINT بمهلة قصوى، لا ابتلاع uncaught، `execFile` بمصفوفة وسائط"*. وفي المراجعة ابحث عن: `process.on(` بلا `exit` في المسار، `exec(` + علامة `+` أو `${`.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 fork/exec وشجرة العمليات وPID 1؛ جدول exit codes (137/143)؛ SIGINT/SIGTERM/SIGKILL ومن يرسلها وأيها يُلتقط؛ **وصفة الإغلاق الرشيق الست**؛ لماذا لا تبتلع uncaught؛ `spawn/execFile` بمصفوفة وخطر `exec`.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 zombie/reaping وDocker `--init`؛ SIGHUP لإعادة التحميل؛ `/health` vs `/ready`؛ `unref()`؛ استهلاك مخرجات الأبناء وقتلهم؛ العلاقة بين مهلة الإغلاق ومهلة المنظّم.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ core dumps وتحليلها؛ `setsid`/مجموعات العمليات/`nohup`؛ `cluster` بالتفصيل (M2.7)؛ systemd units وsocket activation؛ seccomp/capabilities.
 
 ## 18. الخلاصة

@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] تكاليف المصفوفة (`push/pop` O(1)، `shift/unshift` O(n))، فكرة التجزئة — [M3.1](module-3.1-arrays-hash-maps.md)
 - [ ] مكدس الاستدعاء — [L2-M2.3](../level-2-computer-systems/module-2.3-memory-stack-heap-gc.md)
 - [ ] حلقة الأحداث وطوابيرها — [L2-M2.7](../level-2-computer-systems/module-2.7-concurrency-event-loop.md)
@@ -241,9 +242,13 @@ function redoLast() { const e = redo.shift(); if (e) { doEdit(e); undo.push(e); 
 ## 14. الصلة بعصر AI
 AI يولّد طوابير بـ `shift()` ومصفوفات `seen` بـ `includes` وطوابير بلا حد باستمرار — لأنها الأكثر شيوعًا في بيانات تدريبه. أضف لمواصفاتك: *"طابور محدود بسياسة امتلاء صريحة ومقياس عمق"*، وفي المراجعة ابحث عن `.shift()` و`.includes(` في حلقات و`push` بلا حد.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 Set للعضوية/dedup/الفروق ومقارنته بالمرجع؛ المكدس وأين يعيش (call stack، undo، parsers)؛ الطابور وأين يعيش (event loop، مهام، BFS، buffers)؛ **`shift()` O(n)** والبدائل؛ الطابور المحدود والسياسات الثلاث.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 ring buffer بالتفصيل؛ deque والنافذة المنزلقة؛ عمليات Set المدمجة؛ WeakSet؛ تفريغ redo؛ مقياس العمق.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ monotonic deque؛ work-stealing؛ lock-free queues؛ طوابير الأولوية (M3.5 التالي بعد واحدة).
 
 ## 18. الخلاصة

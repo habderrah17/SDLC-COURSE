@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] الأنواع البدائية — [M1.1](module-1.1-values-variables-types.md)
 - [ ] المصفوفات وفكرة mutating — [M1.5](module-1.5-arrays.md)
 - [ ] الذاكرة كصناديق بعناوين — [L0-M0.3](../level-0-absolute-foundations/module-03-running-a-program.md)
@@ -236,7 +237,7 @@ console.log(total(loaded));                 // 6750
 
 لاحظ: `empty` و`c1` و`c2` ثلاث **لقطات** مستقلة. يمكنك "التراجع" (undo) بمجرد الاحتفاظ بالقديمة. هذا جوهر M1.7.
 
-## 8. مثام من العالم الحقيقي
+## 8. مثال من العالم الحقيقي
 كل استجابة API (`{ "id": 1, "name": ... }`)، كل ملف إعدادات `package.json`، كل سجل في قاعدة بيانات documents — كائنات/JSON. وكل bug من نوع "غيّرت هذا هنا فتغيّر هناك دون سبب" = مشاركة مرجع.
 
 ## 9. مثال من الإنتاج
@@ -299,9 +300,13 @@ function settingsFor(userPrefs: { theme?: string; sms?: boolean }) {
 ## 14. الصلة بعصر AI
 AI كثيرًا ما يعدّل كائنات ممرّرة في مكانها وينسخ سطحيًا ويثق بـ `JSON.parse` كأنه آمن. **تحقق:** ابحث عن `param.x = ...` داخل دوال؛ عن spread لكائن فيه تداخل؛ عن `as SomeType` بعد `parse`. اسأل: *"هل تُعدَّل أي بيانات مشتركة هنا؟ أرني كل نقطة mutation."*
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 إنشاء/وصول/تعديل؛ **القيمة vs المرجع**؛ `===` يقارن المراجع؛ shallow vs deep؛ spread/destructuring/`?.`؛ JSON stringify/parse وحدوده؛ `type` لوصف الشكل.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 `structuredClone`؛ `Object.freeze`؛ `Record<string, T>`؛ `Object.entries`؛ لماذا `JSON.parse` خطر.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ prototypes/`__proto__`؛ getters/setters؛ `Map`/`Set`/`WeakMap` (L3-M1/2)؛ classes (L4).
 
 ## 18. الخلاصة

@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] سباق read-modify-write و"السعر المجاني" — [L0-M0.7](../level-0-absolute-foundations/module-07-database-api-web-app.md); التحديث الذري `stock = stock - 1 WHERE stock >= 1` — [M3.11](module-3.11-sql-from-zero.md)
 - [ ] الانهيار أثناء الكتابة، WAL كاسم — [M3.10](module-3.10-databases-from-zero.md); الإغلاق المتدرّج والـ pool — [L2-M2.5](../level-2-computer-systems/module-2.5-process-deep-dive.md)
 - [ ] الأقفال وdeadlock بين الخيوط — [L2-M2.6](../level-2-computer-systems/module-2.6-threads.md)
@@ -302,9 +303,13 @@ async function transfer(from: number, to: number, cents: number) {
 ## 14. الصلة بعصر AI
 AI يكتب `pool.query("BEGIN")` وفحوصات في Node ويضع `fetch` داخل المعاملات بانتظام — لأن الكود يبدو صحيحًا ويعمل في الاختبار اليدوي (لا تزامن). اطلب: *"client واحد، withTransaction، تحديثات ذرية بشرط، FOR UPDATE بترتيب id، لا I/O خارجي داخل المعاملة، retry على 40001/40P01، idempotency key"* — واختبر **بـ `Promise.all` × 50** على نفس المورد قبل الدمج. اختبار التزامن هو ما يفضح الكود المقنع.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 المعاملة من مثال التحويل؛ ACID بما يشتريه كل حرف؛ lost update وحلوله الثلاثة؛ client واحد + `withTransaction` + release؛ معاملات قصيرة بلا I/O خارجي؛ ترتيب الأقفال؛ القيود كحكم أخير؛ idempotency key في تدفق الطلب.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 مستويات العزل بالشذوذات (non-repeatable، phantom، write skew)؛ SERIALIZABLE + retry 40001؛ `SKIP LOCKED`؛ `SET LOCAL` timeouts؛ WAL/fsync؛ MVCC والمعاملات الطويلة؛ outbox كفكرة.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ SSI داخليًا؛ two-phase commit والمعاملات الموزّعة (L7: sagas بدلها)؛ `synchronous_commit` وreplication lag؛ advisory locks المتقدمة؛ Jepsen.
 
 ## 18. الخلاصة

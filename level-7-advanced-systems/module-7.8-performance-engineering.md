@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] جدول الزمن (RAM/SSD/شبكة)، CPU-bound مقابل I/O-bound — [L2-M2.2](../level-2-computer-systems/module-2.2-cpu-cache-ram.md), [L0-M0.3](../level-0-absolute-foundations/module-03-running-a-program.md)
 - [ ] event loop ولماذا الحلقة المحظورة تُوقف كل الطلبات — [L2-M2.7](../level-2-computer-systems/module-2.7-concurrency-event-loop.md), [L1-M1.11](../level-1-programming/module-1.11-async-event-loop.md)
 - [ ] Big-O والفهارس وخطط الاستعلام — [L3-M3.8](../level-3-core-computer-science/module-3.8-big-o.md), [L3-M3.13](../level-3-core-computer-science/module-3.13-indexes.md)
@@ -289,9 +290,13 @@ test("percentiles: المتوسّط يُخفي الذيل؛ p99 يكشفه؛ ت�
 ## 14. الصلة بعصر AI
 الوكلاء ممتازون في **اقتراح** تحسينات وسيّئون في **معرفة أيّها يهمّ** — سيُحسّنون حلقة `for` بينما العنق 51 استعلامًا. منهجك هو ما يُوجّههم: أعطهم القياس (التتبّع، الـ profile، عدد الاستعلامات) واطلب تشخيصًا قبل أي اقتراح، ثم اطلب التحسين **مع اختبار قياس قبل/بعد** مثل §7 ("أثبت أن عدد الاستعلامات صار 2 وأن p50 انخفض"). والأنماط التي يُدخلها الوكلاء بكثرة: N+1 عبر ORM مريح، `Promise.all` بلا حدّ، `readFileSync`/`JSON.parse` لملفات كبيرة في مسار الطلب، وتعبيرات regex قابلة للانفجار — ضعها في قائمة المراجعة الآلية (M8.7). الأداء مجال يتفوّق فيه "قِس ثم قرّر" على أي قدر من الذكاء، بشريًا كان أم اصطناعيًا.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 latency/throughput/utilization ومنحنى 70%؛ percentiles لا متوسّط وتضخيم الذيل؛ حلقة قِس→اعثر→أصلح→أعد القياس؛ قراءة flame graph والتتبّع؛ N+1 كشفًا وعلاجًا (batch/JOIN/DataLoader)؛ حجب event loop وقياسه وعلاجه؛ النموذج المفتوح مقابل المغلق في اختبار الحمل.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 coordinated omission وHdrHistogram؛ worker threads مقابل عمليات مقابل طابور؛ GC وضغط الذاكرة في Node؛ توازٍ بحدّ (`p-limit`)؛ Core Web Vitals وRUM؛ `pg_stat_statements` كأداة يومية.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ نظرية الطوابير رسميًا (M/M/1, M/M/c)؛ تحسين V8 الداخلي (hidden classes, deopts)؛ eBPF وprofiling على مستوى النواة؛ SIMD/WASM للحساب الثقيل.
 
 ## 18. الخلاصة

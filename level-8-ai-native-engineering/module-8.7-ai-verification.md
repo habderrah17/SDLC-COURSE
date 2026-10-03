@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] الاختبار: الهرم، ما يُثبته وما لا يُثبته، التغطية مقابل الصحّة — [L4-M4.11](../level-4-software-engineering-foundations/module-4.11-testing.md)
 - [ ] مراجعة الكود كغريب — [L6-M6.2](../level-6-professional-engineering/module-6.2-code-review.md)
 - [ ] قائمة فحص الأمن (OWASP) — [L5-M5.4](../level-5-building-real-software/module-5.4-security.md)

@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] المصفوفات والكائنات في JS، `includes`/`find`/`indexOf` — [L1-M1.5](../level-1-programming/module-1.5-arrays.md)، [L1-M1.6](../level-1-programming/module-1.6-objects-references.md)
 - [ ] خط الكاش 64B، المحلية، AoS vs SoA — [L2-M2.2](../level-2-computer-systems/module-2.2-cpu-cache-ram.md)
 - [ ] الكومة والمراجع — [L2-M2.3](../level-2-computer-systems/module-2.3-memory-stack-heap-gc.md)
@@ -244,9 +245,13 @@ const merged = crm.map(c => ({ ...c, billing: billing.find(b => b.email === c.em
 ## 14. الصلة بعصر AI
 AI يكتب `find` داخل حلقات بلا تردد لأنه "واضح"، ويستخدم `Object` كخريطة بمفاتيح من المستخدم (prototype pollution). عند مراجعة كود مولَّد ابحث آليًا عن `for … find(`/`includes(` على مجموعات قد تكبر، واطلب: *"ما تعقيد هذا مع n = 100k؟"* — AI يجيب بدقة إن سُئل، ولا يفعل إن لم يُسأل.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 لماذا `arr[i]` O(1) وشكل تكاليف المصفوفة؛ فكرة التجزئة (hash → bucket) وO(1) متوسطًا؛ جدول القرار Map/Object/Array/Set؛ **بحث في حلقة → Map**؛ تطبيع المفاتيح؛ مقارنة المفاتيح بالمرجع.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 التصادمات وload factor وrehash؛ amortized O(1)؛ أنواع العناصر والثقوب في V8؛ TypedArray؛ prototype pollution؛ HashDoS.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ open addressing vs chaining بالتفصيل؛ دوال تجزئة تشفيرية vs غير تشفيرية؛ Robin Hood/Swiss tables؛ consistent hashing (L7).
 
 ## 18. الخلاصة

@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] نافذة السياق وما يحدث حين تمتلئ — [L8-M8.4](module-8.4-ai-agents.md)
 - [ ] الوحدات والاستيراد ورسم الاعتماديات — [L1-M1.8](../level-1-programming/module-1.8-modules.md), [L4-M4.7](../level-4-software-engineering-foundations/module-4.7-coupling-cohesion.md)
 - [ ] الرسوم البيانية وBFS (لرسم الاعتماديات) — [L3-M3.6](../level-3-core-computer-science/module-3.6-graphs.md)

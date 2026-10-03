@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] المنهج العلمي للتصحيح Observe→Evidence→Hypothesis→Experiment→Conclusion — [L0-M0.2](../level-0-absolute-foundations/module-02-programs-and-code.md)
 - [ ] breakpoint/F5/F10 من الإعداد — [M1.0](module-1.0-setup.md)
 - [ ] stack trace — [M1.4](module-1.4-functions-scope-closures.md)؛ الأخطاء — [M1.9](module-1.9-errors.md)؛ async — [M1.11](module-1.11-async-event-loop.md)
@@ -249,9 +250,13 @@ for (const s of students) { const a = average(s.grades); console.log(s.name, a =
 ## 14. الصلة بعصر AI
 AI ممتاز في **اقتراح فرضيات** من رسالة خطأ، وسيئ في **التحقق** منها — سيقترح 5 أسباب بثقة متساوية، وبعضها خاطئ. استخدمه لتوسيع قائمة الفرضيات، ثم **جرّب بنفسك بالمصحّح**. أعطه: الرسالة كاملة، أول سطر من ملفك في الـ trace، المدخل الخام، أصغر إعادة إنتاج — لا "لا يعمل". ولا تدعه "يصلح" ما لم تفهم سببه؛ غالبًا سيخفي العرض.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 متوقع/فعلي/إعادة إنتاج؛ دورة الفرضية-التجربة بتغيير واحد؛ breakpoint/Step/Call Stack/Watch؛ قاموس الأخطاء الأساسية؛ قراءة أول سطر من ملفك؛ التنصيف؛ أصغر إعادة إنتاج.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 breakpoints شرطية وlogpoints؛ `skipFiles`؛ Break on exceptions؛ async traces؛ "أين أيضًا؟"؛ تحويل الإعادة إلى اختبار.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ `--inspect` عن بُعد؛ heap snapshots/CPU profiles (L7-M8)؛ `git bisect` (M1.14)؛ تصحيح في الإنتاج بالسجلات والتتبع (L6-M6).
 
 ## 18. الخلاصة

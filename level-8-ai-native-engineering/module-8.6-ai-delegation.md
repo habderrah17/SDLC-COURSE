@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] المتطلبات: وظيفية/غير وظيفية، الغموض، "قابل للتحقّق" — [L4-M4.2](../level-4-software-engineering-foundations/module-4.2-requirements.md)
 - [ ] قصص المستخدم ومعايير القبول Given/When/Then — [L4-M4.3](../level-4-software-engineering-foundations/module-4.3-user-stories-acceptance-criteria.md)
 - [ ] المصادقة والتفويض وأمن كلمات المرور (لمثال "Build authentication") — [L5-M5.2](../level-5-building-real-software/module-5.2-authentication.md), [L5-M5.3](../level-5-building-real-software/module-5.3-authorization.md)

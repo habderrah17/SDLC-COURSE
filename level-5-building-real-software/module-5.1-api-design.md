@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] HTTP بعمق: methods وsafe/idempotent، status codes، headers، caching، content negotiation — [L2-M2.12](../level-2-computer-systems/module-2.12-http.md)
 - [ ] keyset pagination ولماذا offset ينهار — [L3-M3.9](../level-3-core-computer-science/module-3.9-algorithms-that-matter.md)
 - [ ] المتطلبات وNFRs بمقياس، معايير القبول GWT — [L4-M4.2](../level-4-software-engineering-foundations/module-4.2-requirements.md), [L4-M4.3](../level-4-software-engineering-foundations/module-4.3-user-stories-acceptance-criteria.md)
@@ -385,9 +386,13 @@ node --import tsx --test src/orders-api.test.ts     # 5 pass
 ## 14. الصلة بعصر AI
 العقد هو ما تُسلّمه لـ AI في L8: "نفّذ هذا `openapi.yaml`" مع اختبارات العقد الحاكمة = تفويض آمن؛ "اكتب لي API للطلبات" = تخمين. وAI يولّد endpoints متسقة بسرعة لكنه يُخفق نمطيًا في: idempotency ذرّي، نطاق المفاتيح، 404 مقابل 403، الحدود القصوى، والتغيير الكاسر الصامت — وهي بالضبط ما تراجعه أنت. كما أن APIs الموصوفة جيدًا (OpenAPI بأوصاف وأمثلة) هي ما تستهلكه الوكلاء (tools) في L8-M8.4 — تصميم API جيد صار تصميم واجهة للبشر وللنماذج معًا.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 API كعقد من حالات الاستخدام؛ تسمية الموارد والأفعال كموارد فرعية؛ methods وcodes بمعناها (401/403/404/409/422/429/5xx)؛ Problem Details بـ `type` مستقر وrequestId وبلا تسريب؛ cursor مُعتِم + limit مقيَّد + فرز حتمي؛ Idempotency-Key بنطاق وبصمة و"جارٍ" وذرّية؛ التغيير المتوافق/الكاسر وسياسة الإهمال؛ التحقق على الحدود؛ e2e للعقد.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 OpenAPI design-first وما يُولَّد منه؛ JSON Merge Patch؛ `include`/field selection؛ 202 للعمليات الطويلة (M5.9)؛ ETag/`If-Match` (M5.6)؛ rate limit headers؛ CORS كعقد للمتصفح (M5.4).
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ HATEOAS/hypermedia بتفاصيله، GraphQL/gRPC كبدائل (L7 حين تحتاجها)، إصدار بالتاريخ لكل عميل، JSON:API spec كاملًا، API gateways التجارية.
 
 ## 18. الخلاصة

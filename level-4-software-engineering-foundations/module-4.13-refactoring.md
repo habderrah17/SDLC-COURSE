@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] الكود النظيف: التسمية، guard clauses، الخيارات المسمّاة، التعقيد، `complexity.ts` — [M4.10](module-4.10-clean-code.md)
 - [ ] الاختبارات كشبكة أمان: unit/AAA/حتمية — [M4.11](module-4.11-testing.md)
 - [ ] التماسك/الاقتران، إخفاء القرار — [M4.6](module-4.6-abstraction-encapsulation-modularity.md), [M4.7](module-4.7-coupling-cohesion.md)
@@ -282,9 +283,13 @@ Project 4: خذ أكبر دالة في طبقة الـ handlers (غالبًا `P
 ## 14. الصلة بعصر AI
 AI ممتاز في **اقتراح** حركات الكتالوج وتنفيذ Extract/Rename على نطاق ملف — لكنه يميل إلى **الخطوة الكبيرة** ("أعدت كتابة الملف كاملًا بأسلوب أنظف") وهي بالضبط ما يحظره الانضباط: لا يمكن مراجعتها، وتُغيّر السلوك خلسة (التقريب، الترتيب، الحالات الحدّية). الممارسة الصحيحة في L8: اكتب اختبارات التوصيف **أنت** أولًا (أو راجع ما ولّده بعناية: هل تثبّت السلوك الحالي أم السلوك "المنطقي"؟)، ثم اطلب **خطوة واحدة** مسمّاة بحركة من الكتالوج، شغّل الاختبارات، commit، كرّر. "Refactor this file" بلا شبكة أمان = rewrite مقنّع بثقة مصطنعة.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 التعريف الدقيق وفصل refactor/feature/fix في commits؛ الدورة أخضر→خطوة→اختبار→commit؛ Rename/Extract Function/Extract Variable/Inline/Guard Clauses/Replace Magic Number/Introduce Parameter Object/Lookup Table/Replace Error Code with Result؛ اختبارات التوصيف قبل البدء؛ expand→migrate→contract للواجهات؛ قاعدة الكشّاف والتحضير قبل الميزة.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 الروائح كمؤشرات لحركات؛ Split Phase، Move Function، Replace Loop with Pipeline، Encapsulate Collection، Replace Conditional with Polymorphism؛ القرار الاقتصادي (فائدة الدين)؛ حركات الـ IDE الآلية وحدودها؛ المخاطر الرياضية (تقريب/ترتيب).
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ الكتالوج الكامل (Fowler ~70 حركة)، أدوات إعادة الهيكلة الآلية واسعة النطاق (codemods بـ jscodeshift/ts-morph — تظهر في M4.14 كمفهوم)، إعادة هيكلة قواعد البيانات تفصيليًا (L3-M3.12 غطّت الأساس).
 
 ## 18. الخلاصة

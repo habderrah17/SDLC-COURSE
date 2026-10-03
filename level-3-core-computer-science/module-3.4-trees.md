@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] التكرار (recursion) ومكدس الاستدعاء — [L1-M1.4](../level-1-programming/module-1.4-functions-scope-closures.md), [L2-M2.3](../level-2-computer-systems/module-2.3-memory-stack-heap-gc.md)
 - [ ] المكدس والطابور (DFS/BFS يحتاجانهما) — [M3.2](module-3.2-sets-stacks-queues.md)
 - [ ] العقد والمؤشرات — [M3.3](module-3.3-linked-lists.md)
@@ -242,9 +243,13 @@ async function dirSize(p: string): Promise<number> {
 ## 14. الصلة بعصر AI
 AI يكتب اجتيازات صحيحة بسهولة، لكنه نادرًا ما يضيف **حد العمق** أو يتعامل مع الدورات/الروابط الرمزية إلا إذا طلبت. أضف "مدخلات غير موثوقة: حد عمق/حجم + التقاط" لمواصفاتك. وعندما تطلب "فهرس" في SQL من AI، الآن تفهم ما سينشئه (B+Tree) وتستطيع الحكم إن كان مناسبًا (M3.13).
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 الشجرة كتعريف تكراري وأين تراها؛ pre/post/BFS ومتى كلٌّ؛ مكدس صريح وحد عمق للمدخلات؛ فكرة BST وO(h)؛ لماذا الإدراج المرتّب يدمّرها؛ فكرة B-Tree = صفحة عريضة (3–4 مستويات).
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 in-order وrange على BST؛ تمثيل الأشجار في DB الثلاثة؛ AST visitor؛ Merkle tree في Git؛ دورات/روابط رمزية.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ كتابة AVL/Red-Black بنفسك؛ B-Tree splits/merges؛ tries، segment trees، R-trees، LSM trees (ستذكر في M3.13 كمقابل).
 
 ## 18. الخلاصة

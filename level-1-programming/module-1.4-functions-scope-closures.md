@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] المتغيرات والأنواع — [M1.1](module-1.1-values-variables-types.md)
 - [ ] الشروط والحلقات — [M1.2](module-1.2-expressions-conditions.md), [M1.3](module-1.3-loops.md)
 - [ ] فكرة "المكدس" stack كمنطقة ذاكرة — [L0-M0.3](../level-0-absolute-foundations/module-03-running-a-program.md) (سنعمّقها)
@@ -269,9 +270,13 @@ for (var i = 0; i < 3; i++) {
 ## 14. الصلة بعصر AI
 AI يولّد دوالًا بسرعة — عادةً **طويلة وغير نقية**. **تحقق:** هل للدالة مسؤولية واحدة؟ هل تعتمد على متغيرات خارجية خفية؟ اطلب: *"قسّم هذه إلى دوال نقية + طبقة I/O رقيقة واكتب اختبارات للنقية."* واقرأ كل stack trace بنفسك قبل لصقه للـ AI — غالبًا السطر الأول يكفيك.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 تعريف/استدعاء؛ parameter vs argument؛ signature كعقد؛ scope (الداخل يرى الخارج)؛ قراءة stack trace؛ ما الإغلاق ولماذا `let` في الحلقات؛ ما الدالة النقية.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 الدوال كقيم (higher-order)؛ معاملات افتراضية/اختيارية؛ functional core / imperative shell؛ stack overflow.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ `this` وارتباطه؛ `arguments` object؛ currying؛ recursion (L3-M7).
 
 ## 18. الخلاصة

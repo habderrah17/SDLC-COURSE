@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] الحاسوب = CPU + RAM + Storage، وأن كل شيء "كهرباء" — [L0-M0.1](../level-0-absolute-foundations/module-01-what-is-a-computer.md)
 - [ ] `0.1 + 0.2 !== 0.3` والمال بالسنتات (رأيت **الأثر**؛ هنا **السبب**) — [L1-M1.1](../level-1-programming/module-1.1-values-variables-types.md)
 - [ ] `Buffer` ظهر عند `readFile` بلا `"utf8"`، وBOM — [L1-M1.10](../level-1-programming/module-1.10-io.md)
@@ -240,9 +241,13 @@ if (after === 0.01) console.log("ok"); else console.log("mismatch", after);   //
 ## 14. الصلة بعصر AI
 AI يستخدم `.length` و`.slice` و`parseFloat` و`number` للمعرّفات بلا تردد. **تحقق** في أي كود يلمس نصوصًا من مستخدمين أو أرقامًا من أنظمة خارجية: الطبقة الصحيحة للطول؟ المعرّفات نصوص؟ المال صحيح؟ الترميز صريح على كل حد؟ وعندما يصفه الـ AI بـ "تحويل بسيط إلى UTF-8" اسأل: من أي ترميز؟
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 بت/بايت/ثنائي/hex؛ `number` = double، 2⁵³، `BigInt` للمعرّفات الكبيرة؛ لماذا `0.1+0.2`؛ الطبقات الثلاث للنص و`length` الثلاثي؛ UTF-8 صريح على كل حد؛ `Buffer.from/toString`.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 two's complement والفيض؛ البتّية 32 بت؛ `NaN`/`Infinity`/`-0`؛ BOM وmojibake وإصلاحه؛ magic bytes؛ `Intl.Segmenter`؛ تطبيع NFC.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ تفاصيل IEEE 754 (subnormals، rounding modes)؛ UTF-16 surrogates بالتفصيل؛ endianness (يعود في M2.8/2.9)؛ ترميزات قديمة.
 
 ## 18. الخلاصة

@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] B+Tree: عقدة = صفحة، تفرّع كبير، 3–4 مستويات، أوراق مربوطة — [M3.4](module-3.4-trees.md)
 - [ ] Big-O والقياس بأحجام ×10؛ hash/merge/nested loop — [M3.8](module-3.8-big-o.md), [M3.11](module-3.11-sql-from-zero.md)
 - [ ] جدول الكمون: RAM ns، SSD μs، وعدد الرحلات يحكم — [L2-M2.2](../level-2-computer-systems/module-2.2-cpu-cache-ram.md)
@@ -227,9 +228,13 @@ SELECT * FROM users WHERE lower(email) = lower($1) AND organization_id = $2 AND 
 ## 14. الصلة بعصر AI
 AI يقترح فهارس بسخاء (وغالبًا `(status)` و`(created_at)` منفردين) — اطلب منه **خطة EXPLAIN قبل وبعد** واطلب "فهرس للاستعلام كاملًا: فلتر + ترتيب + أعمدة". والصق له مخرجات `EXPLAIN (ANALYZE, BUFFERS)` الحقيقية ليفسّرها — هذا من أفضل استخداماته — ثم تحقق أنت من `Buffers` والنوع. ولا تدع AI ينفّذ `CREATE INDEX` على الإنتاج بلا `CONCURRENTLY`.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 الفهرس = B+Tree منفصل، O(log n)+k؛ FK بلا فهرس تلقائي؛ قراءة `EXPLAIN (ANALYZE, BUFFERS)` (نوع المسح، est vs actual، Buffers، Sort، Join)؛ قاعدة المركّب (مساواة ثم نطاق/ترتيب، leftmost)؛ أسباب "لم يُستخدم" الثمانية؛ تكلفة الكتابة و`CONCURRENTLY`.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 جزئي/INCLUDE/وظيفي؛ Bitmap scan؛ visibility map وVACUUM؛ `work_mem`؛ `pg_stat_user_indexes`/`pg_stat_statements`؛ فحص CI للخطط؛ GIN/trigram/BRIN كأسماء.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ بنية صفحات B-Tree داخليًا، HOT updates، تضخّم الفهارس وREINDEX، clustered indexes (InnoDB)، LSM trees مقابل B-Tree (كتابات ثقيلة — L7).
 
 ## 18. الخلاصة

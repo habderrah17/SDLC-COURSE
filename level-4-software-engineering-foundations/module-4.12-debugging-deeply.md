@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] المنهج العلمي للتصحيح: Observe → Evidence → Hypothesis → Experiment → Conclusion — [L1-M1.12](../level-1-programming/module-1.12-debugging.md)
 - [ ] الأخطاء والـ stack trace وcause — [L1-M1.9](../level-1-programming/module-1.9-errors.md)
 - [ ] حلقة الأحداث، الـ event loop lag، الذاكرة/GC/تسريبات — [L2-M2.7](../level-2-computer-systems/module-2.7-concurrency-event-loop.md), [L2-M2.3](../level-2-computer-systems/module-2.3-memory-stack-heap-gc.md)
@@ -234,9 +235,13 @@ SELECT calls, round(mean_exec_time) AS mean_ms, round(total_exec_time) AS total_
 ## 14. الصلة بعصر AI
 AI مساعد قوي في **تفسير** الأدلة: الصق stack trace أو خطة `EXPLAIN` أو نتيجة profile واطلب فرضيات مرتّبة — ممتاز. لكنه **لا يملك الدليل**: لا يرى سجلاتك ولا DB ولا الحمل؛ فإن أعطيته العرض فقط ("API بطيء") أعطاك قائمة عامة. المنهج يبقى لك: إعادة الإنتاج والقياس والتجربة بمتغير واحد. وحذارِ من "إصلاحات" مولَّدة تعالج العرض (`try/catch`، retry، `?.` في كل مكان) — اسأل دائمًا: ما السبب الجذري الذي يفسّر **كل** الأدلة؟ (L8-M8.8 failure modes.)
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 المنهج + إعادة الإنتاج أولًا + متغير واحد + توثيق؛ قراءة stack غير متزامن و`cause`؛ سجل منظّم بـ requestId وتنقيح؛ breakpoint شرطي/logpoint؛ CPU profile لقراءة flame/bottom-up؛ heap snapshot ×2؛ event loop delay؛ `curl -w` timings؛ `pg_stat_activity`/`pg_blocking_pids`/`EXPLAIN ANALYZE`؛ `git bisect run`؛ اختبار انحدار بعد كل إصلاح.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 `AsyncLocalStorage` للسياق؛ `pg_stat_statements`/`auto_explain`؛ `--heap-prof`، `--heapsnapshot-signal`؛ تنصيف البيانات/الإعدادات/التبعيات؛ لماذا تُفقد الأطر؛ قابلية التصحيح كمتطلب.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ `tcpdump`/Wireshark تفصيليًا، `perf`/eBPF على مستوى النظام، تصحيح الـ core dumps، أدوات APM التجارية (تأتي كمفهوم في L6-M6.6)، تصحيح WebAssembly/native addons.
 
 ## 18. الخلاصة

@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] async/await، Promise، حلقة الأحداث كصورة مبسّطة، microtasks — [L1-M1.11](../level-1-programming/module-1.11-async-event-loop.md)
 - [ ] المقاطعات، syscalls، Blocked vs Running — [M2.4](module-2.4-operating-systems.md)
 - [ ] الخيوط وطبقات Node الثلاث — [M2.6](module-2.6-threads.md)
@@ -282,9 +283,13 @@ app.post("/import", async (req, res) => {
 ## 14. الصلة بعصر AI
 AI يكتب `await` في كل مكان (حتى على حسابات متزامنة) ويخلط التزامن بالتوازي في شروحه، ويولّد regex من نصوص المستخدم بلا تردد. عند مراجعة كود مولَّد لخادم اسأل: *"أين يُنفَّذ JS ثقيل على الحلقة؟ أي regex يُبنى من مدخل خارجي؟ ما حد حجم الجسم؟"* وفي المقابل، اطلب منه **حساب ترتيب التنفيذ** لتسلسل معيّن — جيد في ذلك، وتحقق أنت بالتشغيل.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 التزامن vs التوازي؛ epoll_wait كجوهر الحلقة وسلسلة مقاطعة→callback؛ المراحل الست + nextTick/microtasks بينها؛ المؤقّتات = "ليس قبل"؛ قائمة ما يحجب (JS ثقيل، JSON ضخم، ReDoS، Sync، GC)؛ **قياس lag**؛ شجرة القرار.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 `setImmediate` vs `setTimeout` داخل I/O؛ تجويع بـ nextTick؛ عدّاد handles و`unref`؛ chunking؛ `cluster` وحدوده (لا ذاكرة مشتركة)؛ thread pool لأي عمليات.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ تفاصيل libuv الداخلية؛ io_uring؛ IOCP؛ المقارنة الدقيقة مع goroutines/virtual threads؛ Reactor vs Proactor.
 
 ## 18. الخلاصة

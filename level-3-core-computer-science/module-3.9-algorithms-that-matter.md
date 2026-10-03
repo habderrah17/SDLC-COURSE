@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] الهياكل الثمانية وتكاليفها — M3.1–M3.6
 - [ ] المنهج الخوارزمي وتقنياته — [M3.7](module-3.7-algorithmic-thinking.md); Big-O والقياس — [M3.8](module-3.8-big-o.md)
 - [ ] الشبكة تفشل وتتأخر؛ idempotency — [L0-M0.6](../level-0-absolute-foundations/module-06-network-client-server.md), [L2-M2.12](../level-2-computer-systems/module-2.12-http.md)
@@ -249,9 +250,13 @@ Project 4: `GET /orders` لمتجر بـ 20M طلب، واجهة "تمرير ل�
 ## 14. الصلة بعصر AI
 هذه الوحدة هي **قاموسك لمراجعة كود AI**: ابحث عن offset في APIs، retry بلا jitter/idempotency، fetch بلا debounce/abort، فرز في Node بدل DB، `Math.random` للرموز، UUIDv4 كمفتاح ضخم بلا تبرير. واطلب من AI صراحةً: *"keyset pagination، retry بـ full jitter للأخطاء العابرة فقط، batch الاستعلامات"* — المصطلحات الصحيحة تُخرج الكود الصحيح.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 جدول اختيار الهيكل من العمليات؛ أنماط تقليل العمل الخمسة؛ keyset vs offset؛ شروط retry الخمسة؛ debounce/throttle؛ batching/N+1؛ `node:crypto` للعشوائية والتجزئة؛ قائمة "لا تتقن الآن".
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 DataLoader عبر microtask؛ تصميم cursor؛ المعرّفات الثلاثة وأثرها على الفهرس والأمان؛ consistent hashing وBloom كمفاهيم؛ full jitter لماذا.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ تنفيذ consistent hashing/Bloom؛ HyperLogLog، count-min sketch؛ rate limiting الموزّع؛ خوارزميات التوزيع (L7).
 
 ## 18. الخلاصة

@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] CPU/RAM/Storage ودورهم، وجدول الكمون الأولي — [L0-M0.1](../level-0-absolute-foundations/module-01-what-is-a-computer.md)
 - [ ] الكود المصدري → machine code، JIT — [L0-M0.2](../level-0-absolute-foundations/module-02-programs-and-code.md)
 - [ ] البتات والبايتات — [M2.1](module-2.1-bits-bytes-encoding.md)
@@ -247,9 +248,13 @@ CPU 100% **لا يعني** CPU-bound — المعالج "مشغول" أيضًا 
 ## 14. الصلة بعصر AI
 AI يكتب الحلقات بالاتجاه الطبيعي للكود لا للذاكرة، ويقترح "استخدم worker threads" قبل أن يسأل عن تخطيط البيانات. اطلب منه **تحليل الاختناق أولًا**: *"هل هذا CPU أم memory أم I/O-bound؟ ما بيانات العمل وهل تدخل في الكاش؟"* ثم قِس بنفسك — أرقام الـ AI عن الأداء تخمينات حتى تُقاس.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 دورة التعليمة والسجلات؛ **جدول التسلسل الهرمي بأرقامه التقريبية**؛ المحلية الزمانية/المكانية وخطوط الكاش؛ متسلسل > عشوائي؛ CPU/memory/I/O-bound والفرق في العلاج؛ نوى كثيرة ≠ أسرع تلقائيًا.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 AoS vs SoA وtyped arrays؛ row-major؛ التنبؤ بالقفزات؛ كيف تقيس (تسخين، تكرار)؛ لماذا توقفت الساعة عند ~4GHz.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ pipelining، out-of-order، SIMD، NUMA، تفاصيل سياسات الكاش، prefetching؛ assembly الحقيقي.
 
 ## 18. الخلاصة

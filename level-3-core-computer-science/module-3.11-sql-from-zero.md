@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] الجداول الخمسة (`schema.sql`) وPostgreSQL يعمل محليًا، `pg` Pool — [M3.10](module-3.10-databases-from-zero.md)
 - [ ] hash join وmerge join كأفكار (Map لربط قائمتين؛ مؤشران على مرتّبين) — [M3.1](module-3.1-arrays-hash-maps.md), [M3.7](module-3.7-algorithmic-thinking.md)
 - [ ] N+1 كشكل من "استعلام داخل حلقة" — [M3.8](module-3.8-big-o.md)
@@ -279,9 +280,13 @@ Project 4 يحتاج `GET /orders/:id` يعيد الطلب مع المستخدم
 ## 14. الصلة بعصر AI
 AI يكتب SQL ممتازًا — ويكتب أيضًا `${}` في الاستعلامات و`COUNT(*)` فوق fan-out وORM lazy loading. اطلب: *"معاملات فقط، لا تركيب نصي؛ عدّاد استعلامات لكل طلب ≤ 3؛ جمّع قبل الربط؛ tie-break في ORDER BY"*. واستخدم AI لشرح استعلام معقّد تقرأه — ثم تحقق على بيانات صغيرة تعرف إجابتها (كما في §6: ali = 2400).
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 ترجمة JS→SQL؛ `SELECT/WHERE/ORDER BY/LIMIT` مع NULL وtie-break؛ INNER vs LEFT ونمط "ليس له"؛ `GROUP BY` وفخ fan-out؛ `INSERT RETURNING`، `UPDATE` ذري بشرط، `DELETE` مع `WHERE`؛ N+1 واكتشافه وإصلاحه؛ `$1` دائمًا وقائمة بيضاء لما لا يُمرَّر.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 ترتيب التنفيذ المنطقي؛ `ON CONFLICT`؛ CTE (`WITH`)؛ `json_agg`/`FILTER`؛ `= ANY($1)`؛ `EXISTS`؛ `COUNT(DISTINCT)`؛ hash/merge/nested loop كأسماء ستراها في EXPLAIN.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ window functions (`OVER`)، `LATERAL`، `WITH RECURSIVE` تفصيليًا (M3.4 الأشجار)، `pg_trgm`/full-text search، `MERGE`.
 
 ## 18. الخلاصة

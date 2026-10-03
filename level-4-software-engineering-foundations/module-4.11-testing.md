@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] معايير القبول GWT وربطها بـ `describe/it` — [M4.3](module-4.3-user-stories-acceptance-criteria.md)
 - [ ] المنافذ والـ fakes التي تحترم العقد — [M4.5](module-4.5-software-design.md), [M4.8](module-4.8-solid.md)
 - [ ] `node:test` و`node:assert` بالحد الأدنى (استخدمتهما منذ M4.0)
@@ -183,7 +184,14 @@ import pg from "pg"; import { makeUsersRepo, DuplicateEmail } from "./users-repo
 
 const pool = new pg.Pool({ connectionString: process.env.DATABASE_URL ?? "postgres://postgres:dev@localhost:5432/store" });
 let client: pg.PoolClient; let orgId: number;
-before(async () => { const c = await pool.connect(); try { await c.query("SELECT 1"); } finally { c.release(); } });   // فشل مبكر وواضح إن غابت DB
+before(async () => {                                                                   // فشل مبكر وواضح إن غابت DB + المخطط الأدنى الذي يحتاجه الاختبار (idempotent)
+  const c = await pool.connect();
+  try {
+    await c.query(`CREATE TABLE IF NOT EXISTS organizations (id serial PRIMARY KEY, name text NOT NULL);
+      CREATE TABLE IF NOT EXISTS users (id serial PRIMARY KEY, organization_id int NOT NULL REFERENCES organizations(id), email text NOT NULL);
+      CREATE UNIQUE INDEX IF NOT EXISTS users_email_ci ON users (lower(email));`);                      // القيد هو الحكم: التفرّد بلا حساسية لحالة الأحرف
+  } finally { c.release(); }
+});
 beforeEach(async () => { client = await pool.connect(); await client.query("BEGIN"); orgId = (await client.query<{ id: number }>("INSERT INTO organizations (name) VALUES ('t') RETURNING id")).rows[0]!.id; });
 afterEach(async () => { await client.query("ROLLBACK"); client.release(); });
 after(async () => { await pool.end(); });
@@ -282,9 +290,13 @@ Project 4: اختبار "القطعة الأخيرة لا تُباع مرتين"
 ## 14. الصلة بعصر AI
 الاختبارات هي **آلية التحقق الأولى** من كود يولّده نموذج (L8-M8.7): اكتب/راجع الاختبارات بنفسك من معايير القبول، ودع النموذج يجعلها خضراء — لا العكس (نموذج يكتب الكود والاختبار معًا قد يختبر ما كتبه لا ما أردته). AI ممتاز في: تعداد الحالات الحدّية، توليد builders وfakes، تحويل GWT إلى هياكل اختبار، واقتراح اختبارات خاصية. راجع مخرجاته بحثًا عن: mocks للتنفيذ، asserts فارغة أو ضعيفة (`toBeDefined`)، زمن حقيقي، واختبارات تنسخ منطق الكود.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 الغاية: ثقة للتغيير + توثيق حيّ؛ الأنواع الثلاثة بحسب ما هو حقيقي واختيار المستوى بحسب الخطر؛ AAA + اسم سلوكي + حتمي + معزول؛ ماذا تختبر وماذا لا؛ fake > mock ولماذا؛ DB بمعاملة تُلغى؛ HTTP بخادم حقيقي على منفذ 0؛ الزمن محقون؛ اختبار أحمر لكل خطأ.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 الهرم vs الكأس؛ اختبارات الخاصية والعقد؛ التغطية كأداة فجوات؛ TDD كأداة سياقية؛ `mock.timers`؛ تشخيص الاختبارات المتذبذبة؛ builders.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ أُطر الاختبار الكاملة (Vitest/Jest) وميزاتها، اختبار الواجهات الأمامية (Playwright) تفصيليًا، mutation testing، اختبار الحمل (يأتي في L7-M7.8)، snapshot testing ومخاطره.
 
 ## 18. الخلاصة

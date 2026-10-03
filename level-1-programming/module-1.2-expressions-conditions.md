@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] القيم والأنواع البدائية، `===`، التحويل الضمني — [M1.1](module-1.1-values-variables-types.md)
 
 ## 2. أهداف التعلّم
@@ -273,9 +274,13 @@ function fee(amountCents: number, isMember: boolean, couponCents: number = 0): n
 ## 14. الصلة بعصر AI
 AI يحب `||` للافتراضيات ويعشّش `if` بعمق. **تحقق:** كل `||` — هل `0`/`""` قيمة صالحة هنا؟ كل `if` متعشّش — هل يمكن قلبه إلى guard clause؟ اسأل: *"ما القيم الحدية (0, "", null, undefined, NaN) لكل شرط هنا، وما سلوك الكود معها؟"*
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 expression vs statement؛ `===`؛ falsy الست؛ `??` vs `||`؛ guard clauses؛ `switch` مع `break`.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 short-circuit evaluation؛ narrowing الأولي؛ `Math.round` مع العشري.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ قواعد `==` الكاملة (لن تستخدمه)؛ `switch(true)` patterns؛ pattern matching proposals.
 
 ## 18. الخلاصة

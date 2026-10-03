@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] الطابور FIFO ولماذا `shift()` O(n) — [M3.2](module-3.2-sets-stacks-queues.md)
 - [ ] الشجرة الثنائية والارتفاع log n — [M3.4](module-3.4-trees.md)
 - [ ] مصفوفات متجاورة وخطوط الكاش — [M3.1](module-3.1-arrays-hash-maps.md)
@@ -226,9 +227,13 @@ function decreaseCost(id: string, cost: number) { const t = pending.find(x => x.
 ## 14. الصلة بعصر AI
 "رتّب المصفوفة ثم خذ الأول" هو ما يقترحه AI غالبًا لأي أولوية. اسأل: كم عملية في الثانية؟ إذا > بضع مئات على آلاف العناصر، اطلب كومة واطلب كسر تعادل FIFO وaging صراحةً. وفي مراجعة `ORDER BY ... LIMIT` ضخم، تحقق من `EXPLAIN` أنه top-N heapsort لا فرزًا كاملًا على القرص.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 طابور الأولوية ≠ FIFO؛ الكومة = شجرة في مصفوفة بـ push/pop O(log n) وpeek O(1)؛ نمط top-K بكومة min بحجم K؛ لماذا `sort` لكل pop خطأ؛ كسر التعادل والمجاعة/aging.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 sift-up/down وheapify O(n)؛ دمج K تدفقات؛ المؤقتات في libuv؛ indexed heap/lazy deletion؛ فصل الطوابير حسب SLA.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ Fibonacci/pairing heaps، d-ary heaps، skip lists (Redis ZSET)، heapsort مقابل quicksort عمليًا.
 
 ## 18. الخلاصة

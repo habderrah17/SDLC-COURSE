@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] الدوال النقية والآثار الجانبية (تعريف أولي) — [M1.4](module-1.4-functions-scope-closures.md)
 - [ ] المراجع والنسخ، spread — [M1.6](module-1.6-objects-references.md)
 - [ ] mutating vs non-mutating في المصفوفات — [M1.5](module-1.5-arrays.md)
@@ -263,9 +264,13 @@ function checkDuplicate(seen: ReadonlySet<string>, email: string): { duplicate: 
 ## 14. الصلة بعصر AI
 AI يميل لمتغيرات عالمية و`push` و`sort` في المكان لأن "الأمثلة على الإنترنت" كذلك. **اطلب صراحة:** *"بدون mutation؛ نواة نقية `(state, action) => state` + قشرة I/O منفصلة؛ `readonly` على الأنواع."* ثم **تحقق:** ابحث عن `let` على مستوى الوحدة، وعن `.push(`/`.sort(`/`= ` على معاملات.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 ما الحالة؛ تصنيف الآثار الجانبية؛ تحديث بإنشاء جديد (spread/map/filter)؛ `readonly`/`as const`؛ core/shell؛ لماذا الحالة العالمية خطرة.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 `Object.freeze` وحدوده؛ نمط `reduce(state, action)`؛ exhaustiveness في `switch`؛ تمرير الوقت/العشوائية كمعاملات.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ مكتبات immutability (Immer)، persistent data structures، event sourcing (L7).
 
 ## 18. الخلاصة

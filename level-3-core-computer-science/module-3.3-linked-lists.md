@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] المراجع والكائنات في الـ heap — [L1-M1.6](../level-1-programming/module-1.6-objects-references.md)
 - [ ] خطوط الكاش والذاكرة المتجاورة — [L2-M2.2](../level-2-computer-systems/module-2.2-cpu-cache-ram.md)
 - [ ] تكلفة إدراج/حذف المصفوفة، `Map` — [M3.1](module-3.1-arrays-hash-maps.md)
@@ -224,9 +225,13 @@ class LRU<K, V> {
 ## 14. الصلة بعصر AI
 اطلب من AI "LRU cache" وستحصل غالبًا على نسخة صحيحة — المشكلة في **التكامل**: ما يُخزَّن، كيف يُبطَل، الحد بالبايتات. راجع الحدود لا الخوارزمية. وإذا اقترح AI قائمة مرتبطة "لأن الإدراج O(1)" اسأله: من يمسك العقدة؟ إن لم يكن هناك Map أو مرجع مباشر فالمصفوفة أفضل.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 لماذا القائمة O(1) عند عقدة تمسكها وO(n) بالفهرس؛ لماذا تخسر أمام المصفوفة عمليًا (كاش، overhead)؛ القاعدة "Array افتراضيًا"؛ LRU = Map + قائمة مزدوجة، و`get` ينقل للمقدمة.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 singly vs doubly، sentinels، reverse؛ أين تعيش القوائم في JS/النواة؛ الحد بالبايتات والإبطال.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ skip lists، unrolled/chunked lists، intrusive lists، lock-free lists، piece table/rope.
 
 ## 18. الخلاصة

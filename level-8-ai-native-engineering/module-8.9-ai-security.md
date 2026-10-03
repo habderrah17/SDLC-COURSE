@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] حدّ الثقة والمدخلات غير الموثوقة والحقن — [L0-M0.7](../level-0-absolute-foundations/module-07-database-api-web-app.md), [L5-M5.4](../level-5-building-real-software/module-5.4-security.md)
 - [ ] نموذج التهديد (STRIDE / من يهاجم ماذا) — [L5-M5.5](../level-5-building-real-software/module-5.5-threat-modeling.md)
 - [ ] أذونات نظام التشغيل والعمليات والحاويات — [L2-M2.4](../level-2-computer-systems/module-2.4-operating-systems.md), [L5-M5.11](../level-5-building-real-software/module-5.11-docker-containers.md)

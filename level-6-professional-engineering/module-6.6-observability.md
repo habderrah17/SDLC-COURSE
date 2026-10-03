@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] المسجّل المهيكل وrequestId في Problem Details — [L5-M5.1](../level-5-building-real-software/module-5.1-api-design.md), [L4-M4.12](../level-4-software-engineering-foundations/module-4.12-debugging-deeply.md)
 - [ ] رحلة الطلب والمهل وevent loop lag وpool — [L5-M5.7](../level-5-building-real-software/module-5.7-production-anatomy.md)
 - [ ] hit ratio للكاش وoldest job age للطابور — [L5-M5.8](../level-5-building-real-software/module-5.8-caching.md), [L5-M5.9](../level-5-building-real-software/module-5.9-queues-jobs-workers.md)
@@ -548,9 +549,13 @@ groups:
 ## 14. الصلة بعصر AI
 الوكلاء يحتاجون observability أكثر من البشر: وكيل يُصحّح عطلًا في الإنتاج (L8-M8.4) لا يستطيع "الشعور" بالبطء؛ يحتاج `traceId` وp99 وسجلات مهيكلة يمكنه الاستعلام عنها — **النظام القابل للملاحظة هو النظام الذي يمكن لـ AI تشغيله**. وفي الاتجاه الآخر: AI جيّد في اقتراح لوحات وقواعد تنبيه ومخطّطات حقول، وفي **تفسير** trace طويل أو تجميع 10k سطر سجل إلى فرضيات (L8-M8.7) — لكنه سيقترح أيضًا تنبيهات على CPU وعلامات بـ `userId` لأنها "شائعة"؛ طبّق قواعد §3 على مخرجاته. وأخيرًا: ميزات AI في منتجك (نداءات LLM) تحتاج نفس الأعمدة: زمن، tokens، أخطاء، نسخة الـ prompt كـ `version` — بلا ذلك لا تعرف إن كان "التحديث الصامت" للنموذج قد كسر شيئًا.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 الأعمدة الثلاثة وأي سؤال لأيّها؛ السجل المهيكل بحقول ثابتة ومستويات ومعرّف عبر `AsyncLocalStorage` وحجب؛ RED/USE؛ الـ histogram والـ percentiles ولماذا المتوسّط يكذب؛ cardinality؛ `traceparent` والربط بـ traceId؛ التنبيه على الأعراض مبنيًّا على SLO/burn rate، بـ runbook ومالك، بلا ضجيج.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 OpenTelemetry SDK وauto-instrumentation وOTLP؛ sampling (head/tail)؛ exemplars؛ لوحات بثلاثة مستويات؛ مراجعة التنبيهات شهريًا؛ فقدان السياق وAsyncResource؛ تكلفة السجلات والاحتفاظ.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ eBPF وprofiling المستمرّ، Kubernetes metrics بعمق، معايير SLO المتقدّمة (multi-window multi-burn-rate بالتفصيل)، تتبّع الواجهة الأمامية (RUM).
 
 ## 18. الخلاصة

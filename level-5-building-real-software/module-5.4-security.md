@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] Trust Boundary، Frontend غير موثوق، حادثة "السعر المجاني" — [L2-M2.13](../level-2-computer-systems/module-2.13-web-app-architecture.md)
 - [ ] TLS: ماذا يحمي وما لا يحمي — [L2-M2.11](../level-2-computer-systems/module-2.11-tls.md)
 - [ ] الاستعلامات المُعلمَّة (`$1`) في `pg` — [L3-M3.11](../level-3-core-computer-science/module-3.11-sql-from-zero.md)
@@ -304,9 +305,13 @@ DATABASE_URL=postgres://app:app@127.0.0.1:5432/store node --import tsx --test sr
 ## 14. الصلة بعصر AI
 AI يولّد **الأنماط غير الآمنة بنفس ثقة الآمنة** لأنها شائعة في بيانات تدريبه: تسلسل SQL في "سكربت سريع"، `innerHTML`، `exec` بنص، `fetch(url)` بلا فحص، CORS `*`. القوائم في §11 هي ما تراجعه في كل كود مولَّد، وأدوات الفحص الآلي (eslint-plugin-security، semgrep، gitleaks، `npm audit`) هي شبكة الأمان في CI بغض النظر عن كاتب الكود. ومن الجهة الأخرى، AI مساعد ممتاز في **المراجعة الأمنية الموجّهة** ("راجع هذا الـ handler ضد OWASP ASVS V5 وV12") وفي شرح تقارير الثغرات. وتذكّر أن تطبيقات AI نفسها تفتح أسطح هجوم جديدة (prompt injection = حقن أيضًا: بيانات فُسِّرت كأوامر) — L8-M8.9 يبني على مفردات هذه الوحدة حرفيًا.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 المفردات (أصل/مهاجم/تهديد/ثغرة/حدّ ثقة/سطح هجوم) والمبادئ (least privilege، defense in depth، fail securely)؛ تحقّق بقائمة بيضاء عند الدخول وترميز بحسب السياق عند الخروج؛ آلية ودفاع XSS (encode+CSP+HttpOnly)، CSRF (SameSite+Origin+token)، SQLi (parameters+allow-list للمعرّفات)، SSRF (scheme+allow-list+IP عام بعد الحلّ+لا redirects)، path traversal، command injection، رفع الملفات بـ magic bytes؛ الأسرار خارج Git/السجلات/URL مع تدوير؛ TLS في النقل؛ lockfile وaudit؛ رؤوس الأمان وCORS.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 تشفير مستوى التطبيق بـ AES-GCM وKMS وHMAC للبحث؛ prototype pollution؛ IMDSv2؛ step-up auth؛ حقن CSV؛ CSP بالتفصيل (nonce/strict-dynamic/report-to)؛ semgrep/ZAP؛ الاستجابة لتقارير الثغرات.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ التشفير الرياضي، HSM، PCI-DSS تفصيلًا، اختبار الاختراق الاحترافي، WAF rules، أمن الـ kernel/الحاويات العميق (M5.11 الأساسيات).
 
 ## 18. الخلاصة

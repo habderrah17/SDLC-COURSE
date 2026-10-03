@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] الشروط والتعابير المنطقية — [M1.2](module-1.2-expressions-conditions.md)
 - [ ] فكرة أن المعالج ينفذ تعليمة تلو الأخرى — [L0-M0.3](../level-0-absolute-foundations/module-03-running-a-program.md)
 
@@ -249,9 +250,13 @@ function indexOf(items: number[], target: number): number {
 ## 14. الصلة بعصر AI
 AI يكتب الحلقات بسرعة لكنه يخطئ في الحدود ويعشّش حلقات بلا وعي بالتكلفة. **تحقق:** تتبّع أول وآخر دورة يدويًا؛ ابحث عن حلقة داخل حلقة واسأل "كم مرة مع بيانات حقيقية؟"؛ ابحث عن `while` بلا تقدّم واضح.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 `for...of`, `for`, `while`؛ `break/continue`؛ off-by-one؛ التتبع اليدوي والجدول؛ breakpoint داخل حلقة.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 حلقة متداخلة = تكلفة مضاعفة؛ الفرق `for...in` / `for...of`؛ خادم = حلقة لا نهائية مقصودة.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ labeled break؛ `do...while`؛ generators/iterators protocol (M1.5 لمحة، L3).
 
 ## 18. الخلاصة

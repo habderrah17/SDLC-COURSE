@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] النتيجة الثالثة "لا أعرف" ومحاكي `FakeNetwork` — [L7-M7.1](module-7.1-distributed-systems-1-2-10.md)
 - [ ] `AbortController` والمهل في `fetch`؛ مفتاح idempotency كفكرة — [L0-M0.6](../level-0-absolute-foundations/module-06-network-client-server.md), [L2-M2.12](../level-2-computer-systems/module-2.12-http.md)
 - [ ] الطوابير والمهام ومعنى "at-least-once" — [L5-M5.9](../level-5-building-real-software/module-5.9-queues-jobs-workers.md)
@@ -370,9 +371,13 @@ test("idempotency عبر شبكة تكرّر وتفقد: خصم واحد فقط�
 ## 14. الصلة بعصر AI
 اطلب من وكيل كتابة "استدعاء API بإعادة محاولة" وستحصل غالبًا على حلقة `for` بـ `catch` شامل وبلا مهلة ولا مفتاح ولا ميزانية — لأن هذا هو الشكل الأكثر شيوعًا في بيانات التدريب. العقد الذي تعلّمته هنا هو ما تضعه في سياقه (M8.5) كـ "قائمة قبول": deadline مُمرَّر، تصنيف صريح، إعادة فقط لـ transient/unknown مع idempotency، backoff+jitter+budget، حالة in-progress. والأهم: اطلب من الوكيل **اختبار عاصفة الإعادة** و**اختبار الخصم المزدوج** مثل §7 قبل أن تقبل الكود — الموثوقية لا تُراجَع بالعين، بل بحقن الفشل.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 timeout مقابل deadline وتمرير الميزانية؛ تصنيف الأخطاء الثلاثي وقرار الإعادة من (الصنف × الأمان)؛ backoff+jitter+retry budget ولماذا؛ idempotency key كاملًا (ذرّية الحجز، in-progress، البصمة، العمر، المخزن المشترك)؛ طبقة إعادة واحدة.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 إشارات الخادم `429/503 + Retry-After`؛ المصالحة الدورية للنتائج المجهولة؛ decorrelated jitter وأنواع jitter الأخرى؛ hedged requests (إرسال نسخة ثانية بعد p95) ومتى تصلح.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ الإثبات الرياضي لاستقرار الميزانية؛ exactly-once في أنظمة التدفّق (Kafka transactions) — ستلمسه في M7.9.
 
 ## 18. الخلاصة

@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] سلسلة التحقّق الثمانية — [L8-M8.7](module-8.7-ai-verification.md)
 - [ ] الأخطاء ومعالجتها والحالات الحدّية — [L1-M1.9](../level-1-programming/module-1.9-errors.md)
 - [ ] التجريد والتغليف ومتى يُصبح التجريد ضررًا — [L4-M4.6](../level-4-software-engineering-foundations/module-4.6-abstraction-encapsulation-modularity.md), [L4-M4.9](../level-4-software-engineering-foundations/module-4.9-design-patterns.md)

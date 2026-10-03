@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] نقاط اللا رجوع في SDLC ومصفوفة الملكية — [L8-M8.3](module-8.3-ai-assisted-sdlc.md)
 - [ ] مستويات الاستقلالية وسياسة allow/ask/deny — [L8-M8.4](module-8.4-ai-agents.md), [L8-M8.9](module-8.9-ai-security.md)
 - [ ] الترحيلات والمعاملات وما لا يمكن التراجع عنه في قواعد البيانات — [L3-M3.14](../level-3-core-computer-science/module-3.14-transactions-acid.md), [L5-M5.10](../level-5-building-real-software/module-5.10-deployment.md)

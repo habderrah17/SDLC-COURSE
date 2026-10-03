@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] الأنواع البدائية والاستدلال — [M1.1](module-1.1-values-variables-types.md)
 - [ ] narrowing الأولي — [M1.2](module-1.2-expressions-conditions.md)
 - [ ] `type` للكائنات، `Record`, `readonly` — [M1.6](module-1.6-objects-references.md)، [M1.7](module-1.7-state-side-effects-immutability.md)
@@ -367,9 +368,13 @@ type Payment = { amountCents: number } & (
 ## 14. الصلة بعصر AI
 AI يُسكت المترجم بـ `any`/`as`/`!`/`@ts-ignore` لأن "يعمل". **قاعدتك:** `grep -rn "any\|as \|!\.\|ts-ignore" src/` بعد كل جلسة؛ كل نتيجة تحتاج تبريرًا. اطلب: *"اتحادات مميَّزة بدل حقول اختيارية؛ `unknown` + محقّق على كل حد؛ `never` في `default`؛ لا `as` إلا داخل مصنع موثّق."* الأنواع الجيدة هي أيضًا **أفضل برومبت**: AI يولّد كودًا أدق عندما تكون الأنواع ضيقة ومعبّرة.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 النوع كمجموعة؛ unions + literals؛ **الاتحاد المميَّز** + `switch` + `never`؛ أدوات التضييق؛ `unknown` vs `any` vs `as`؛ محقّق يدوي على الحدود؛ generics بسيطة (`Result<T>`, `first<T>`)؛ `readonly`.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 حراس `x is T`؛ `satisfies`؛ `Partial/Pick/Omit/keyof/ReturnType`؛ branded types؛ `interface` vs `type`؛ لمحة zod.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ conditional/mapped/template literal types؛ variance؛ declaration files `.d.ts`؛ overloads؛ decorators.
 
 ## 18. الخلاصة

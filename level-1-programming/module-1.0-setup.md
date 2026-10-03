@@ -258,10 +258,13 @@ AI سيقترح عليك إعدادات `tsconfig` بخيارات لا تفهم�
 
 ---
 
-## 15–17. ما يجب إتقانه / فهمه / تأجيله
-
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 **Master:** إنشاء مشروع، `strict`، الفرق بين typecheck والتنفيذ، breakpoint في VS Code، `.gitignore` لـ `node_modules`.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 **Understand:** `package-lock.json` و`npm ci`، ESM والامتداد `.js` في الاستيراد، ما يفعله tsx.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ **Defer:** bundlers (esbuild/webpack)، monorepos، ESLint rules بالتفصيل، `paths` aliases.
 
 ---

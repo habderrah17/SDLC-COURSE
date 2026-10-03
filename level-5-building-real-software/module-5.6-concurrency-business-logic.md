@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] المعاملات، العزل، `FOR UPDATE`، `withTransaction` بإعادة المحاولة على 40001/40P01 — [L3-M3.14](../level-3-core-computer-science/module-3.14-transactions-acid.md)
 - [ ] سباق القراءة-ثم-الكتابة، التحديث الذري بشرط — [L2-M2.13](../level-2-computer-systems/module-2.13-web-app-architecture.md), [L3-M3.14](../level-3-core-computer-science/module-3.14-transactions-acid.md)
 - [ ] القيود كحَكَم نهائي (UNIQUE, CHECK) — [L3-M3.10](../level-3-core-computer-science/module-3.10-databases-from-zero.md)
@@ -284,9 +285,13 @@ UPDATE orders SET status = 'paid' WHERE id = $1 AND status = 'pending' RETURNING
 ## 14. الصلة بعصر AI
 كود AI للكتابات هو الحالة النموذجية لـ "اقرأ ثم قرّر ثم اكتب" — لأنه الأكثر شيوعًا في بيانات التدريب ويبدو واضحًا. يميل أيضًا إلى اقتراح "قفل Redis" كحل عام. قاعدتك في L8: كل كتابة مولَّدة على مورد مشترك تمرّ من سؤالَي §4 واختبار `Promise.all × N` **قبل** القبول — وهو اختبار لا يستطيع AI تزييفه لأنه يعمل على DB حقيقية. وAI مفيد جدًا في **توليد اختبارات التزامن** من سياستك ("لكل use case في الجرد اكتب اختبار تنافس بالقيم المتوقّعة") وفي شرح خطط الأقفال (`pg_locks`).
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 شكل السباق (اقرأ→قرّر→اكتب) وأين يظهر في الأعمال؛ السؤالان (طلبان متزامنان؟ تنفيذ مرتين؟)؛ السلّم واختيار الأدنى؛ `UPDATE … WHERE` شرطي + `rowCount`؛ `UNIQUE/CHECK` + `ON CONFLICT … RETURNING`؛ `FOR UPDATE` على الأب ضد write skew؛ `version` + 409 و`ETag/If-Match`؛ deadlock وترتيب ثابت ومهلة+retry؛ idempotency داخلي بمفاتيح طبيعية وانتقالات حالة؛ اختبار `Promise.all × N` إلزامي.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 `SKIP LOCKED` كطابور في DB؛ advisory locks؛ SERIALIZABLE + retry كشبكة أمان؛ حدود الأقفال الموزّعة وfencing tokens؛ السباقات بين `await`s؛ هجمات السباق المقصودة.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ Saga/outbox عبر الخدمات (L7-M7.2)، CRDTs، MVCC داخليًا، تحليل الأقفال بـ `pg_locks` تفصيلًا، التحكّم في التزامن في قواعد غير علائقية.
 
 ## 18. الخلاصة

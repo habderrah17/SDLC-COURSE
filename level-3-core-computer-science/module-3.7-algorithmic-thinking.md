@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] الحلقات والدوال والتكرار — [L1-M1.3](../level-1-programming/module-1.3-loops.md), [L1-M1.4](../level-1-programming/module-1.4-functions-scope-closures.md)
 - [ ] الهياكل الستة السابقة (M3.1–M3.6) — خاصة "الهيكل = مقايضة عمليات"
 - [ ] المنهج التجريبي Observe→Evidence→Hypothesis→Experiment — [L1-M1.12](../level-1-programming/module-1.12-debugging.md)
@@ -228,9 +229,13 @@ Project 4 يحتاج "اقتراحات منتجات أثناء الكتابة" (
 ## 14. الصلة بعصر AI
 AI يعرف كل خوارزمية كلاسيكية — ما يحتاجه منك هو **الخطوة 1 و3**: تعريف المشكلة بقيودها الحقيقية (حجم، تدفق، ذاكرة) وتحديد أين المكرر. اطلب "الحل الساذج أولًا ثم المحسّن مع شرح العمل المكرر الذي أُلغي"، واطلب حالات حدّية صريحة، وتحقق بالقياس (M3.8). ولا تقبل `sort(() => Math.random() - 0.5)` أو بحثًا ثنائيًا بلا اختبار خاصية.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 المنهج الخماسي؛ البحث الثنائي بنموذج lower bound وعلى أي شيء أحادي؛ `sort` يحتاج مقارِنًا، مستقر، O(n log n)، ومتى لا تفرز؛ تكرار ↔ حلقة، memoization؛ مؤشران ونافذة منزلقة.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 merge sort وسبب n log n؛ prefix sums؛ الطمع وحدوده؛ فكرة DP (مسائل فرعية متداخلة)؛ counting sort؛ Fisher–Yates.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ quickselect، DP متقدمة (knapsack، LCS تفصيليًا)، backtracking، التحليل المطفأ (amortized) رسميًا، خوارزميات النصوص (KMP، suffix arrays).
 
 ## 18. الخلاصة

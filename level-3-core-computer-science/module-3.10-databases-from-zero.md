@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] خريطة Frontend/Backend/DB وTrust Boundary — [L0-M0.7](../level-0-absolute-foundations/module-07-database-api-web-app.md)
 - [ ] ملف JSON كتخزين في Project 1/2، وسباق read-modify-write — [L1-M1.10](../level-1-programming/module-1.10-io.md), [Project 1](../projects/project-1-cli/README.md)
 - [ ] العمليات معزولة، الملفات مشتركة، الذاكرة تضيع عند الإيقاف — [L2-M2.5](../level-2-computer-systems/module-2.5-process-deep-dive.md)
@@ -290,9 +291,13 @@ Project 4 يبدأ: اكتب schema للمتجر (الجداول الخمسة أ
 ## 14. الصلة بعصر AI
 AI يولّد schemas بسرعة — وبأخطاء التمرين 12 بالضبط (`float` للمال، `timestamp`، FK مفقودة، CASCADE عشوائي). اطلب صراحةً: *"PostgreSQL، bigint identity، timestamptz، المال بالسنتات، NOT NULL افتراضيًا، كل FK مع ON DELETE مبرَّر، CHECK على الحالات"*، وراجع كل `CASCADE` يدويًا. والقيود في DB هي أفضل حماية ضد كود AI (أو بشري) ينسى قاعدة عمل: DB لا تنسى.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 لماذا الملف يفشل (الأسباب الستة، بتجربة)؛ DB = عملية خادم بعقد واحد؛ جدول/صف/عمود/نوع؛ PK/FK/NOT NULL/UNIQUE/CHECK/DEFAULT ولماذا تُفرض في DB؛ العلاقات الثلاث وأين يذهب FK؛ الأنواع الصحيحة (bigint، text، timestamptz، المال)؛ pool + `$1` + `DATABASE_URL`.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 `ON DELETE` الخيارات؛ فهرس وظيفي `lower(email)`؛ رموز SQLSTATE (23505/23503/23514)؛ `max_connections` المشترك؛ لقطات تاريخية مقصودة؛ `jsonb` ومتى.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ تفاصيل WAL/MVCC الداخلية (M3.14 يلمسها)؛ PgBouncer؛ التقسيم (partitioning)؛ NoSQL ومتى (L7).
 
 ## 18. الخلاصة

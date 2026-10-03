@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] Git: فروع، rebase/merge، تاريخ نظيف، `git bisect` — [L1-M1.13](../level-1-programming/module-1.13-git-1.md), [L1-M1.14](../level-1-programming/module-1.14-git-2.md)
 - [ ] قصص المستخدم ومعايير القبول (GWT) — [L4-M4.3](../level-4-software-engineering-foundations/module-4.3-user-stories-acceptance-criteria.md)
 - [ ] التقدير وعدم اليقين — [L4-M4.4](../level-4-software-engineering-foundations/module-4.4-estimation.md)
@@ -456,9 +457,13 @@ gh pr create --fill --draft                       # draft حتى يكتمل؛ ث
 ## 14. الصلة بعصر AI
 AI يكتب كودًا أسرع مما يراجعه الفريق؛ عنق الزجاجة انتقل من الكتابة إلى **التذكرة والمراجعة**. تذكرة جيدة (سياق/نطاق/AC) هي حرفيًا **أفضل prompt** للوكيل (L8-M8.5) وأفضل عقد للبشر معًا. وقاعدة الـ PR الصغير تصبح أهمّ لا أقلّ: PR من 2,000 سطر ولّده وكيل في دقيقة يحتاج نفس ساعات المراجعة البشرية، والمخاطر أعلى لأن لا أحد "عاش" الكود. اطلب من الوكيل الالتزام بالتقسيم §3 (PRs مرتّبة قابلة للدمج) ورسائل commit بصيغة "لماذا"، وارفض "sprint work" آليًا بالبوّابات §7.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 التذكرة بأقسامها الخمسة وخاصة "خارج النطاق"؛ Definition of Done متفق عليه؛ PRs صغيرة بفكرة واحدة وتقسيم ميزة إلى سلسلة قابلة للدمج؛ Conventional Commits مع جسم "لماذا"؛ rebase يومي وmain قابل للنشر دائمًا؛ صيغة طلب المساعدة "جرّبت/أتوقّع/حصلت/أحتاج".
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 merge queue وup-to-date rule؛ `git bisect run`؛ `git revert -m 1`؛ متى Git flow؛ إدارة الـ flags وتنظيفها؛ قياس عمر PR وحجمه كمؤشّرات صحّة.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ أدوات إدارة المشاريع (Jira/Linear) وتخصيصاتها؛ monorepo tooling وCODEOWNERS المتقدّم؛ stacked PRs tooling؛ طقوس Scrum التفصيلية.
 
 ## 18. الخلاصة

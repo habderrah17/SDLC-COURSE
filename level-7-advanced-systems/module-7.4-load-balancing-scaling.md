@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] الطبقات: TCP مقابل HTTP، الاتصال مقابل الطلب، keep-alive — [L2-M2.9](../level-2-computer-systems/module-2.9-tcp-udp.md), [L2-M2.12](../level-2-computer-systems/module-2.12-http.md)
 - [ ] تشريح الإنتاج: LB، النسخ المتعدّدة، `/health` و`/ready`، النشر التدريجي — [L5-M5.7](../level-5-building-real-software/module-5.7-production-anatomy.md), [L5-M5.10](../level-5-building-real-software/module-5.10-deployment.md)
 - [ ] لا حالة قرار في الذاكرة؛ الجلسات في مخزن مشترك — [L7-M7.1](module-7.1-distributed-systems-1-2-10.md), [L5-M5.2](../level-5-building-real-software/module-5.2-authentication.md)
@@ -305,9 +306,13 @@ Project 6 يحتاج إلى خدمة 20× الحمل الحالي خلال 6 أ�
 ## 14. الصلة بعصر AI
 اطلب من وكيل "اجعل الخدمة قابلة للتوسّع" وسيقترح بسرعة Kubernetes وsharding وmicroservices — وهو الترتيب المعكوس. دورك هو إعطاؤه القيود والأرقام (M8.5): الحمل الحالي والمستهدف، أين الحالة، ما المقبول من التعقيد، والتسلسل الناضج (رأسي → أفقي عديم الحالة → توابع/كاش → sharding آخرًا). والأشياء التي يُغفلها الوكلاء بانتظام هي التفاصيل التشغيلية التي تعلّمتها هنا: التصريف، readiness المنفصل، `trust proxy`، keep-alive خلف L4، panic threshold. اجعلها قائمة مراجعة إلزامية لأي كود "بنية تحتية" يُولّده، واطلب اختبار §7 الثالث (قتل نسخة أثناء الحمل بلا أخطاء) كشرط قبول.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 رأسي أولًا ولماذا؛ L4 مقابل L7 وفخّ keep-alive؛ round-robin/least-conn/weighted ومتى يفشل كلّ؛ readiness مقابل liveness وpanic threshold؛ التصريف الصحيح خطوة بخطوة؛ لماذا الالتصاق مسكّن؛ consistent hashing وما يحلّ؛ sharding كملاذ أخير وثمنه.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 power-of-two-choices؛ العُقد الافتراضية والتوزيع؛ تكرار الموازن نفسه (DNS/anycast/VRRP)؛ `X-Forwarded-For` و`trust proxy`؛ جدول توجيه للأجزاء بدل hash ثابت؛ اختبار الحمل كجزء من الخطة.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ Maglev/rendezvous hashing، global server load balancing عبر المناطق، service mesh كموازن جانبي، autoscaling policies بالتفصيل.
 
 ## 18. الخلاصة

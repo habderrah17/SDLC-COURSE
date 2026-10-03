@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] SOLID كأدوات تشخيص، نقاط التوسعة، المنافذ — [M4.8](module-4.8-solid.md), [M4.5](module-4.5-software-design.md)
 - [ ] الدوال كقيم، الإغلاقات، الدوال العليا — [L1-M1.4](../level-1-programming/module-1.4-functions-scope-closures.md)
 - [ ] `EventEmitter` والأحداث في Node — [L1-M1.11](../level-1-programming/module-1.11-async-event-loop.md)
@@ -267,9 +268,13 @@ Node نفسه مبني على هذه الأنماط: `http.createServer` (Factor
 ## 14. الصلة بعصر AI
 الأنماط هي **لغة مشتركة بينك وبين النموذج**: "اكتب adapter لمنفذ `PaymentGateway` لمزوّد X مع تصنيف الأخطاء إلى retryable/غير" ينتج ما تريد في محاولة واحدة. لكن النماذج تُفرط في الأنماط (Factory لكل شيء، Singleton، service locator) وتنسى **الثمن** (Observer بلا أخطاء). عند مراجعة كود مولَّد اسأل عن كل نمط: ما المشكلة التي يحلّها هنا؟ ما ثمنه؟ هل الحالة الثانية موجودة؟ (L8-M8.2 vibe coding vs engineering: الفرق هو هذه الأسئلة.)
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 النمط = مشكلة + حل + ثمن؛ الستة بمشكلتها وحلها وثمنها وشكلها كدوال/كائنات؛ جذر التركيب؛ Observer مُصمَّم للفشل؛ Repository بدوال مسمّاة بلا إخفاء الأداء؛ الأنماط المضادة الأربعة الأولى.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 Decorator/Middleware وترتيب الطبقات؛ State كآلة حالات بجدول انتقالات؛ Command/Unit of Work؛ متى يكون الإعلان مقبولًا ومتى outbox؛ اختبارات العقد على الطبقات.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ كامل كتالوج GoF وPoEAA بالاسم، أنماط التزامن (Actor، Reactor)، أنماط التكامل المؤسسي (EIP)، DSLs وBuilders المعقدة.
 
 ## 18. الخلاصة

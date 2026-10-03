@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] TCP، المهل، ECONNREFUSED/ETIMEDOUT، "الشبكة تفشل بشكل طبيعي" — [L2-M2.9](../level-2-computer-systems/module-2.9-tcp-udp.md), [L0-M0.6](../level-0-absolute-foundations/module-06-network-client-server.md)
 - [ ] العمليات والذاكرة المعزولة؛ النسخ المتعدّدة خلف LB — [L2-M2.5](../level-2-computer-systems/module-2.5-process-deep-dive.md), [L5-M5.7](../level-5-building-real-software/module-5.7-production-anatomy.md)
 - [ ] سباق اقرأ-قرّر-اكتب والتحديث الذري — [L5-M5.6](../level-5-building-real-software/module-5.6-concurrency-business-logic.md)
@@ -344,9 +345,13 @@ test("partition: nodes in different islands only see timeouts; healing restores 
 ## 14. الصلة بعصر AI
 النماذج اللغوية تعلّمت من كود كُتب في معظمه لخادم واحد؛ لذلك يقترح الوكيل بسهولة `const cache = new Map()` أو "رتّب بالطابع الزمني" أو "أعد المحاولة عند timeout" بلا idempotency. اجعل قائمة §11 جزءًا من سياقه (L8-M8.5) واطلب صراحةً: "النظام يعمل بـ N نسخ؛ لا حالة قرار في الذاكرة؛ لا LWW بطابع". وفي المراجعة (L8-M8.7) اسأل سؤال M7 الدائم: "ماذا يحدث لهذا الكود مع نسختين وشبكة تفقد 1%؟" — محاكي §7 أداة ممتازة لتجعل الوكيل يثبت ذلك باختبار بدل أن يطمئنك.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 ما ينكسر عند 1→2 و2→10؛ المغالطات الثماني بأمثلة؛ لا ساعة مشتركة وما تعطيه Lamport وما لا تعطيه؛ النتيجة الثالثة "لا أعرف"؛ "شيء معطّل دائمًا" حسابيًا؛ لا حالة قرار في الذاكرة؛ اختبار بنسختين.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 vector clocks كمفهوم؛ `performance.now()` مقابل `Date.now()` وقفزات NTP؛ انتخاب القائد والـ fencing؛ p99 المركّب عبر الاستدعاءات؛ متى لا تُوزّع.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ TrueTime/Hybrid Logical Clocks، بروتوكولات الإجماع (Raft/Paxos) بالتفصيل، نظرية FLP — ستلمسها مفاهيميًا في M7.3.
 
 ## 18. الخلاصة

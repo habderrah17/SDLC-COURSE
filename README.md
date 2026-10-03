@@ -440,3 +440,15 @@ AFTER:   "أفهم الحواسيب، البرمجيات، الأنظمة، ال
 | Level 9 — Professional Capstone | ✅ مكتمل (Mode A + Mode B + التقييم الذاتي + التحدي النهائي) |
 | Projects 1–8 + Capstone | ✅ مكتملة |
 | Challenges / Glossary | ✅ (فهرس التحديات داخل الوحدات؛ القاموس 1,100+ مصطلح) |
+
+### التحقّق الآلي والمساهمة (Automated checks & contributing)
+
+الكورس ليس نصًّا فقط — **كل مثال TypeScript فيه يُترجَم ويُختبَر**، وكل رابط ومخطّط Mermaid وبنية وحدة تُفحص في CI:
+
+```bash
+npm ci
+npm run check          # بنية الـ19 قسمًا، الروابط، القاموس، Mermaid
+npm run examples:all   # يستخرج ~100 مجموعة أمثلة من الوحدات، يُترجمها بـ strict ويُشغّل اختباراتها
+```
+
+التفاصيل والقواعد (لغة، بنية، اتفاقية `// src/…`، القاموس) في [**CONTRIBUTING.md**](CONTRIBUTING.md)، ووصف الأدوات في [`tools/README.md`](tools/README.md).

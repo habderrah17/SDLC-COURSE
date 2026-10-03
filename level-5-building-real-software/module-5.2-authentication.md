@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] HTTP: الرؤوس، الكوكيز، عديمية الحالة — [L2-M2.12](../level-2-computer-systems/module-2.12-http.md)
 - [ ] TLS ولماذا بدونه كل شيء مكشوف — [L2-M2.11](../level-2-computer-systems/module-2.11-tls.md)
 - [ ] Frontend غير موثوق / Backend موثوق / Trust Boundary، authN ≠ authZ (تعريف أولي) — [L0-M0.7](../level-0-absolute-foundations/module-07-database-api-web-app.md), [L2-M2.13](../level-2-computer-systems/module-2.13-web-app-architecture.md)
@@ -350,9 +351,13 @@ CREATE TABLE password_resets (token_hash text PRIMARY KEY, user_id uuid NOT NULL
 ## 14. الصلة بعصر AI
 المصادقة هي المكان الذي يُنتج فيه AI كودًا **يبدو صحيحًا ويحوي الخطأ الكلاسيكي**: `bcrypt` بـ 4 جولات، SHA-256 "مع salt"، JWT في localStorage، رسالة "user not found"، رمز إعادة تعيين بلا استخدام واحد، `SameSite` منسيّ. لا تقبل كود مصادقة من AI دون قائمة الفحص في §11 واختبارات §7 (التعداد، التدوير، الاستخدام الواحد، الحدّ). وفي الاتجاه الآخر: AI ممتاز في **مراجعة** تدفّق مكتوب ("ما الذي ينقص هذا التدفّق مقارنة بـ OWASP ASVS؟") وفي شرح RFCs. وتذكّر: وكلاء AI أنفسهم سيحتاجون مصادقة لخدماتك (مفاتيح API بنطاقات ضيّقة، رموز قصيرة العمر) — L8-M8.9.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 authN ≠ authZ؛ hash بطيء مملّح (argon2id/scrypt) بمعاملات مخزّنة ومقارنة بزمن ثابت وإعادة تجزئة؛ جلسة مُعتِمة بـ hash(id)، مهلتا خمول/مطلقة، تدوير، إبطال الكل؛ أعلام الكوكي الخمسة و`__Host-`؛ لماذا لا localStorage؛ رسالة واحدة + hash وهمي + 202 موحّد ضد التعداد؛ رموز لمرة واحدة مُجزّأة بانتهاء واستهلاك ذرّي؛ rate limit متعدد الأبعاد بـ 429/Retry-After؛ متى JWT ومتى لا.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 refresh token rotation وكشف إعادة الاستخدام؛ `jose` وتثبيت الخوارزمية و`exp/aud/iss`؛ OIDC Authorization Code + PKCE والتحقق من ID token؛ TOTP/WebAuthn كمفاهيم؛ BFF للـ SPA؛ فحص HIBP؛ قرار مزوّد الهوية.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ بروتوكولات SAML، Kerberos، تفاصيل WebAuthn/FIDO2 التنفيذية، device flow، token binding/DPoP، بناء مزوّد هوية بنفسك.
 
 ## 18. الخلاصة

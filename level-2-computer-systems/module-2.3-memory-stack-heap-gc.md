@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] مكدس الاستدعاء والإطارات والإغلاقات — [L1-M1.4](../level-1-programming/module-1.4-functions-scope-closures.md)
 - [ ] القيمة vs المرجع (الممارسة) — [L1-M1.6](../level-1-programming/module-1.6-objects-references.md)
 - [ ] الحالة العالمية وخطرها — [L1-M1.7](../level-1-programming/module-1.7-state-side-effects-immutability.md)
@@ -278,9 +279,13 @@ wss.on("connection", (socket) => {
 ## 14. الصلة بعصر AI
 AI ينشئ كاشات `Map` بلا حدود، ويضيف مستمعين بلا إزالة، ويقترح `--max-old-space-size` كأول "حل" لـ OOM. **تحقق:** كل `Map`/`Set`/مصفوفة على مستوى الوحدة — ما حدّها الأقصى؟ كل `on(` — أين `off`/`once`؟ كل `setInterval` — أين `clear`؟ وعند التشخيص، اطلب منه قراءة **Retainers** من لقطتك لا تخمين السبب.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 stack vs heap ولماذا؛ أين يعيش `const user = {...}`؛ GC بالوصول من الجذور (mark & sweep)؛ تعريف التسرّب في GC-language والأنماط الخمسة؛ `process.memoryUsage` وقراءته؛ منهج لقطتين + Delta + Retainers.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 الأجيال young/old وتوقفات GC وأثرها على p99؛ ضغط التخصيص؛ `WeakMap`/`WeakRef`؛ `external` وBuffers؛ `--max-old-space-size` كمسكّن.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ خوارزميات GC المتقدمة (incremental/concurrent marking، Orinoco)، hidden classes/inline caches في V8، تفاصيل Smi/HeapNumber، ملكية Rust.
 
 ## 18. الخلاصة

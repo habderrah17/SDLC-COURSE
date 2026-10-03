@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] SDLC: المراحل ولماذا تكلفة الخطأ تتضاعف كلّما تأخّر اكتشافه — [L4-M4.1](../level-4-software-engineering-foundations/module-4.1-sdlc.md)
 - [ ] المتطلبات: وظيفية/غير وظيفية، الغموض، أسئلة الاستيضاح — [L4-M4.2](../level-4-software-engineering-foundations/module-4.2-requirements.md)
 - [ ] الاختبار: الهرم، ما يُثبته الاختبار وما لا يُثبته — [L4-M4.11](../level-4-software-engineering-foundations/module-4.11-testing.md)

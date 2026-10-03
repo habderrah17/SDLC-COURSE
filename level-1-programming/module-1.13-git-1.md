@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] الطرفية، المسارات، الملفات المخفية — [L0-M0.4](../level-0-absolute-foundations/module-04-files-terminal-shell.md)
 - [ ] فكرة اللقطة الثابتة — [M1.7](module-1.7-state-side-effects-immutability.md)
 
@@ -258,9 +259,13 @@ f3a1c2d Add money helpers      # ← هذا الـ commit قديم من أمس!
 ## 14. الصلة بعصر AI
 وكلاء AI يلتزمون بالنيابة عنك — غالبًا commit واحد ضخم برسالة عامة. **أنت** المسؤول عن التاريخ: اطلب commits صغيرة بموضوع واضح وجسم يشرح **لماذا**، راجع `git diff --staged` **قبل** السماح بالالتزام، وتأكد من `.gitignore` قبل أن يلمس الوكيل المشروع (الأسرار!). التاريخ النظيف هو ما سيسمح لك — وللـ AI — بفهم المشروع بعد شهور.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 لقطات + parent + hash؛ المناطق الثلاث؛ `status/diff/add -p/commit/log`؛ رسائل جيدة وcommits ذرّية؛ `switch -c`/`merge`/`branch -d`؛ `restore` vs `revert`؛ `.gitignore` قبل أول commit.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 fast-forward vs merge commit؛ `--amend` للمحلي فقط؛ `reflog`؛ `HEAD~n`؛ `show`/`log --stat`.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ internals (blobs/trees/objects)؛ `rebase -i`؛ `stash`؛ hooks؛ `bisect` (M1.14)؛ signing commits.
 
 ## 18. الخلاصة

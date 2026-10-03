@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] IP/ports/DNS/TLS/load balancer، الشبكات الخاصة كفكرة — [L2-M2.8](../level-2-computer-systems/module-2.8-networking-from-zero.md) … [L2-M2.11](../level-2-computer-systems/module-2.11-tls.md)
 - [ ] تشريح النظام الإنتاجي، pool، readiness، الإيقاف الرشيق — [M5.7](module-5.7-production-anatomy.md)
 - [ ] النشر، systemd، artifact، الهجرات — [M5.10](module-5.10-deployment.md); الحاويات وCompose — [M5.11](module-5.11-docker-containers.md); CI/CD وOIDC — [M5.12](module-5.12-ci-cd.md)
@@ -329,9 +330,13 @@ spec:
 ## 14. الصلة بعصر AI
 AI يولّد Terraform وسياسات IAM وmanifests بسرعة — وغالبًا بـ `"Action": "*"` "للتبسيط"، وbuckets بلا public access block، وsecurity groups مفتوحة "للاختبار". خطر هذا أعلى من كود التطبيق لأن أثره **فوري وخارجي**. القواعد: كل IaC يمرّ بـ `plan` تقرؤه + فحص سياسات آلي (`lintPolicy`, tfsec/checkov) + مراجعة بشرية، ولا يملك الوكيل صلاحية `apply` على prod (L8-M8.10 human-in-the-loop). وهو ممتاز في: شرح فاتورة (الصق تقرير التكلفة واسأل "ما غير الطبيعي؟")، وترجمة Compose إلى manifests، وصياغة سياسات أقل صلاحية **من قائمة أفعال تعطيها أنت**.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 السحابة كموارد عبر API؛ نماذج الخدمة ومتى كل منها؛ المسؤولية المشتركة؛ region/AZ/Multi-AZ؛ خريطة النظام على اللبنات؛ شبكة عامة/خاصة، DB خاصة، security groups بالمصدر؛ IAM: أدوار لا مفاتيح، أقل صلاحية بلا `*`، فصل البيئات، OIDC؛ PostgreSQL مُدار: Multi-AZ، PITR مُختبَر، TLS، pooler؛ object storage خاص + presigned URLs + دورة حياة؛ التكلفة: نموذج، ميزانية، وسوم، egress/NAT/logs؛ "لا تدر ما يمكن إدارته لك"؛ PaaS كافتراضي.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 Kubernetes مفاهيميًا (Deployment/Service/Ingress/probes/limits/HPA)؛ IaC وplan/apply وdrift؛ serverless وحدوده؛ read replicas وتأخّرها؛ CDN/WAF؛ VPC endpoints؛ CSPM؛ lock-in وPorts & Adapters كتأمين.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ Multi-region وDR المتقدّم (L7)، service mesh، FinOps المتقدّم، تفاصيل شبكات السحابة (peering, transit)، تصميم landing zones متعدّدة الحسابات، Kubernetes operators.
 
 ## 18. الخلاصة

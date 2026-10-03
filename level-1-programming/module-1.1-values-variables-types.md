@@ -8,6 +8,7 @@
 ---
 
 ## 1. المتطلبات (Prerequisites)
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 
 - [ ] RAM = مكان مؤقت تعيش فيه بيانات البرنامج — [L0-M0.1](../level-0-absolute-foundations/module-01-what-is-a-computer.md)
 - [ ] compile-time vs runtime، الأنواع تُحذف قبل التشغيل — [L0-M0.2](../level-0-absolute-foundations/module-02-programs-and-code.md)
@@ -264,10 +265,13 @@ console.log("Total:", price * qty);
 
 AI يكتب `let` حيث يكفي `const`، ويستخدم `number` للمال، ويثق بـ `JSON.parse` كأنه يعيد النوع المطلوب. **تحقق:** هل كل `let` ضروري؟ هل المبالغ أعداد صحيحة؟ أين تدخل البيانات من الخارج وهل تُحوَّل وتُفحص؟
 
-## 15–17. Master / Understand / Defer
-
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 **Master:** value/variable/type؛ `const` افتراضيًا؛ الأنواع البدائية السبعة؛ `undefined` vs `null`؛ التحويل الصريح عند الحدود؛ `===`.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 **Understand:** inference ومتى تكتب النوع؛ لماذا `0.1+0.2≠0.3`؛ النصوص immutable.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ **Defer:** `bigint`/`symbol` بالتفصيل؛ تمثيل IEEE-754 (L2).
 
 ## 18. الخلاصة

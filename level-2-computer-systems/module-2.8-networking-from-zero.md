@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] IP = آلة، Port = عملية، localhost، `0.0.0.0` — [L0-M0.5](../level-0-absolute-foundations/module-05-processes-ports-localhost.md)
 - [ ] العميل/الخادم والشبكة تفشل بشكل طبيعي — [L0-M0.6](../level-0-absolute-foundations/module-06-network-client-server.md)
 - [ ] البايتات والـ Buffer — [M2.1](module-2.1-bits-bytes-encoding.md)
@@ -231,9 +232,13 @@ $ ping 10.0.2.15                           # من المصدر
 ## 14. الصلة بعصر AI
 AI يولّد إعدادات شبكة تفتح `0.0.0.0/0` على كل المنافذ "ليعمل الآن"، ويخلط IP الخاص بالعام في الشروح. عند أي إعداد بنية تحتية مولَّد، افحص كل قاعدة تحتوي `0.0.0.0/0` واسأل "لماذا؟". أما لتشخيص `ETIMEDOUT` vs `ECONNREFUSED`، أعطه مخرجات `ss`/`tcpdump` الحقيقية — يحلّلها جيدًا.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 الحزم المستقلة وbest effort؛ IPv4/v6 وCIDR والنطاقات الخاصة وloopback؛ NAT ونتيجتاه (لا وارد، الخامل يُحذف)؛ الطبقات الأربع والتغليف؛ المنفذ في طبقة النقل والرباعية؛ `ETIMEDOUT` (رُمي) vs `ECONNREFUSED` (رُفض).
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 التوجيه قفزة بقفزة وdefault gateway؛ TTL/traceroute/ICMP؛ MAC/ARP؛ المنافذ المؤقتة و<1024؛ أدوات `ip`, `ss`, `tcpdump`؛ SSRF والعناوين الداخلية؛ RTT حسب المسافة.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ BGP؛ تفاصيل IPv6 (SLAAC، NDP)؛ MTU/PMTUD وتجزئة الحزم؛ VLANs؛ SDN؛ الطبقات السبع لـ OSI (اعرف أن الناس يقولون "Layer 7 = HTTP، Layer 4 = TCP").
 
 ## 18. الخلاصة

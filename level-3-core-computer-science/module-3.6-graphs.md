@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] `Map`/`Set` — [M3.1](module-3.1-arrays-hash-maps.md); المكدس والطابور — [M3.2](module-3.2-sets-stacks-queues.md)
 - [ ] الأشجار وDFS/BFS عليها — [M3.4](module-3.4-trees.md); الكومة — [M3.5](module-3.5-heaps-priority-queues.md)
 
@@ -241,9 +242,13 @@ function impacted(deps: Map<string, string[]>, down: string): string[] {
 ## 14. الصلة بعصر AI
 AI ممتاز في كتابة BFS/DFS/toposort الكلاسيكية. ما يغفله: `visited` عند الإضافة، الفشل الصريح على الدورات، والمكدس الصريح للعمق. وأخطر شيء: عندما تطلب "خريطة الاعتماديات" يختلق AI حوافًا غير موجودة — مصدر الحواف يجب أن يكون **الكود/التهيئة الفعلية** (import graph، `depends_on`)، وتتحقق منه.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 ما الرسم البياني وأين تراه (deps، imports، services، GC)؛ قائمة الجوار؛ BFS/DFS مع `visited`؛ الترتيب الطوبولوجي بـ Kahn واكتشاف الدورة والفشل الصريح؛ أن الاعتماديات رسم بياني يجب تمثيله.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 DFS ثلاثي الألوان؛ إعادة بناء المسار؛ Dijkstra كمفهوم ومتى؛ الرسم العكسي؛ تمثيل الحواف في DB و`WITH RECURSIVE`؛ التنفيذ المتوازي للطبقات.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ Bellman-Ford، A\*، Floyd–Warshall، MST (Kruskal/Prim)، strongly connected components (Tarjan)، max-flow، DBs رسومية.
 
 ## 18. الخلاصة

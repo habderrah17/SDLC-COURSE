@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] Git: فروع، PRs، tags، rebase/merge، lockfile — [L1-M1.13](../level-1-programming/module-1.13-git-1.md), [L1-M1.14](../level-1-programming/module-1.14-git-2.md)
 - [ ] هرم الاختبارات، الاختبارات المتكاملة على DB حقيقية، fake > mock — [L4-M4.11](../level-4-software-engineering-foundations/module-4.11-testing.md)
 - [ ] build/release/deploy، artifact ثابت، deploy.sh، الهجرات كخطوة — [M5.10](module-5.10-deployment.md)
@@ -341,9 +342,13 @@ node --import tsx --test src/release.test.ts    # 3 pass
 ## 14. الصلة بعصر AI
 AI يولّد workflows تعمل لكنها `@v4` بلا SHA، بلا `permissions`، بـ `npm install`، وتبني لكل بيئة. راجعه بقائمة §4، ومرّر الملف على actionlint/zizmor. الأهم: في L8 سيصبح الـ pipeline **خط الدفاع الأول ضد كود مولَّد**: نفس البوابات (أنواع، اختبارات على خدمات حقيقية، فحص أسرار وثغرات، lint أمني) تحكم على كود الإنسان والوكيل سواء — فاستثمر فيها الآن. وAI ممتاز في: تحليل سجل pipeline فاشل وتلخيص السبب، واقتراح تقسيم الاختبارات لتقليل الزمن، وكتابة smoke tests من `openapi.yaml`.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 CI كممارسة دمج صغير متكرّر؛ المراحل وزمن التغذية الراجعة ≤ 10 دقائق (cache، توازي، concurrency)؛ اختبارات متكاملة بخدمات حقيقية؛ build once بالـ SHA/digest والترقية عبر البيئات؛ البوابات الإلزامية القليلة الموثوقة؛ سياسة المتذبذبين؛ `permissions` دنيا، actions بالـ SHA، بيئات محمية، forks معزولة، OIDC؛ smoke يمثّل المستخدم؛ rollback = إعادة نشر SHA؛ main محمي وPRs صغيرة؛ Conventional Commits → SemVer.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 DORA وكيف تُقاس؛ تقسيم الاختبارات وتوازيها؛ SBOM وprovenance؛ فحص الـ workflows ثابتًا؛ Dependabot/Renovate كسياسة؛ junit reports؛ pre-push hooks.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ GitOps/ArgoCD، runners ذاتية الاستضافة وتحصينها، monorepo pipelines (affected-only)، توقيع الصور (cosign/SLSA)، merge queues.
 
 ## 18. الخلاصة

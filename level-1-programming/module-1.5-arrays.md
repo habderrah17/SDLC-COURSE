@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] الحلقات والفهارس — [M1.3](module-1.3-loops.md)
 - [ ] الدوال كقيم، arrow functions، الدوال النقية — [M1.4](module-1.4-functions-scope-closures.md)
 
@@ -252,9 +253,13 @@ const biggest = sorted.at(-1);                   // 11 (نوعه number | undefi
 ## 14. الصلة بعصر AI
 AI يستخدم `sort` في المكان و`reduce` معقّدًا و`forEach` بدل `map` كثيرًا. **تحقق:** هل تُعدَّل مصفوفة قادمة من خارج الدالة؟ هل لكل `reduce` قيمة أولية؟ هل `sort` له مقارن؟ وإن كانت السلسلة أطول من 4 خطوات اطلب أسماء وسيطة (`const paidOrders = ...`).
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 إنشاء/فهرسة/`length`؛ mutating vs non-mutating؛ `map/filter/reduce/find/some/every`؛ `sort` مع مقارن؛ `toSorted`؛ spread `[...a]`.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 `reduce` إلى كائن (grouping)؛ `Object.entries`؛ `readonly number[]`؛ متى الحلقة أوضح.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ `flatMap`, `Array.from({length})`, typed arrays, iterators/generators (L3).
 
 ## 18. الخلاصة

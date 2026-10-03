@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] أنماط المعمارية وmodular monolith كنقطة بداية — [L6-M6.9](../level-6-professional-engineering/module-6.9-architecture-styles.md)
 - [ ] الاقتران والتماسك؛ الحدود والواجهات — [L4-M4.7](../level-4-software-engineering-foundations/module-4.7-coupling-cohesion.md)
 - [ ] المعاملات وACID؛ لماذا لا توجد معاملة عبر قاعدتين — [L3-M3.14](../level-3-core-computer-science/module-3.14-transactions-acid.md)
@@ -332,9 +333,13 @@ test("outbox + relay at-least-once + idempotent consumer: الحدث يُنشر 
 ## 14. الصلة بعصر AI
 الوكلاء يُولّدون "هياكل microservices" كاملة في دقائق — 12 مجلّدًا وdocker-compose وgateway — وهذا أخطر إغراء في هذه الوحدة لأنه يجعل الثمن غير مرئي حتى الإنتاج. استخدم الوكيل في الاتجاه المعاكس: حلّل الاقتران الفعلي في monolith (من يستورد من؟ من يقرأ أي جدول؟) واقترح حدودًا بالمعايير الأربعة مع الدليل؛ وراجع كل خطوة saga: "هل هي idempotent؟ ما تعويضها؟ هل التعويض idempotent؟ ما الذي يُرى في الحالة الوسطى؟"؛ وولّد اختبارات حقن الفشل مثل §7 (انهيار بين الخطوات، relay يُكرّر، خدمة معطّلة أثناء التعويض). وحين يقترح "أضف Kafka وexactly-once" اسأله عن outbox وidempotent consumer — إن لم يذكرهما فهو يصف شريحة عرض لا نظامًا.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 الخدمات المصغّرة كحلّ لمشكلة تنظيمية؛ المعايير الأربعة للحدود وmodular monolith أولًا؛ قاعدة بيانات لكل خدمة وثمنها الثلاثي؛ متزامن للاستعلام وغير متزامن للأحداث مع عمق ≤ 2؛ saga بالتنسيق مع تعويضات idempotent وحالة محفوظة؛ dual write → outbox + relay + idempotent consumer؛ الجواب الصادق على "هل نحتاجها".
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 choreography ومتى؛ CDC كبديل للـ relay؛ اختبارات العقود consumer-driven؛ سجل المخطّطات والتوافق الخلفي للأحداث؛ API gateway وBFF؛ service mesh وmTLS كمفاهيم.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ Event sourcing وCQRS بعمق؛ 2PC/XA ولماذا تُتجنّب؛ محرّكات workflow (Temporal) كمنسّق saga مُدار؛ تصميم منصّة داخلية.
 
 ## 18. الخلاصة

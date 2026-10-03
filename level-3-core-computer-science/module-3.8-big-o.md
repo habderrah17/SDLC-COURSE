@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] تكاليف العمليات على Array/Map/Set/Stack/Queue/Heap/Tree/Graph — M3.1–M3.6
 - [ ] جدول الكمون (RAM ns، SSD μs، شبكة ms) وخطوط الكاش — [L2-M2.2](../level-2-computer-systems/module-2.2-cpu-cache-ram.md)
 - [ ] حلقة الأحداث وأن العمل المتزامن الطويل يحجبها — [L2-M2.7](../level-2-computer-systems/module-2.7-concurrency-event-loop.md)
@@ -220,9 +221,13 @@ Project 4 سيعرض "أفضل 10 منتجات مبيعًا هذا الشهر" �
 ## 14. الصلة بعصر AI
 AI يولّد `find` داخل حلقات وspread في `reduce` بكثافة لأنها "قابلة للقراءة". اطلب صراحةً: *"n قد يصل 1M؛ بلا O(n²)؛ اذكر تعقيد كل دالة"* — ثم **تحقق** بالقياس عند ×10، لأن AI قد يدّعي O(n) لكود O(n²). وعلى regex من AI على مدخلات المستخدم: افترض ReDoS حتى تثبت العكس (اختبر بـ `"a".repeat(40)+"!"`).
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 Big-O = شكل النمو؛ جدول الأشكال الستة بأرقام 1k/1M؛ اختبار ×10؛ عدّ الحلقات المخفية (`includes/find/shift/spread/sort/await db` داخل حلقة)؛ القياس الصحيح بأحجام متعددة؛ الحالة الأسوأ على مدخلات غير موثوقة (ReDoS، حدود الحجم).
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 تعقيد الذاكرة؛ الثوابت والكاش؛ amortized؛ hash flooding؛ لماذا `sort` n log n؛ event loop lag كأثر مباشر؛ `--cpu-prof`.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ الترميز الرسمي (Θ، Ω، إثباتات)؛ master theorem؛ micro-benchmarking دقيق (`mitata`، deopt)؛ تحليل تعقيد خوارزميات متقدمة.
 
 ## 18. الخلاصة

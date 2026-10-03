@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] TCP والمصافحة وتكلفة RTT — [M2.9](module-2.9-tcp-udp.md)
 - [ ] DNS ولماذا ليس آمنًا — [M2.10](module-2.10-dns.md)
 - [ ] البايتات وhex وBuffer — [M2.1](module-2.1-bits-bytes-encoding.md)
@@ -252,9 +253,13 @@ depth=1 CN = Partner Internal CA
 ## 14. الصلة بعصر AI
 أول اقتراح لأي خطأ TLS من AI (ومن Stack Overflow) هو `rejectUnauthorized: false` / `NODE_TLS_REJECT_UNAUTHORIZED=0`. اعتبر ظهوره في كود مولَّد **علامة حمراء تلقائية**. اطلب بدلًا منه: *"حدّد الـ CA الناقصة وأضفها بشكل محدود النطاق."* وفي المراجعة، ابحث عن `rejectUnauthorized`, `NODE_TLS_REJECT`, `sslmode=require`, `verify=False` (Python), `-k` (curl) — كلها نفس الخطأ.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 الضمانات الثلاث ولماذا الهوية شرط لمعنى التشفير؛ شهادة = اسم↔مفتاح موقّعة من CA → سلسلة → trust store؛ ما يتحقق منه العميل؛ ACME/90 يومًا/تجديد آلي؛ المصافحة 1 RTT ومكانها؛ جدول الأخطاء والإصلاح الصحيح؛ **لا `rejectUnauthorized:false` أبدًا**؛ termination وX-Forwarded-* من proxy موثوق فقط.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 متماثل vs غير متماثل vs hash vs ECDHE/forward secrecy؛ SNI/ALPN/resumption؛ `NODE_EXTRA_CA_CERTS`؛ mTLS؛ `verify-full` للـ DB؛ `openssl s_client`؛ Certificate Transparency؛ HSTS.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ رياضيات RSA/ECC؛ OCSP stapling/CRLs؛ ECH؛ تفاصيل مجموعات التشفير؛ TLS 1.2 handshake؛ HSMs؛ إعداد CA داخلية (step-ca/Vault) بالتفصيل.
 
 ## 18. الخلاصة

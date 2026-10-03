@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] العملية، الإشارات (SIGTERM)، رموز الخروج، stdout/stderr — [L2-M2.5](../level-2-computer-systems/module-2.5-process-deep-dive.md)
 - [ ] TCP، keep-alive، المهل، ECONNREFUSED/ETIMEDOUT — [L2-M2.9](../level-2-computer-systems/module-2.9-tcp-udp.md), [L2-M2.12](../level-2-computer-systems/module-2.12-http.md)
 - [ ] pool الاتصالات وجفافه، `withTransaction` — [L3-M3.14](../level-3-core-computer-science/module-3.14-transactions-acid.md)
@@ -313,9 +314,13 @@ DATABASE_URL=postgres://app:app@127.0.0.1:5432/store node --import tsx --test sr
 ## 14. الصلة بعصر AI
 AI يكتب handler جيدًا ويكتب "هيكلًا إنتاجيًا" سيئًا افتراضيًا: لا مهل، `process.exit` في SIGTERM، `/health` يفحص كل شيء، pool بحجم اعتباطي، تهيئة من `process.env.X!`. أعطه **قائمة مراجعة §4** كجزء من السياق (L8-M8.5) واطلب اختبارات الإيقاف الرشيق وحدود الجسم كما في §7 — وشغّلها. وAI ممتاز في مراجعة **التهيئة والمهل**: "هذا جدول المهل، أين لا تتحقق قاعدة الخارجي > الداخلي؟" وفي شرح رموز خروج/إشارات غامضة في السجلات (137، 143، `ECONNRESET` بين LB وNode).
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 رحلة الطلب ونقاط الانتظار؛ التهيئة المُتحقَّقة fail-fast المجمّدة بلا أسرار في السجل؛ pool: `max`، `connectionTimeoutMillis`، حساب النسخ × الحجم، `pool.on("error")`؛ مهلة على كل طبقة وقاعدة الخارجي > الداخلي وkeepAlive > LB؛ `/health` ≠ `/ready`؛ تسلسل SIGTERM الرشيق بمهلة؛ حدّ الجسم أثناء القراءة؛ `statement_timeout` → 504؛ حالة العملية مؤقتة.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 `idle_in_transaction_session_timeout`؛ event loop lag وworker threads؛ `--max-old-space-size` والهامش؛ EMFILE وتسريب الموارد؛ PgBouncer؛ 12-Factor كاملة؛ unhandledRejection/uncaughtException.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ ضبط kernel/ulimit، HTTP/2 وgRPC keep-alive، service mesh، autoscaling على المقاييس (L7-M7.4)، تفاصيل Kubernetes probes (M5.13).
 
 ## 18. الخلاصة

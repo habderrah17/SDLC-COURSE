@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] الملفات والمسارات وcwd وstdin/stdout/stderr — [L0-M0.4](../level-0-absolute-foundations/module-04-files-terminal-shell.md)
 - [ ] JSON وحدوده — [M1.6](module-1.6-objects-references.md)
 - [ ] الأخطاء وResult — [M1.9](module-1.9-errors.md)
@@ -303,9 +304,13 @@ writeFileSync("data/todos.json", JSON.stringify(data));
 ## 14. الصلة بعصر AI
 AI يكتب `JSON.parse(x) as T`، `split(",")` للـ CSV، ومسارات نسبية لـ cwd، ويطبع كل شيء على stdout. **تحقق:** كل مدخل خارجي — أين يُتحقق منه؟ هل الـ CSV يحترم الاقتباسات؟ هل الكتابة ذرّية؟ هل stderr/stdout مفصولان؟ اطلب: *"عامل كل مدخل كـ unknown وتحقق منه؛ اكتب ذرّيًا؛ التشخيص على stderr."*
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 `argv`/`env` نصوص → تحويل + تحقق؛ `readFile/writeFile` مع `utf8`؛ `path.join` + `import.meta.dirname` vs `cwd`؛ stdin سطرًا سطرًا؛ JSON آمن؛ stdout للنتيجة/stderr للتشخيص؛ exit codes.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 `parseArgs`؛ مصائد CSV (اقتباسات، BOM، `\r\n`)؛ الكتابة الذرّية؛ متى Sync مقبول.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ Streams API الكاملة (`pipeline`, Transform)؛ ترميزات غير UTF-8؛ أقفال الملفات؛ مكتبات CSV.
 
 ## 18. الخلاصة

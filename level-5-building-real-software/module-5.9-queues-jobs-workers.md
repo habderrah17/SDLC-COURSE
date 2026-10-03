@@ -7,6 +7,7 @@
 ---
 
 ## 1. المتطلبات
+> **قبل أن تتعلم هذا، يجب أن تفهم:**
 - [ ] الطابور (FIFO) كبنية بيانات — [L3-M3.2](../level-3-core-computer-science/module-3.2-sets-stacks-queues.md)
 - [ ] المعاملات، `FOR UPDATE SKIP LOCKED`، الـ idempotency من الداخل، `withTransaction` — [L3-M3.14](../level-3-core-computer-science/module-3.14-transactions-acid.md), [M5.6](module-5.6-concurrency-business-logic.md)
 - [ ] مشكلة الكتابة المزدوجة (DB + بريد/استدعاء خارجي) ونمط outbox كفكرة — [L3-M3.14](../level-3-core-computer-science/module-3.14-transactions-acid.md)
@@ -356,9 +357,13 @@ DATABASE_URL=postgres://app:app@127.0.0.1:5432/store node --import tsx --test sr
 ## 14. الصلة بعصر AI
 AI يقترح "BullMQ/Redis" فورًا ويكتب `await queue.add()` **بعد** COMMIT (الكتابة المزدوجة الكلاسيكية)، ومعالجات غير idempotent، وبلا تصنيف للأخطاء. أعطه القواعد: outbox في المعاملة، at-least-once ⇒ idempotent، تصنيف عابر/دائم، lease+heartbeat+مهلة، سياق أمني في الحمولة — واطلب اختبارات §7 (خصوصًا "الانهيار منتصف الوظيفة" و"3 عمّال بلا ازدواج"). وهو ممتاز في توليد **سيناريوهات الفشل** للمخطّط (§13 بند 2) وفي كتابة استعلامات لوحة الطابور. والوكلاء (L8-M8.4) أنفسهم أنظمة وظائف: نفس القواعد تنطبق على "مهامهم" الطويلة.
 
-## 15–17. Master / Understand / Defer
+## 15. ما يجب إتقانه (Must Master) 🔴
 - 🔴 ما ينتمي إلى الخلفية؛ مشكلة الكتابة المزدوجة والـ outbox في المعاملة؛ claim ذري بـ `SKIP LOCKED`؛ lease والاستعادة بعد الانهيار؛ at-least-once ⇒ معالجات idempotent (processed/مفتاح طبيعي/حالة بشرط/مفتاح مزوّد)؛ تصنيف عابر/دائم؛ backoff + jitter + سقف؛ DLQ بمالك وتنبيه وأداة إعادة؛ الحمولة معرّفات + tenant/actor؛ العامل يعيد التفويض؛ مهلة لكل وظيفة؛ إيقاف رشيق؛ مقياس عمر أقدم وظيفة.
+
+## 16. ما يجب فهمه (Should Understand) 🟠
 - 🟠 heartbeat للطويلة؛ `LISTEN/NOTIFY`؛ الأولويات والجدولة (`run_at`)؛ الفهرس الجزئي والتنظيف؛ relay إلى وسيط خارجي؛ مقابلات المفاهيم في SQS/RabbitMQ/BullMQ؛ حدود معدّل المزوّد والتزامن.
+
+## 17. ما يمكن تأجيله (Can Defer) ⚪
 - ⚪ Kafka وسجلات الأحداث وإعادة التشغيل، exactly-once semantics في Kafka، sagas وتنسيق العمليات الطويلة (L7-M7.2)، تقسيم الطوابير بالمفتاح، CDC.
 
 ## 18. الخلاصة
