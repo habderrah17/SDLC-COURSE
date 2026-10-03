@@ -71,7 +71,7 @@ Problem → Requirements → Acceptance Criteria → Non-Functional Requirements
 | 9 | تصميم API احترافي بـ pagination, versioning, idempotency, errors؟ | L5 |
 | 10 | تصحيح كود في مستودع لم أره من قبل، بمنهجية؟ | L4 |
 | 11 | مراجعة PR بقائمة Correctness/Security/Perf/Architecture/Tests/Maintainability؟ | L6 |
-| 12 | تصميم نظام بعملية 11 خطوة مع مقايضات صريحة؟ | L7 |
+| 12 | تصميم نظام بعملية الخطوات السبع مع مقايضات صريحة؟ | L7 |
 | 13 | التفكير في الفشل: timeouts, retries, idempotency, degradation؟ | L7 |
 | 14 | قراءة logs/metrics/traces وفهم ما يفعله الإنتاج؟ | L6 |
 | 15 | نشر برنامج بـ Docker + CI/CD + rollback؟ | L5 |

@@ -170,17 +170,17 @@
 
 | # | Module | المحتوى | الحالة |
 |---|---|---|---|
-| 7.1 | Distributed Systems: 1 → 2 → 10 Servers | what breaks | 📋 |
-| 7.2 | Failure: Partial Failure, Timeouts, Retries, Idempotency | duplicate messages | 📋 |
-| 7.3 | Replication, Consistency, CAP (Correctly) | partitions; C vs A tradeoff; eventual consistency | 📋 |
-| 7.4 | Load Balancing & Scaling | horizontal/vertical, stateless services, sticky sessions | 📋 |
-| 7.5 | Reliability Patterns | availability, redundancy, failover, graceful degradation, circuit breakers | 📋 |
-| 7.6 | The System Design Process | 11-step repeatable process | 📋 |
-| 7.7 | System Design Challenges | URL shortener, notifications, file upload, payment workflow, chat | 📋 |
-| 7.8 | Performance Engineering | CPU, memory, network, DB, cache, serialization; "what is the bottleneck?" | 📋 |
-| 7.9 | Microservices In Depth | why, when they help, when they hurt | 📋 |
-| 🛠 | **Project 7:** Distributed System Exercise | | 📋 |
-| ✔ | Checkpoint 7 | | 📋 |
+| 7.1 | [Distributed Systems: 1 → 2 → 10 Servers](../level-7-advanced-systems/module-7.1-distributed-systems-1-2-10.md) | what breaks | ✅ |
+| 7.2 | [Failure: Partial Failure, Timeouts, Retries, Idempotency](../level-7-advanced-systems/module-7.2-failure-timeouts-retries-idempotency.md) | duplicate messages | ✅ |
+| 7.3 | [Replication, Consistency, CAP (Correctly)](../level-7-advanced-systems/module-7.3-replication-consistency-cap.md) | partitions; C vs A tradeoff; eventual consistency | ✅ |
+| 7.4 | [Load Balancing & Scaling](../level-7-advanced-systems/module-7.4-load-balancing-scaling.md) | horizontal/vertical, stateless services, sticky sessions | ✅ |
+| 7.5 | [Reliability Patterns](../level-7-advanced-systems/module-7.5-reliability-patterns.md) | availability, redundancy, failover, graceful degradation, circuit breakers | ✅ |
+| 7.6 | [The System Design Process](../level-7-advanced-systems/module-7.6-system-design-process.md) | 7-step repeatable process | ✅ |
+| 7.7 | [System Design Challenges](../level-7-advanced-systems/module-7.7-system-design-challenges.md) | URL shortener, notifications, file upload, payment workflow, chat | ✅ |
+| 7.8 | [Performance Engineering](../level-7-advanced-systems/module-7.8-performance-engineering.md) | CPU, memory, network, DB, cache, serialization; "what is the bottleneck?" | ✅ |
+| 7.9 | [Microservices In Depth](../level-7-advanced-systems/module-7.9-microservices-in-depth.md) | why, when they help, when they hurt | ✅ |
+| 🛠 | [**Project 7:** Distributed System Exercise](../projects/project-7-distributed/README.md) | | ✅ |
+| ✔ | [Checkpoint 7](../level-7-advanced-systems/checkpoint-7.md) | | ✅ |
 
 ---
 

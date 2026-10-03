@@ -435,5 +435,6 @@ AFTER:   "أفهم الحواسيب، البرمجيات، الأنظمة، ال
 | Level 4 — Software Engineering Foundations | ✅ مكتمل (16 وحدة + Checkpoint 4) |
 | Level 5 — Building Real Software | ✅ مكتمل (13 وحدة + Project 5–6 + Checkpoint 5) |
 | Level 6 — Professional Engineering | ✅ مكتمل (9 وحدات + Checkpoint 6) |
-| Level 7 – 9 | 🚧 (الفهارس جاهزة) |
+| Level 7 — Advanced Systems | ✅ مكتمل (9 وحدات + Project 7 + Checkpoint 7) |
+| Level 8 – 9 | 🚧 (الفهارس جاهزة) |
 | Projects / Challenges / Glossary | 🚧 |

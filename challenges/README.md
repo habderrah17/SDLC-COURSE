@@ -50,7 +50,7 @@
 | Payment workflow | transactions, idempotency, external provider failure, reconciliation |
 | Chat system | real-time, ordering, presence, delivery guarantees |
 
-كلها بعملية الـ 11 خطوة.
+كلها بعملية الخطوات السبع (M7.6).
 
 ---
 
