@@ -437,5 +437,6 @@ AFTER:   "أفهم الحواسيب، البرمجيات، الأنظمة، ال
 | Level 6 — Professional Engineering | ✅ مكتمل (9 وحدات + Checkpoint 6) |
 | Level 7 — Advanced Systems | ✅ مكتمل (9 وحدات + Project 7 + Checkpoint 7) |
 | Level 8 — AI-Native Engineering | ✅ مكتمل (11 وحدة + Project 8 + Checkpoint 8) |
-| Level 9 | 🚧 (الفهرس جاهز) |
-| Projects / Challenges / Glossary | 🚧 |
+| Level 9 — Professional Capstone | ✅ مكتمل (Mode A + Mode B + التقييم الذاتي + التحدي النهائي) |
+| Projects 1–8 + Capstone | ✅ مكتملة |
+| Challenges / Glossary | ✅ (فهرس التحديات داخل الوحدات؛ القاموس 1,100+ مصطلح) |

@@ -1,6 +1,8 @@
 # مشروع التخرج — Capstone Overview
 
 > تطبيق **SaaS** حقيقي، يُبنى مرتين مفاهيميًا: **Mode A** بقيادة بشرية كاملة، **Mode B** بمساعدة AI مع تحقق بشري كامل.
+>
+> **الدليل التفصيلي:** [M9.1 — Mode A](../level-9-capstone/module-9.1-capstone-mode-a.md) · [M9.2 — Mode B](../level-9-capstone/module-9.2-capstone-mode-b.md) · [قوائم التسليم](../projects/capstone/README.md)
 
 ---
 

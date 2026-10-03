@@ -208,10 +208,11 @@
 
 | # | Module | المحتوى | الحالة |
 |---|---|---|---|
-| 9.1 | Capstone SaaS — Mode A (Human-led) | full SDLC, no code until design complete | 📋 |
-| 9.2 | Capstone SaaS — Mode B (AI-assisted) | student provides spec/arch/constraints/tests; AI implements; student verifies | 📋 |
-| 9.3 | Final Self-Assessment | 16 questions | 📋 |
-| 9.4 | Final Professional Challenge | new problem, 15 independent steps, no solution given | 📋 |
+| 9.1 | [Capstone SaaS — Mode A (Human-led)](../level-9-capstone/module-9.1-capstone-mode-a.md) | full SDLC, no code until design complete | ✅ |
+| 9.2 | [Capstone SaaS — Mode B (AI-assisted)](../level-9-capstone/module-9.2-capstone-mode-b.md) | student provides spec/arch/constraints/tests; AI implements; student verifies | ✅ |
+| 9.3 | [Final Self-Assessment](../level-9-capstone/module-9.3-final-self-assessment.md) | 16 questions | ✅ |
+| 9.4 | [Final Professional Challenge](../level-9-capstone/module-9.4-final-professional-challenge.md) | new problem ([final-challenge.md](../level-9-capstone/final-challenge.md)), 15 independent steps, no solution given | ✅ |
+| 🛠 | [**Capstone:** SaaS (Mode A + Mode B)](../projects/capstone/README.md) | | ✅ |
 
 ---
 

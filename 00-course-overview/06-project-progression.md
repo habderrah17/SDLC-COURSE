@@ -138,4 +138,4 @@ output: report.json  { totalByRegion, topProducts, invalidRows }
 
 ## Capstone — SaaS Application (Level 9)
 
-انظر [`09-capstone-overview.md`](09-capstone-overview.md).
+انظر [`09-capstone-overview.md`](09-capstone-overview.md)، والدليل الكامل في [M9.1 (Mode A)](../level-9-capstone/module-9.1-capstone-mode-a.md) و[M9.2 (Mode B)](../level-9-capstone/module-9.2-capstone-mode-b.md)، وقوائم التسليم في [`projects/capstone/`](../projects/capstone/README.md).

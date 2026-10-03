@@ -32,10 +32,11 @@ AFTER:   "أفهم الحواسيب، البرمجيات، الأنظمة، ال
 
 | # | الوحدة | المحتوى | الحالة |
 |---|---|---|---|
-| 9.1 | Capstone SaaS — Mode A (Human-led) | SDLC كاملة، لا كود قبل اكتمال التصميم، AI كمحاور نقدي فقط | 📋 |
-| 9.2 | Capstone SaaS — Mode B (AI-assisted) | أنت: spec + architecture + constraints + acceptance criteria + tests. AI: تنفيذ مختار. أنت: تحقق كامل + `ai-review-log.md` | 📋 |
-| 9.3 | Final Self-Assessment | 16 سؤالًا | 📋 |
-| 9.4 | Final Professional Challenge | مشكلة جديدة كليًا، 15 خطوة مستقلة، بلا حل | 📋 |
+| 9.1 | [Capstone SaaS — Mode A (Human-led)](module-9.1-capstone-mode-a.md) | SDLC كاملة، لا كود قبل اكتمال التصميم، AI كمحاور نقدي فقط | ✅ |
+| 9.2 | [Capstone SaaS — Mode B (AI-assisted)](module-9.2-capstone-mode-b.md) | أنت: spec + architecture + constraints + acceptance criteria + tests. AI: تنفيذ مختار. أنت: تحقق كامل + `ai-review-log.md` | ✅ |
+| 9.3 | [Final Self-Assessment](module-9.3-final-self-assessment.md) | 16 سؤالًا، كلٌّ بسؤال تعمّق ومهمّة صغيرة وسلّم 0–2 | ✅ |
+| 9.4 | [Final Professional Challenge](module-9.4-final-professional-challenge.md) | مشكلة جديدة كليًا ([`final-challenge.md`](final-challenge.md))، 15 خطوة مستقلة، بلا حل | ✅ |
+| 🛠 | [Capstone — فهرس التسليم](../projects/capstone/README.md) | قوائم تسليم المسارين A وB | ✅ |
 
 > التفاصيل الكاملة للمنتج والميزات والمخرجات: [`00-course-overview/09-capstone-overview.md`](../00-course-overview/09-capstone-overview.md)
 
@@ -55,6 +56,8 @@ Problem → Requirements → Acceptance Criteria → Non-Functional Requirements
 ---
 
 ## ✅ التقييم الذاتي النهائي (Final Self-Assessment)
+
+> النسخة الكاملة — بأسئلة التعمّق والمهام الصغيرة وسلّم التقييم وفحوص الصدق — في [M9.3](module-9.3-final-self-assessment.md). هذا ملخّصها.
 
 أجب بصدق — **بكلماتك، بمثال من عندك**:
 
@@ -103,7 +106,7 @@ Problem → Requirements → Acceptance Criteria → Non-Functional Requirements
 15. Iterate
 ```
 
-> يُقدَّم التحدي في `level-9-capstone/final-challenge.md` — **افتحه فقط بعد اجتياز التقييم الذاتي.**
+> يُقدَّم التحدي في [`final-challenge.md`](final-challenge.md) (القواعد وسلّم التقييم في [M9.4](module-9.4-final-professional-challenge.md)) — **افتحه فقط بعد اجتياز التقييم الذاتي.**
 
 ---
 
