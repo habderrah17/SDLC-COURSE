@@ -153,16 +153,16 @@
 
 | # | Module | المحتوى | الحالة |
 |---|---|---|---|
-| 6.1 | Working in a Team | tickets, issues, requirements, pull requests | 📋 |
-| 6.2 | Code Review | correctness, security, performance, architecture, tests, maintainability | 📋 |
-| 6.3 | Design Review, RFCs, ADRs | tradeoffs, risks, constraints, alternatives | 📋 |
-| 6.4 | Engineering Communication | "Assumption / Constraint / Tradeoff / Risk / Alternative / Recommendation" | 📋 |
-| 6.5 | Documentation | README, architecture docs, runbooks | 📋 |
-| 6.6 | Observability | logs, metrics, traces; how do I know what production is doing? | 📋 |
-| 6.7 | Incident Response | detect → investigate → mitigate → recover → learn; postmortems | 📋 |
-| 6.8 | Product Thinking | feature ≠ requirement; user, problem, business goal, constraint, success criteria | 📋 |
-| 6.9 | Software Architecture Styles | layered, feature-based, modular monolith, microservices | 📋 |
-| ✔ | Checkpoint 6 | | 📋 |
+| 6.1 | [Working in a Team](../level-6-professional-engineering/module-6.1-working-in-a-team.md) | tickets, issues, requirements, pull requests | ✅ |
+| 6.2 | [Code Review](../level-6-professional-engineering/module-6.2-code-review.md) | correctness, security, performance, architecture, tests, maintainability | ✅ |
+| 6.3 | [Design Review, RFCs, ADRs](../level-6-professional-engineering/module-6.3-design-review-rfc-adr.md) | tradeoffs, risks, constraints, alternatives | ✅ |
+| 6.4 | [Engineering Communication](../level-6-professional-engineering/module-6.4-engineering-communication.md) | "Assumption / Constraint / Tradeoff / Risk / Alternative / Recommendation" | ✅ |
+| 6.5 | [Documentation](../level-6-professional-engineering/module-6.5-documentation.md) | README, architecture docs, runbooks | ✅ |
+| 6.6 | [Observability](../level-6-professional-engineering/module-6.6-observability.md) | logs, metrics, traces; how do I know what production is doing? | ✅ |
+| 6.7 | [Incident Response](../level-6-professional-engineering/module-6.7-incident-response.md) | detect → investigate → mitigate → recover → learn; postmortems | ✅ |
+| 6.8 | [Product Thinking](../level-6-professional-engineering/module-6.8-product-thinking.md) | feature ≠ requirement; user, problem, business goal, constraint, success criteria | ✅ |
+| 6.9 | [Software Architecture Styles](../level-6-professional-engineering/module-6.9-architecture-styles.md) | layered, feature-based, modular monolith, microservices | ✅ |
+| ✔ | [Checkpoint 6](../level-6-professional-engineering/checkpoint-6.md) | conceptual · coding · debugging · architecture + team package | ✅ |
 
 ---
 

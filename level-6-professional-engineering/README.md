@@ -41,16 +41,16 @@
 
 | # | الوحدة | المفاهيم | الحالة |
 |---|---|---|---|
-| 6.1 | Working in a Team | tickets/issues, scoping, branching strategies, PR hygiene, commit messages, definition of done, async communication | 📋 |
-| 6.2 | Code Review | reviewer mindset, checklist (correctness/security/perf/architecture/tests/maintainability), comment tone, author's side, **flawed-code challenges + senior review** | 📋 |
-| 6.3 | Design Review, RFCs, ADRs | when to write, template, alternatives considered, reversibility, decision records as team memory | 📋 |
-| 6.4 | Engineering Communication | "Assumption: / Constraint: / Tradeoff: / Risk: / Alternative: / Recommendation based on context:"; disagreeing well; escalation | 📋 |
-| 6.5 | Documentation | README that works, architecture docs (C4-lite), runbooks, API docs, keeping docs alive | 📋 |
-| 6.6 | Observability | logs (structured, levels, correlation ids), metrics (RED/USE, percentiles), traces (spans, distributed), dashboards, alerts that matter | 📋 |
-| 6.7 | Incident Response | severity, on-call, detect → investigate → mitigate → recover → learn; communication during incidents; blameless postmortems | 📋 |
-| 6.8 | Product Thinking | feature ≠ requirement; user, problem, business goal, constraint, success criteria; saying no; measuring outcomes | 📋 |
-| 6.9 | Software Architecture Styles | layered, feature-based (vertical slices), **modular monolith** (why it's often best), microservices (why/when/cost), evolutionary architecture | 📋 |
-| ✔ | Checkpoint 6 | | 📋 |
+| 6.1 | [Working in a Team](module-6.1-working-in-a-team.md) | tickets/issues, scoping, branching strategies, PR hygiene, commit messages, definition of done, async communication | ✅ |
+| 6.2 | [Code Review](module-6.2-code-review.md) | reviewer mindset, checklist (correctness/security/perf/architecture/tests/maintainability), comment tone, author's side, **flawed-code challenges + senior review** | ✅ |
+| 6.3 | [Design Review, RFCs, ADRs](module-6.3-design-review-rfc-adr.md) | when to write, template, alternatives considered, reversibility, decision records as team memory | ✅ |
+| 6.4 | [Engineering Communication](module-6.4-engineering-communication.md) | "Assumption: / Constraint: / Tradeoff: / Risk: / Alternative: / Recommendation based on context:"; disagreeing well; escalation | ✅ |
+| 6.5 | [Documentation](module-6.5-documentation.md) | README that works, architecture docs (C4-lite), runbooks, API docs, keeping docs alive | ✅ |
+| 6.6 | [Observability](module-6.6-observability.md) | logs (structured, levels, correlation ids), metrics (RED/USE, percentiles), traces (spans, distributed), dashboards, alerts that matter | ✅ |
+| 6.7 | [Incident Response](module-6.7-incident-response.md) | severity, on-call, detect → investigate → mitigate → recover → learn; communication during incidents; blameless postmortems | ✅ |
+| 6.8 | [Product Thinking](module-6.8-product-thinking.md) | feature ≠ requirement; user, problem, business goal, constraint, success criteria; saying no; measuring outcomes | ✅ |
+| 6.9 | [Software Architecture Styles](module-6.9-architecture-styles.md) | layered, feature-based (vertical slices), **modular monolith** (why it's often best), microservices (why/when/cost), evolutionary architecture | ✅ |
+| ✔ | [Checkpoint 6](checkpoint-6.md) | conceptual · coding · debugging · architecture + team package | ✅ |
 
 ---
 
