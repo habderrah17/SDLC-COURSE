@@ -1,0 +1,32 @@
+{
+  "needsDatabase": [
+    "module-3.10-",
+    "module-3.11-",
+    "module-3.12-",
+    "module-3.13-",
+    "module-3.14-"
+  ],
+  "dependsOn": {
+    "level-3-core-computer-science/module-3.11-sql-from-zero.md": [
+      "level-3-core-computer-science/module-3.10-databases-from-zero.md"
+    ],
+    "level-3-core-computer-science/module-3.12-database-design.md": [
+      "level-3-core-computer-science/module-3.10-databases-from-zero.md"
+    ],
+    "level-3-core-computer-science/module-3.13-indexes.md": [
+      "level-3-core-computer-science/module-3.10-databases-from-zero.md"
+    ],
+    "level-3-core-computer-science/module-3.14-transactions-acid.md": [
+      "level-3-core-computer-science/module-3.10-databases-from-zero.md"
+    ],
+    "level-4-software-engineering-foundations/module-4.5-software-design.md": [
+      "level-4-software-engineering-foundations/module-4.3-user-stories-acceptance-criteria.md"
+    ],
+    "level-7-advanced-systems/module-7.2-failure-timeouts-retries-idempotency.md": [
+      "level-7-advanced-systems/module-7.1-distributed-systems-1-2-10.md"
+    ]
+  },
+  "skip": {},
+  "testTimeoutMs": 180000,
+  "setupSql": {}
+}
