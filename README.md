@@ -436,5 +436,6 @@ AFTER:   "أفهم الحواسيب، البرمجيات، الأنظمة، ال
 | Level 5 — Building Real Software | ✅ مكتمل (13 وحدة + Project 5–6 + Checkpoint 5) |
 | Level 6 — Professional Engineering | ✅ مكتمل (9 وحدات + Checkpoint 6) |
 | Level 7 — Advanced Systems | ✅ مكتمل (9 وحدات + Project 7 + Checkpoint 7) |
-| Level 8 – 9 | 🚧 (الفهارس جاهزة) |
+| Level 8 — AI-Native Engineering | ✅ مكتمل (11 وحدة + Project 8 + Checkpoint 8) |
+| Level 9 | 🚧 (الفهرس جاهز) |
 | Projects / Challenges / Glossary | 🚧 |

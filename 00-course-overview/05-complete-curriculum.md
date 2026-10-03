@@ -188,19 +188,19 @@
 
 | # | Module | المحتوى | الحالة |
 |---|---|---|---|
-| 8.1 | What Changes When AI Can Generate Code? | AI vs SE | 📋 |
-| 8.2 | Vibe Coding vs Engineering | Prompt → Code → Looks good ≠ engineering | 📋 |
-| 8.3 | AI-Assisted SDLC | AI mapped onto every phase; human judgment remains responsible | 📋 |
-| 8.4 | AI Agents | agent, tools, context, planning, execution, feedback, verification | 📋 |
-| 8.5 | Context Engineering | repo context, architecture docs, conventions, requirements, tests, constraints | 📋 |
-| 8.6 | AI Delegation | vague request → structured engineering task | 📋 |
-| 8.7 | AI Verification | compile → typecheck → tests → behavior → security → performance → architecture → human review | 📋 |
-| 8.8 | AI Failure Modes | hallucinated/outdated APIs, wrong assumptions, vulnerabilities, missing edge cases, over-abstraction | 📋 |
-| 8.9 | AI Security | prompt injection, repo instruction poisoning, malicious files, tool permissions, secrets, destructive commands | 📋 |
-| 8.10 | Human-in-the-Loop | migrations, auth, payments, security, prod deploy, destructive ops, infra | 📋 |
-| 8.11 | The AI-Era Engineering Loop | UNDERSTAND → SPECIFY → DESIGN → DELEGATE → VERIFY → REVIEW → INTEGRATE → DEPLOY → OBSERVE → LEARN | 📋 |
-| 🛠 | **Project 8:** AI-assisted Engineering Project | | 📋 |
-| ✔ | Checkpoint 8 | | 📋 |
+| 8.1 | [What Changes When AI Can Generate Code?](../level-8-ai-native-engineering/module-8.1-what-changes.md) | AI vs SE | ✅ |
+| 8.2 | [Vibe Coding vs Engineering](../level-8-ai-native-engineering/module-8.2-vibe-coding-vs-engineering.md) | Prompt → Code → Looks good ≠ engineering | ✅ |
+| 8.3 | [AI-Assisted SDLC](../level-8-ai-native-engineering/module-8.3-ai-assisted-sdlc.md) | AI mapped onto every phase; human judgment remains responsible | ✅ |
+| 8.4 | [AI Agents](../level-8-ai-native-engineering/module-8.4-ai-agents.md) | agent, tools, context, planning, execution, feedback, verification | ✅ |
+| 8.5 | [Context Engineering](../level-8-ai-native-engineering/module-8.5-context-engineering.md) | repo context, architecture docs, conventions, requirements, tests, constraints | ✅ |
+| 8.6 | [AI Delegation](../level-8-ai-native-engineering/module-8.6-ai-delegation.md) | vague request → structured engineering task | ✅ |
+| 8.7 | [AI Verification](../level-8-ai-native-engineering/module-8.7-ai-verification.md) | compile → typecheck → tests → behavior → security → performance → architecture → human review | ✅ |
+| 8.8 | [AI Failure Modes](../level-8-ai-native-engineering/module-8.8-ai-failure-modes.md) | hallucinated/outdated APIs, wrong assumptions, vulnerabilities, missing edge cases, over-abstraction | ✅ |
+| 8.9 | [AI Security](../level-8-ai-native-engineering/module-8.9-ai-security.md) | prompt injection, repo instruction poisoning, malicious files, tool permissions, secrets, destructive commands | ✅ |
+| 8.10 | [Human-in-the-Loop](../level-8-ai-native-engineering/module-8.10-human-in-the-loop.md) | migrations, auth, payments, security, prod deploy, destructive ops, infra | ✅ |
+| 8.11 | [The AI-Era Engineering Loop](../level-8-ai-native-engineering/module-8.11-ai-era-engineering-loop.md) | UNDERSTAND → SPECIFY → DESIGN → DELEGATE → VERIFY → REVIEW → INTEGRATE → DEPLOY → OBSERVE → LEARN | ✅ |
+| 🛠 | [**Project 8:** AI-assisted Engineering Project](../projects/project-8-ai-assisted/README.md) | | ✅ |
+| ✔ | [Checkpoint 8](../level-8-ai-native-engineering/checkpoint-8.md) | | ✅ |
 
 ---
 

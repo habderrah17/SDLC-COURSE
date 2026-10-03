@@ -51,19 +51,19 @@ AI يكتب → "يعمل" → تنشر → يفشل        AI يكتب → تت
 
 | # | الوحدة | المفاهيم | الحالة |
 |---|---|---|---|
-| 8.1 | What Changes When AI Can Generate Code? | cost of writing ↓, cost of verifying ↑, specification as the core skill; what stays the same | 📋 |
-| 8.2 | Vibe Coding vs Engineering | Prompt → Code → "Looks good" ≠ engineering; Understand → Specify → Design → Delegate → Implement → Verify → Review → Deploy → Observe | 📋 |
-| 8.3 | AI-Assisted SDLC | per phase: what AI helps with / what humans own; Discovery, Requirements, Design, Implementation, Testing, Review, Documentation, Operations | 📋 |
-| 8.4 | AI Agents | agent loop, tools, context window, planning, execution, feedback, verification; autonomy levels | 📋 |
-| 8.5 | Context Engineering | repository context, architecture docs, conventions files, requirements, tests as spec, constraints; what to include/exclude | 📋 |
-| 8.6 | AI Delegation | BAD: "Build authentication." GOOD: requirements + constraints + architecture + acceptance criteria + security requirements + tests + out-of-scope | 📋 |
-| 8.7 | AI Verification | the 8-step chain; tests that actually test; reviewing AI code as a stranger's code; verification log | 📋 |
-| 8.8 | AI Failure Modes | hallucinated APIs, outdated APIs, wrong assumptions, security vulnerabilities, incomplete edge cases, excessive abstraction, duplicated logic, inconsistent architecture — with real examples | 📋 |
-| 8.9 | AI Security | prompt injection, repository instruction poisoning, malicious files/comments, tool permissions & sandboxing, secret exposure, destructive commands, supply chain | 📋 |
-| 8.10 | Human-in-the-Loop | hard gates: DB migrations, auth, payments, security, production deploy, destructive ops, infra changes; approval workflows | 📋 |
-| 8.11 | The AI-Era Engineering Loop | UNDERSTAND → SPECIFY → DESIGN → DELEGATE → VERIFY → REVIEW → INTEGRATE → DEPLOY → OBSERVE → LEARN as daily practice | 📋 |
-| 🛠 | [Project 8: AI-assisted Engineering Project](../projects/README.md#project-8) | | 📋 |
-| ✔ | Checkpoint 8 | | 📋 |
+| 8.1 | [What Changes When AI Can Generate Code?](module-8.1-what-changes.md) | cost of writing ↓, cost of verifying ↑, specification as the core skill; what stays the same | ✅ |
+| 8.2 | [Vibe Coding vs Engineering](module-8.2-vibe-coding-vs-engineering.md) | Prompt → Code → "Looks good" ≠ engineering; Understand → Specify → Design → Delegate → Implement → Verify → Review → Deploy → Observe | ✅ |
+| 8.3 | [AI-Assisted SDLC](module-8.3-ai-assisted-sdlc.md) | per phase: what AI helps with / what humans own; Discovery, Requirements, Design, Implementation, Testing, Review, Documentation, Operations | ✅ |
+| 8.4 | [AI Agents](module-8.4-ai-agents.md) | agent loop, tools, context window, planning, execution, feedback, verification; autonomy levels | ✅ |
+| 8.5 | [Context Engineering](module-8.5-context-engineering.md) | repository context, architecture docs, conventions files, requirements, tests as spec, constraints; what to include/exclude | ✅ |
+| 8.6 | [AI Delegation](module-8.6-ai-delegation.md) | BAD: "Build authentication." GOOD: requirements + constraints + architecture + acceptance criteria + security requirements + tests + out-of-scope | ✅ |
+| 8.7 | [AI Verification](module-8.7-ai-verification.md) | the 8-step chain; tests that actually test; reviewing AI code as a stranger's code; verification log | ✅ |
+| 8.8 | [AI Failure Modes](module-8.8-ai-failure-modes.md) | hallucinated APIs, outdated APIs, wrong assumptions, security vulnerabilities, incomplete edge cases, excessive abstraction, duplicated logic, inconsistent architecture — with real examples | ✅ |
+| 8.9 | [AI Security](module-8.9-ai-security.md) | prompt injection, repository instruction poisoning, malicious files/comments, tool permissions & sandboxing, secret exposure, destructive commands, supply chain | ✅ |
+| 8.10 | [Human-in-the-Loop](module-8.10-human-in-the-loop.md) | hard gates: DB migrations, auth, payments, security, production deploy, destructive ops, infra changes; approval workflows | ✅ |
+| 8.11 | [The AI-Era Engineering Loop](module-8.11-ai-era-engineering-loop.md) | UNDERSTAND → SPECIFY → DESIGN → DELEGATE → VERIFY → REVIEW → INTEGRATE → DEPLOY → OBSERVE → LEARN as daily practice | ✅ |
+| 🛠 | [Project 8: AI-assisted Engineering Project](../projects/project-8-ai-assisted/README.md) | | ✅ |
+| ✔ | [Checkpoint 8](checkpoint-8.md) | | ✅ |
 
 ---
 
